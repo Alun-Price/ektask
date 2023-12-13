@@ -115,18 +115,47 @@
         <div class="icon-block">
             <div class="container mx-auto mt-10 text-sm font-bold leading-6 text-center text-primaryblack-950">Trusted by organisations globally</div>
         </div>
-        <div class="container relative flex">
-            <div class="flex-none w-20 h-20 m-2 bg-blue-500">1</div>
-            <div class="m-2 bg-green-500 w-200 h-200">2</div>
-            <div class="m-2 bg-red-500 w-200 h-200">3</div>
-            <div class="m-2 bg-yellow-500 w-200 h-200">4</div>
-            <div class="m-2 bg-purple-500 w-200 h-200">5</div>
-            <div class="m-2 bg-indigo-500 w-200 h-200">6</div>
-            <div class="m-2 bg-pink-500 w-200 h-200">7</div>
-            <div class="m-2 bg-gray-500 w-200 h-200">8</div>
-            <div class="m-2 bg-teal-500 w-200 h-200">9</div>
-            <div class="m-2 bg-orange-500 w-200 h-200">10</div>
-        </div>
+        
+
+<div class="grid grid-cols-2 gap-4 md:grid-cols-3">
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-6.jpg" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-8.jpg" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-9.jpg" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-10.jpg" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-11.jpg" alt="">
+    </div>
+</div>
+
     </section>
 
     {# SOLUTIONS SECTION #}
@@ -569,10 +598,10 @@
     
     
     {#  FOOTER SECTION #}
-    <footer class="bg-white">
+    <footer>
         <div class="container mx-auto mt-10 md:px-3 mb-14">
-            <div class="grid gap-2 mx-5 grid-col-2 grid-row-5 lg:grid-cols-5 lg:grid-row-2">
-                    <div class="grid w-8/12 col-span-1 col-start-1 lg:row-span-1 lg:place-content-start">
+            <div class="grid grid-cols-2 grid-rows-5 gap-2 mx-5 lg:grid-cols-5 lg:grid-rows-2">
+                    <div class="col-span-1 col-start-1 lg:row-span-1 lg:place-content-start">
                         <h2 class="mb-4 text-lg leading-7 font-semibold text-[#272727]">What We Do</h2>
                         <ul class="font-normal leading-[21px] text-base text-[#474747]">
                             <li class="mb-4">
@@ -603,7 +632,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-span-1 col-start-1 lg:col-start-3 lg:place-content-start">
+                    <div class="grid col-span-1 col-start-1 lg:col-start-3 lg:place-content-start">
                         <h2 class="mb-4 text-lg leading-7 font-semibold text-[#272727]">Use Cases</h2>
                         <ul class="font-sans font-normal leading-[21px] text-base text-[#474747]">
                             <li class="mb-4">
@@ -626,7 +655,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-span-1 col-start-2 md:col-start-4 lg:place-content-start">
+                    <div class="grid col-span-1 col-start-2 md:col-start-4 lg:place-content-start">
                         <h2 class="mb-4 text-lg leading-7 font-semibold text-[#272727]">Explore</h2>
                         <ul class="font-normal leading-[21px] text-base text-[#474747]">
                             <li class="mb-4">
@@ -669,7 +698,9 @@
                         {{ actionInput('contact-form/send') }}
                         {{ redirectInput('contact/thanks') }}
 
-                        <input class="mb-3 border-2 border-solid rounded-full border-formoutline h-[50px] w-[335px] md:w-[645px] lg:w-[286px] md:flex px-4 py-2" placeholder:text-pgrey-400 text-base leading-[34px] type="text" placeholder="Name"/>
+                        <input class="mb-3 border-2 border-solid rounded-full border-formoutline h-[50px] w-[335px] md:w-[645px] lg:w-[286px] md:flex px-4 py-2 placeholder:text-pgrey-400 text-base leading-[34px]" type="text" placeholder="Name"/>
+
+
                             {# {{ input('text', 'fromName', message.fromName ?? '', {
                                 id: 'from-name',
                                 autocomplete: 'name',
@@ -678,12 +709,16 @@
                         {# </input> #}
                         
                         <input class="mb-4 border-2 border-solid rounded-full border-formoutline h-[50px] w-[335px] md:w-[645px] lg:w-[286px] md:flex px-4 py-2 text-base leading-[34px]" type="text" placeholder="Email Address"/>
+
+
                             {# {{ input('email', 'fromEmail', message.fromEmail ?? '', {
                                 id: 'from-email',
                                 autocomplete: 'email',
                             }) }}
                             {{ message ? _self.errorList(message.getErrors('fromEmail')) }} #}
                         {# </div> #}
+
+                        
                         <button type="submit" class=" text-white text-lg bg-primaryorange-400 hover:bg-primaryorange-600 font-bold leading-[30px]text-lg py-2 mb-4 text-center rounded-[35px] w-[335px] lg:w-[286px] h-[50px] md:w-[645px] md:flex md:justify-center md:align-middle px-4">Sign Up</button>
                     </form>
                     <p class="font-normal leading-5 text-pgrey-400 text-[13px]">By submitting your email address, you agree to receive updates accordance with our <a class="font-bold underline text-primaryblack-950" href="#">Privacy Policy</a></p>
