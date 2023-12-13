@@ -1,0 +1,131 @@
+dateModified: 1702341770
+elementSources:
+  craft\elements\Asset:
+    -
+      defaultSort:
+        - dateCreated
+        - desc
+      disabled: false
+      key: 'volume:bb0e0fd9-19d2-405c-a25b-72cf038c254e' # Images
+      tableAttributes:
+        - filename
+        - size
+        - dateModified
+        - link
+        - kind
+        - imageSize
+        - width
+        - height
+        - alt
+        - id
+      type: native
+    -
+      key: 'folder:9dbfce8d-97e5-4716-9225-bdf56638d832'
+      type: native
+email:
+  fromEmail: alunprice089@gmail.com
+  fromName: ektask
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  hardDisk:
+    hasUrls: true
+    name: 'Hard Disk'
+    settings:
+      path: '@webroot/static/images'
+    type: craft\fs\Local
+    url: '@web/static/images'
+meta:
+  __names__:
+    00ac0806-61fb-4aef-9a81-8e3e9426032d: 'Solution Card Title' # Solution Card Title
+    02aea2db-7a51-4c6f-a146-c2123960fe5d: Navigation # Navigation
+    5e783436-9213-4fd9-acc2-4703d88a20dd: 'Hero Subtext' # Hero Subtext
+    12dae174-ac60-45df-8001-7bd40dedce57: 'Solutions Global' # Solutions Global
+    15e796fd-d9f9-4eb9-900b-19e85ab478a8: 'Logo Strip' # Logo Strip
+    22e9315c-4dfc-4b95-97ee-a0dbe6e3620f: 'Solutions Button Text' # Solutions Button Text
+    40d0aff4-a577-4811-8a14-be151bd4f63e: 'Solution Card Image' # Solution Card Image
+    50e3b3bb-a6f6-4870-a4d1-d3c78f1e48ba: 'Logo Strip' # Logo Strip
+    78ed5f4b-44d7-4c0d-9fbf-5c4d2d909e05: Common # Common
+    93d458fd-c496-457f-aa0e-f73f4c7ff0ea: Solutions # Solutions
+    555e190a-6d35-423b-89be-d0e492f5bc58: 'Home Page' # Home Page
+    699d7cd3-b9ff-4a6f-867d-ea7c7b3120b6: 'Solutions Button Color' # Solutions Button Color
+    3192af92-0e16-402a-bc85-8ec22b259c0b: 'Link Text' # Link Text
+    4076ab59-327c-42ee-99c4-826bfedf430e: Hero # Hero
+    8200bbfd-113b-4164-b60a-f5a5a1c15c32: ektask # ektask
+    10796049-3cf3-4547-9fdb-16401c6d9c20: 'Dropdown Toggle' # Dropdown Toggle
+    47457785-60c3-4ebd-881d-6da1f22a67e6: 'Link Destination' # Link Destination
+    61282942-49f6-443d-a5e0-8d927401ede5: 'Logo Strip' # Logo Strip
+    80446766-2d4f-4863-977e-956559c32f3e: Navigation # Navigation
+    a1229ca4-4e29-414a-9c33-b4da21c7cb37: 'Solution Card Bulletpoint Text' # Solution Card Bulletpoint Text
+    b073904f-64d9-4bb5-84ba-e15c5e35f456: 'Home Page' # Home Page
+    b6198944-67af-47f1-b642-0de35fb2a97a: 'Solution Card Color' # Solution Card Color
+    bb0e0fd9-19d2-405c-a25b-72cf038c254e: Images # Images
+    bb14322e-9cc4-403f-84de-57fc9605c618: 'Solutions Link ' # Solutions Link 
+    c1b53ef8-2c51-438c-a97f-b3e76e9b7bd5: 'Logo Icon' # Logo Icon
+    c4a611b6-b197-454c-8b52-9a6b973cfd35: 'Solution Main Subheading' # Solution Main Subheading
+    d53c4d5f-7703-48da-be46-b99a157059e7: 'Nav Links' # Nav Links
+    da5f037a-2657-4158-a31e-5b982b3132e8: 'Title Text' # Title Text
+    e0e3d4d6-eddc-4575-9c1e-b489f201a904: logostripmatrix # logostripmatrix
+    e73abdd2-5b3e-400a-8017-810ba4c6c13b: ektask # ektask
+    ecbbd1fb-b93d-4af2-8c8f-9efedfb15e8c: Link # Link
+    f78e604d-3198-45dd-815a-fa0bc67bb1f4: 'Solutions Card Subheading' # Solutions Card Subheading
+    f900aa5e-c80c-4d73-876a-d45c0708f0c5: 'Solution Main Title' # Solution Main Title
+plugins:
+  colour-swatches:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.4.3
+  contact-form:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      allowAttachments: ''
+      allowedMessageFields: null
+      prependSender: 'On behalf of'
+      prependSubject: 'New message from ektask'
+      successFlashMessage: 'Your message has been sent.'
+      toEmail: test@test.com
+  contact-form-honeypot:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  image-resizer:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  inlinesvg:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  inventory:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  redactor-custom-styles:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  typedlinkfield:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  venveo-bulk-edit:
+    edition: standard
+    enabled: true
+    schemaVersion: 4.0.0
+system:
+  edition: solo
+  live: true
+  name: ektask
+  schemaVersion: 4.5.3.0
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

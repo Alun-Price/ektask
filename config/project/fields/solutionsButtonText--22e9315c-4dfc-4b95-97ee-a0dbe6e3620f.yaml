@@ -1,0 +1,62 @@
+columnSuffix: rzumpvrb
+contentColumnType: string
+fieldGroup: 93d458fd-c496-457f-aa0e-f73f4c7ff0ea # Solutions
+handle: solutionsButtonText
+instructions: 'The text that goes on the solutions CTA button'
+name: 'Solutions Button Text'
+searchable: false
+settings:
+  allowCustomText: true
+  allowTarget: true
+  autoNoReferrer: true
+  customTextMaxLength: 0
+  customTextRequired: true
+  defaultLinkName: url
+  defaultText: 'Learn More'
+  enableAllLinkTypes: true
+  enableAriaLabel: true
+  enableElementCache: true
+  enableTitle: true
+  typeSettings:
+    asset:
+      allowCrossSiteLink: false
+      allowCustomQuery: false
+      enabled: false
+      sources: '*'
+    category:
+      allowCrossSiteLink: false
+      allowCustomQuery: false
+      enabled: false
+      sources: '*'
+    custom:
+      allowAliases: false
+      disableValidation: false
+      enabled: false
+    email:
+      allowAliases: false
+      disableValidation: false
+      enabled: false
+    entry:
+      allowCrossSiteLink: false
+      allowCustomQuery: false
+      enabled: false
+      sources: '*'
+    site:
+      enabled: false
+      sites: '*'
+    tel:
+      allowAliases: false
+      disableValidation: false
+      enabled: false
+    url:
+      allowAliases: false
+      disableValidation: false
+      enabled: false
+    user:
+      allowCrossSiteLink: false
+      allowCustomQuery: false
+      enabled: false
+      sources: '*'
+translationKeyFormat: null
+translationMethod: none
+type: lenz\linkfield\fields\LinkField

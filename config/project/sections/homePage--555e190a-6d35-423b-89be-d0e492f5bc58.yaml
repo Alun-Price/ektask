@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: homePage
+name: 'Home Page'
+propagationMethod: all
+siteSettings:
+  e73abdd2-5b3e-400a-8017-810ba4c6c13b: # ektask
+    enabledByDefault: true
+    hasUrls: true
+    template: index.twig
+    uriFormat: __home__
+type: single

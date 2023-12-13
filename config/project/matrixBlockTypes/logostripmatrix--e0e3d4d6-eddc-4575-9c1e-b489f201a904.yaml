@@ -1,0 +1,75 @@
+field: 61282942-49f6-443d-a5e0-8d927401ede5 # Logo Strip
+fieldLayouts:
+  987bcdee-e1ed-41bb-96ea-3fedeeeece4f:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: c1b53ef8-2c51-438c-a97f-b3e76e9b7bd5 # Logo Icon
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1aaaed1e-98bd-4b4d-bd1e-42e3745f475c
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 784f0518-8da1-4ac9-9bc1-3cfd55b57920
+        userCondition: null
+fields:
+  c1b53ef8-2c51-438c-a97f-b3e76e9b7bd5: # Logo Icon
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: logoIcon
+    instructions: 'Add a logo for the logo strip'
+    name: 'Logo Icon'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds: null
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:bb0e0fd9-19d2-405c-a25b-72cf038c254e' # Images
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: false
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:bb0e0fd9-19d2-405c-a25b-72cf038c254e' # Images
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: 'Choose a logo for the logo strip'
+      showSiteMenu: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources:
+        - 'volume:bb0e0fd9-19d2-405c-a25b-72cf038c254e' # Images
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: logostripmatrix
+name: logostripmatrix
+sortOrder: 1

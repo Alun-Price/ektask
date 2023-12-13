@@ -1,0 +1,138 @@
+fieldLayouts:
+  6e68e3f1-7cd4-49b7-af75-3e00ebb9fa85:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 40d0aff4-a577-4811-8a14-be151bd4f63e # Solution Card Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ca74076e-00ea-41b4-b2ff-98b24e1cea1b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 00ac0806-61fb-4aef-9a81-8e3e9426032d # Solution Card Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c8157b5e-17d1-43b1-9e09-73928f56bdca
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f78e604d-3198-45dd-815a-fa0bc67bb1f4 # Solutions Card Subheading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d05dd821-4f8f-43de-8288-69b9b459bb01
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a1229ca4-4e29-414a-9c33-b4da21c7cb37 # Solution Card Bulletpoint Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4e711763-6c31-4978-abab-00b616b5f112
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 22e9315c-4dfc-4b95-97ee-a0dbe6e3620f # Solutions Button Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e25a7fe8-b4be-46ab-b6d3-f794cc87458b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 699d7cd3-b9ff-4a6f-867d-ea7c7b3120b6 # Solutions Button Color
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 158e6d7c-2dcd-45a8-97b9-e0f87b56fba7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b6198944-67af-47f1-b642-0de35fb2a97a # Solution Card Color
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 214a5b3e-37f0-4a6d-ba24-31eafea64073
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: bb14322e-9cc4-403f-84de-57fc9605c618 # Solutions Link 
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a7218031-3fe8-4dce-a1d8-506f162d31d2
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Solution Card'
+        uid: aedc7974-ce00-49c9-abaf-d8e37c82dcda
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: f900aa5e-c80c-4d73-876a-d45c0708f0c5 # Solution Main Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dbc6e156-acf4-47b2-a1a0-47608896c8e6
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c4a611b6-b197-454c-8b52-9a6b973cfd35 # Solution Main Subheading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 187f8c10-9124-455a-827d-eb12fa1433b6
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Solution Section'
+        uid: 04e33990-b10c-4cfe-9aa5-0137b793bb8c
+        userCondition: null
+handle: solutionsGlobal
+name: 'Solutions Global'
+sortOrder: 3

@@ -1,0 +1,13 @@
+{
+  "name": "ektask",
+  "scripts": {
+    "run": "npx tailwindcss  --output web/static/css/styles.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.6"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss-cli": "^11.0.0"
+  }
+}

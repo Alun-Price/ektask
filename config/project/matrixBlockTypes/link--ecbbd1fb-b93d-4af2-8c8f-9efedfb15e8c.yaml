@@ -1,0 +1,140 @@
+field: d53c4d5f-7703-48da-be46-b99a157059e7 # Nav Links
+fieldLayouts:
+  c00920d2-7054-4ed9-9c92-ea6c90b473e6:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 3192af92-0e16-402a-bc85-8ec22b259c0b # Link Text
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e9b0d836-5ebb-495d-b5bf-97b19e14cf24
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 47457785-60c3-4ebd-881d-6da1f22a67e6 # Link Destination
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f6b86f6e-5812-4854-b133-e87f4cf555c3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 10796049-3cf3-4547-9fdb-16401c6d9c20 # Dropdown Toggle
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3f767b58-1bbd-4601-a15d-949c1ce5586d
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: f7298f6e-aa67-4dab-be10-9118a021ec67
+        userCondition: null
+fields:
+  3192af92-0e16-402a-bc85-8ec22b259c0b: # Link Text
+    columnSuffix: hedkveep
+    contentColumnType: text
+    fieldGroup: null
+    handle: linkText
+    instructions: null
+    name: 'Link Text'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  10796049-3cf3-4547-9fdb-16401c6d9c20: # Dropdown Toggle
+    columnSuffix: xdsxoyil
+    contentColumnType: string
+    fieldGroup: null
+    handle: dropdownToggle
+    instructions: 'Select ''Yes'' if the Link will be a dropdown link.  ''No'' is the default.'
+    name: 'Dropdown Toggle'
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - 'Dropdown - No'
+            -
+              - value
+              - dropdownNo
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - 'Dropdown - Yes'
+            -
+              - value
+              - dropdownYes
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Checkboxes
+  47457785-60c3-4ebd-881d-6da1f22a67e6: # Link Destination
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: linkDestination
+    instructions: null
+    name: 'Link Destination'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Entry
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\entries\EntryCondition
+      selectionLabel: 'Select an entry'
+      showSiteMenu: true
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+handle: link
+name: Link
+sortOrder: 1

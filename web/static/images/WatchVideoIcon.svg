@@ -1,0 +1,5 @@
+<div id="NewRootRoot" className="flex flex-row w-6 items-start">
+  <div id="Ellipse" className="bg-[url(https://file.rendit.io/n/MkuOdjd256C8QQJ3n5Uq.svg)] bg-cover bg-50%_50% bg-blend-normal bg-no-repeat flex flex-row w-6 h-6 items-start pt-2 px-2">
+    <img src="https://file.rendit.io/n/LuHinXpIyS4EgSzUAb4w.svg" alt="Polygon" id="Polygon" className="mt-px w-2" />
+  </div>
+</div>

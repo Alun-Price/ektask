@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 50e3b3bb-a6f6-4870-a4d1-d3c78f1e48ba # Logo Strip
+handle: logoStrip
+instructions: 'To add logos to the logo strip'
+name: 'Logo Strip'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_logostrip}}'
+  maxBlocks: null
+  minBlocks: null
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix
