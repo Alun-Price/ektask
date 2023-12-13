@@ -1,0 +1,48 @@
+fieldLayouts:
+  0546bffc-2171-4fba-b106-b254be23087a:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 0c2f4fef-9935-4d4a-9677-0e4c034882a0 # Logo
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f898c8b9-a9bb-46c7-bb05-1f59c5a14483
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: da5f037a-2657-4158-a31e-5b982b3132e8 # Title Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 216d0612-9119-4462-8931-915630eb0f4d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d53c4d5f-7703-48da-be46-b99a157059e7 # Nav Links
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4a74b465-e269-4c82-99c0-274a71287249
+            userCondition: null
+            warning: null
+            width: 100
+        name: logo
+        uid: dd4b6b5c-6cfc-417e-add6-07e424927405
+        userCondition: null
+handle: branding
+name: Branding
+sortOrder: 4

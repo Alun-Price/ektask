@@ -1,4 +1,4 @@
-dateModified: 1702341770
+dateModified: 1702465487
 elementSources:
   craft\elements\Asset:
     -
@@ -37,6 +37,7 @@ fs:
 meta:
   __names__:
     00ac0806-61fb-4aef-9a81-8e3e9426032d: 'Solution Card Title' # Solution Card Title
+    0c2f4fef-9935-4d4a-9677-0e4c034882a0: Logo # Logo
     02aea2db-7a51-4c6f-a146-c2123960fe5d: Navigation # Navigation
     5e783436-9213-4fd9-acc2-4703d88a20dd: 'Hero Subtext' # Hero Subtext
     12dae174-ac60-45df-8001-7bd40dedce57: 'Solutions Global' # Solutions Global
@@ -62,6 +63,8 @@ meta:
     bb14322e-9cc4-403f-84de-57fc9605c618: 'Solutions Link ' # Solutions Link 
     c1b53ef8-2c51-438c-a97f-b3e76e9b7bd5: 'Logo Icon' # Logo Icon
     c4a611b6-b197-454c-8b52-9a6b973cfd35: 'Solution Main Subheading' # Solution Main Subheading
+    c4fc1131-0ef6-450b-8aaf-3b49b261f51d: Branding # Branding
+    cc30cb85-e110-4537-a81d-7ec100c1efa0: Branding # Branding
     d53c4d5f-7703-48da-be46-b99a157059e7: 'Nav Links' # Nav Links
     da5f037a-2657-4158-a31e-5b982b3132e8: 'Title Text' # Title Text
     e0e3d4d6-eddc-4575-9c1e-b489f201a904: logostripmatrix # logostripmatrix

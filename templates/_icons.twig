@@ -1,0 +1,23 @@
+<section class="w-full border logo_strip h-52 md:flex">
+        <div class="icon-block">
+            <div class="container mx-auto mt-10 text-sm font-bold leading-6 text-center text-primaryblack-950">Trusted by organisations globally</div>
+        </div>
+        <div class="grid grid-cols-2 gap-4 md:grid-cols-3">
+
+            {# {% for logos in logoStrip.logostripmatrix.all() %} 
+                {% set image = logos.logostripmatrix.one() %}      
+                    {% if image |length %}
+                        <div>
+                            <img class="h-auto max-w-full rounded-lg" src="{{ image.getUrl('medium') }}" alt="{{ image.title }}" />
+                        </div>    
+                {% endif %}      
+            {% endfor %} #}
+            
+                {% set logo = branding.logo.one() %}      
+                    {% if logo |length %}
+                        <div>
+                            <img class="h-auto max-w-full rounded-lg" src="{{ logo.getUrl('medium') }}" alt="{{ logo.title }}" />
+                        </div>    
+                {% endif %}      
+        </div>
+    </section>
