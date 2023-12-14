@@ -14,8 +14,8 @@
     
 </head>
 <body>
-    <header class="relative items-center justify-center h-screen lg:flex lg:justify-between lg:items-center lg:px-3 md:py-3 md:w-full">
-        <nav class="flex items-center justify-between px-4 py-3 mt-4 lg:p-0 shrink-0">
+    <header class="relative items-center justify-center lg:flex lg:justify-between lg:items-center lg:px-3 md:py-3 md:w-full">
+        <nav class="flex items-center justify-between px-4 py-3 mt-4 lg:p-0">
             <div class="flex items-center"> 
                 <a class="mr-6" href="{{ siteUrl }}">
                     <img src="{{ siteUrl }}static/images/LogoMobile.svg">
@@ -61,7 +61,7 @@
 
     {# HERO SECTION #}
     <section class="Hero">
-        <div class="container overflow-hidden md:flex">
+        <div class="container md:flex">
             {# Content Section - Hero #}
             <div class="p-4 md:w-6/12 lg:w-1/2 ">
                 <h1 class="mb-4 font-sans text-[45px] leading-[55px]
@@ -82,11 +82,9 @@
                 </div>
             </div>
              {# Image Section - Hero #}
-            <div class="justify-center hidden h-full mt-6 align-center lg:flex lg:items-center md:grow md:flex md:align-top">
-                <svg class="hidden" width="375" height="439" viewBox="0 0 375 439" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="171.82" cy="219.202" r="218.102" stroke="#CBCBCB" stroke-width="1.53233" stroke-linecap="round" stroke-dasharray="0.51 10.22"/>
-                </svg>
-                <img class="md:w-5/12 lg:w-1/2 lg:h-full" <img src="{{ siteUrl }}static/images/hero.webp">
+            <div class="justify-center h-full align-center lg:flex lg:items-center md:flex">
+                <img class="hidden md:block" <img src="{{ siteUrl }}static/images/mdHero.svg">
+                <img class="md:hidden lg:hidden xl:hidden" <img src="{{ siteUrl }}static/images/smHero.svg">
             </div>
         </div>
     </section>
@@ -121,7 +119,7 @@
         <div class="container bg-white">
              {# Image Section - Solutions #}
             <div class="lg:flex lg:items-center">
-                <img class="object-cover h-auto mx-auto lg:w-1/2 lg:h-full" <img src="{{ siteUrl }}static/images/heroimage.webp">
+                <img class="object-cover h-auto mx-auto lg:hidden xl:hidden md:hidden lg:w-1/2 lg:h-full" <img src="{{ siteUrl }}static/images/heroimage.webp">
             </div>
             <div class="p-4 text-center lg:w-1/2">
                 <h1 class="mb-4 font-sans text-[28px] leading-[34px]
@@ -201,17 +199,29 @@
                         <a href="#" class="text-[17px] leading-[30px] font-bold text-primaryorange-400  hover:text-primaryorange-600 underline">All Case Studies</a>
                     </div>
                 </div>
-                <figure class="relative flex items-center justify-center">
-                    <img class="rounded-t-lg " src="{{ siteUrl }}static/images/healthcare.png" alt="Image depicting Healthcare where a nurse smiles at an elderly patient">
-                    <figcaption class="md:w-[480px] md:h-[246px] bg-[#F9F4EE] rounded-tl-[20px] rounded-br-[40px] absolute right-12 -bottom-11 p-10 z-10">
-                        <blockquote class="text-xl italic font-semibold text-gray-900">
-                            <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8.92486 11.2917V20H0V13.125C0 9.40278 0.493256 6.70833 1.47977 5.04167C2.77457 2.81944 4.82466 1.13889 7.63006 0L9.66474 2.91667C7.96917 3.55556 6.72062 4.51389 5.91908 5.79167C5.11753 7.04167 4.67052 8.875 4.57803 11.2917H8.92486ZM23.2601 11.2917V20H14.3353V13.125C14.3353 9.40278 14.8285 6.70833 15.815 5.04167C17.1098 2.81944 19.1599 1.13889 21.9653 0L24 2.91667C22.3044 3.55556 21.0559 4.51389 20.2543 5.79167C19.4528 7.04167 19.0058 8.875 18.9133 11.2917H23.2601Z" fill="#F26839"/>
+                <figure>
+                    <img class="hidden rounded-t-lg md:block" src="{{ siteUrl }}static/images/healthcare.png" alt="Image depicting Healthcare where a nurse smiles at an elderly patient">
+                    <img class="mt-6 rounded-t-lg md:hidden lg:hidden xl:hidden " src="{{ siteUrl }}static/images/healthcareMobile.svg" alt="A person wearing surgical gloves washes them in a sink>
+
+                    <figcaption class="w-[335px] h-[233px] md:w-[480px] md:h-[246px] bg-[#F9F4EE] md:rounded-tl-[20px] md:rounded-br-[40px] md:right-12 md:-bottom-11 md:p-10 md:z-10 p-5">
+                        
+                    <blockquote class="bg-[#F9F4EE] text-[20px] font-semibold text-left flex justify-end text-gray-900">
+                    
+                            <svg class="float-left"width="128" height="125" viewBox="0 0 28 25" fill="none" 
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.9622 8.54796V14.6864H0.671143V9.84026C0.671143 7.2165 1.01883 5.31721 1.71422 4.14239C2.62691 2.57596 4.07201 1.39135 6.0495 0.588562L7.48373 2.6445C6.28854 3.09484 5.40845 3.77036 4.84345 4.67106C4.27845 5.55217 3.96335 6.84447 3.89816 8.54796H6.9622ZM17.067 8.54796V14.6864H10.7759V9.84026C10.7759 7.2165 11.1236 5.31721 11.819 4.14239C12.7317 2.57596 14.1768 1.39135 16.1543 0.588562L17.5885 2.6445C16.3933 3.09484 15.5132 3.77036 14.9482 4.67106C14.3832 5.55217 14.0682 6.84447 14.003 8.54796H17.067Z" fill="#F26839"/>
                             </svg>
-                            <p class="text-primaryblack-950 md:leading-[34px] text-2xl md:mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum porro iure ipsa nesciunt.</p>
-                        </blockquote>
-                        <cite class="flex font-bold text-primaryblack-950 text-base leading-[22px]">John Smith</cite>
-                        <cite class="font-normal text-pgrey-400 text-sm leading-[22px]">Head of Training, NHS</cite>
+
+                            <p class="text-primaryblack-950 leading-[26.79px] md:leading-[34px] ml-2 text-xl mt-10 md:mb-4">Lorem ipsum dolor sit amet consectet sum dolor sit amet consectetur, adipiscing elit.</p>
+                        <div class="hidden md:block">
+                            <cite class="flex font-bold text-primaryblack-950 text-base leading-[22px]">John Smith</cite>
+                            <cite class="hidden md:block font-normal text-pgrey-400 text-sm leading-[22px]">Head of Training, NHS</cite>
+                        </div>
+                        <div class="flex p-4 md:hidden lg:hidden xl:hidden">
+                            <cite class="flex justify-start font-bold text-primaryblack-950 text-base leading-[22px]">Paul McGurk</cite>
+                            <cite class="flex font-normal justify-start text-pgrey-400 text-sm leading-[22px] text-left">Head of Training, NHS</cite>
+                        </div>
+                    </blockquote>
                     </figcaption>
                 </figure>
         </div>
