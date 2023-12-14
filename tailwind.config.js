@@ -65,7 +65,7 @@ module.exports = {
         arrowDownIcon: ['url("../images/dropdown-arrow.svg")'],
       },
       fontFamily: {
-        sans: ['"Open Sans"'],
+        sans: ['"Open Sans", sans-serif'],
       },
     },
   },
