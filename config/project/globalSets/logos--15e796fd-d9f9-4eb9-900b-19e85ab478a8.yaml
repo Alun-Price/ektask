@@ -19,6 +19,6 @@ fieldLayouts:
         name: 'Logo Strip Matrix'
         uid: 432cc3e9-7370-4d51-88cb-bdea8867074a
         userCondition: null
-handle: logoStrip
-name: 'Logo Strip'
+handle: logos
+name: Logos
 sortOrder: 2

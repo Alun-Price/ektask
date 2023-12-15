@@ -1,6 +1,6 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: c4fc1131-0ef6-450b-8aaf-3b49b261f51d # Branding
+fieldGroup: 50e3b3bb-a6f6-4870-a4d1-d3c78f1e48ba # Logo Strip
 handle: logo
 instructions: 'A logo for the Logo Strip'
 name: Logo
@@ -16,8 +16,8 @@ settings:
   defaultUploadLocationSubpath: null
   localizeRelations: false
   maintainHierarchy: false
-  maxRelations: 1
-  minRelations: null
+  maxRelations: 9
+  minRelations: 1
   previewMode: full
   restrictFiles: true
   restrictLocation: true

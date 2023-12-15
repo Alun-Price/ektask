@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9850c415fd9028f1697f0c42da99537d",
+    "content-hash": "3f9f6ecc88d9befc6880a5c8f4a0fa40",
     "packages": [
         {
             "name": "carlcs/craft-redactorcustomstyles",
@@ -4563,11 +4563,11 @@
         },
         {
             "name": "verbb/image-resizer",
-            "version": "3.0.8",
+            "version": "3.0.9",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/image-resizer/zipball/67471d302bcd79fc8d968acbe6bf055690388b96",
-                "reference": "67471d302bcd79fc8d968acbe6bf055690388b96",
+                "url": "https://api.github.com/repos/verbb/image-resizer/zipball/2c45c310a25e5820aead3e07741f97a9b9b4fc15",
+                "reference": "2c45c310a25e5820aead3e07741f97a9b9b4fc15",
                 "shasum": ""
             },
             "require": {
@@ -4614,7 +4614,7 @@
                 "docs": "https://github.com/verbb/image-resizer",
                 "rss": "https://github.com/verbb/image-resizer/commits/v2.atom"
             },
-            "time": "2023-10-09T22:20:31+00:00"
+            "time": "2023-12-14T03:17:17+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
