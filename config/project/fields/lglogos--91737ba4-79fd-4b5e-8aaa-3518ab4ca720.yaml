@@ -1,26 +1,25 @@
-columnSuffix: null
+columnSuffix: ccjnzayz
 contentColumnType: string
 fieldGroup: 50e3b3bb-a6f6-4870-a4d1-d3c78f1e48ba # Logo Strip
-handle: logo
-instructions: 'A logo for the Logo Strip'
-name: Logo
+handle: lglogos
+instructions: 'Add logos to add to the lg media width (up to 8 max)'
+name: lgLogos
 searchable: false
 settings:
   allowSelfRelations: false
   allowSubfolders: false
   allowUploads: true
-  allowedKinds:
-    - image
+  allowedKinds: null
   branchLimit: null
   defaultUploadLocationSource: 'volume:bb0e0fd9-19d2-405c-a25b-72cf038c254e' # Images
   defaultUploadLocationSubpath: null
   localizeRelations: false
   maintainHierarchy: false
-  maxRelations: 9
-  minRelations: 1
+  maxRelations: 8
+  minRelations: 4
   previewMode: full
-  restrictFiles: true
-  restrictLocation: true
+  restrictFiles: false
+  restrictLocation: false
   restrictedDefaultUploadSubpath: null
   restrictedLocationSource: 'volume:bb0e0fd9-19d2-405c-a25b-72cf038c254e' # Images
   restrictedLocationSubpath: null
@@ -39,10 +38,11 @@ settings:
   showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
-  sources: '*'
+  sources:
+    - 'volume:bb0e0fd9-19d2-405c-a25b-72cf038c254e' # Images
   targetSiteId: null
   validateRelatedElements: false
-  viewMode: large
+  viewMode: list
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Assets

@@ -1,4 +1,4 @@
-dateModified: 1702624778
+dateModified: 1702642625
 elementSources:
   craft\elements\Asset:
     -
@@ -37,7 +37,8 @@ fs:
 meta:
   __names__:
     00ac0806-61fb-4aef-9a81-8e3e9426032d: 'Solution Card Title' # Solution Card Title
-    0c2f4fef-9935-4d4a-9677-0e4c034882a0: Logo # Logo
+    0c2f4fef-9935-4d4a-9677-0e4c034882a0: 'SM Logo' # SM Logo
+    0d78a984-a68b-444d-a25a-377d5df9a4a4: xlLogos # xlLogos
     02aea2db-7a51-4c6f-a146-c2123960fe5d: Navigation # Navigation
     5e783436-9213-4fd9-acc2-4703d88a20dd: 'Hero Subtext' # Hero Subtext
     12dae174-ac60-45df-8001-7bd40dedce57: 'Solutions Global' # Solutions Global
@@ -52,21 +53,20 @@ meta:
     3192af92-0e16-402a-bc85-8ec22b259c0b: 'Link Text' # Link Text
     4076ab59-327c-42ee-99c4-826bfedf430e: Hero # Hero
     8200bbfd-113b-4164-b60a-f5a5a1c15c32: ektask # ektask
+    91737ba4-79fd-4b5e-8aaa-3518ab4ca720: lgLogos # lgLogos
     10796049-3cf3-4547-9fdb-16401c6d9c20: 'Dropdown Toggle' # Dropdown Toggle
     47457785-60c3-4ebd-881d-6da1f22a67e6: 'Link Destination' # Link Destination
-    61282942-49f6-443d-a5e0-8d927401ede5: 'Logo Strip' # Logo Strip
     80446766-2d4f-4863-977e-956559c32f3e: Navigation # Navigation
     a1229ca4-4e29-414a-9c33-b4da21c7cb37: 'Solution Card Bulletpoint Text' # Solution Card Bulletpoint Text
     b073904f-64d9-4bb5-84ba-e15c5e35f456: 'Home Page' # Home Page
     b6198944-67af-47f1-b642-0de35fb2a97a: 'Solution Card Color' # Solution Card Color
     bb0e0fd9-19d2-405c-a25b-72cf038c254e: Images # Images
     bb14322e-9cc4-403f-84de-57fc9605c618: 'Solutions Link ' # Solutions Link 
-    c1b53ef8-2c51-438c-a97f-b3e76e9b7bd5: 'Logo Icon' # Logo Icon
     c4a611b6-b197-454c-8b52-9a6b973cfd35: 'Solution Main Subheading' # Solution Main Subheading
     c4fc1131-0ef6-450b-8aaf-3b49b261f51d: Branding # Branding
+    c30ece48-e6fe-445e-9a69-f624ddc44989: mdLogos # mdLogos
     d53c4d5f-7703-48da-be46-b99a157059e7: 'Nav Links' # Nav Links
     da5f037a-2657-4158-a31e-5b982b3132e8: 'Title Text' # Title Text
-    e0e3d4d6-eddc-4575-9c1e-b489f201a904: logostripmatrix # logostripmatrix
     e73abdd2-5b3e-400a-8017-810ba4c6c13b: ektask # ektask
     ecbbd1fb-b93d-4af2-8c8f-9efedfb15e8c: Link # Link
     f78e604d-3198-45dd-815a-fa0bc67bb1f4: 'Solutions Card Subheading' # Solutions Card Subheading

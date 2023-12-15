@@ -5,6 +5,108 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            elementCondition: null
+            fieldUid: 0c2f4fef-9935-4d4a-9677-0e4c034882a0 # SM Logo
+            instructions: 'Add logos for the sm logo strip (3 at one time!!)'
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 838aa4b1-5291-4a8b-a689-05b8d24bebd6
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Logo SM'
+        uid: 1f39eaaf-7f9c-4053-b1dd-311f4c39ac02
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: c30ece48-e6fe-445e-9a69-f624ddc44989 # mdLogos
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 22183d49-c786-4fc5-9cf5-8950fa5bf76c
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Logo MD'
+        uid: 888b9df6-c9fb-412a-b7be-59eea34de030
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 91737ba4-79fd-4b5e-8aaa-3518ab4ca720 # lgLogos
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 65eb38c3-3eb0-4ec0-bb61-37b12ed7d159
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Logo LG'
+        uid: 83b4b164-1fd9-46f5-95e4-03bd5a9ecc9c
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 0d78a984-a68b-444d-a25a-377d5df9a4a4 # xlLogos
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1636b7ea-6ee0-489d-952c-336f098a85cd
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Logos XL'
+        uid: eac34405-9909-44e0-910c-924741043317
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: da5f037a-2657-4158-a31e-5b982b3132e8 # Title Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 04e5c6f8-fb80-42eb-9345-5d2523f51f80
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 5e783436-9213-4fd9-acc2-4703d88a20dd # Hero Subtext
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9d33372b-b389-437e-a2de-5b647f5f0f06
+            userCondition: null
+            warning: null
+            width: 100
+        name: Hero
+        uid: 210d611b-667c-4d6a-ad94-c978465ae69b
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
             autocapitalize: true
             autocomplete: false
             autocorrect: true
@@ -31,6 +133,12 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+        name: Content
+        uid: 8fca0acb-dd63-4436-8081-de833c915885
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
           -
             elementCondition: null
             fieldUid: f900aa5e-c80c-4d73-876a-d45c0708f0c5 # Solution Main Title
@@ -57,33 +165,105 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 0c2f4fef-9935-4d4a-9677-0e4c034882a0 # Logo
+            fieldUid: b6198944-67af-47f1-b642-0de35fb2a97a # Solution Card Color
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 838aa4b1-5291-4a8b-a689-05b8d24bebd6
+            uid: d94a7fb5-4761-4a73-9e75-3d58fad127f2
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: 61282942-49f6-443d-a5e0-8d927401ede5 # Logo Strip
+            fieldUid: a1229ca4-4e29-414a-9c33-b4da21c7cb37 # Solution Card Bulletpoint Text
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: f4a6a091-3346-4962-8e60-d1a4d72bfd1a
+            uid: 65d90125-631a-473c-ab0a-64c3a8692a33
             userCondition: null
             warning: null
             width: 100
-        name: Content
-        uid: 8fca0acb-dd63-4436-8081-de833c915885
+          -
+            elementCondition: null
+            fieldUid: 40d0aff4-a577-4811-8a14-be151bd4f63e # Solution Card Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4a2f7cd2-dec0-4170-a646-7109262fc9b9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 00ac0806-61fb-4aef-9a81-8e3e9426032d # Solution Card Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0fa25309-0fe5-4079-a301-a7e8861ff464
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 699d7cd3-b9ff-4a6f-867d-ea7c7b3120b6 # Solutions Button Color
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 076c1dd4-3f16-4a3c-b3c3-3eaad6813405
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 22e9315c-4dfc-4b95-97ee-a0dbe6e3620f # Solutions Button Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a574c890-ccba-4006-89bb-5aea31b53653
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f78e604d-3198-45dd-815a-fa0bc67bb1f4 # Solutions Card Subheading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9f6b3828-23bd-4eb2-9872-8ddab0b7afd8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: bb14322e-9cc4-403f-84de-57fc9605c618 # Solutions Link 
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8e553cea-74f5-4618-9e19-aec97bedcc50
+            userCondition: null
+            warning: null
+            width: 100
+        name: Solutions
+        uid: d26388b1-35be-4eaa-8ee3-a7026a35b928
         userCondition: null
 handle: homePage
-hasTitleField: false
+hasTitleField: true
 name: 'Home Page'
 section: 555e190a-6d35-423b-89be-d0e492f5bc58 # Home Page
 showStatusField: true

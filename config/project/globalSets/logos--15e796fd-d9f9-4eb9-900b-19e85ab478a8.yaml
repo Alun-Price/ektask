@@ -6,7 +6,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 61282942-49f6-443d-a5e0-8d927401ede5 # Logo Strip
+            fieldUid: 61282942-49f6-443d-a5e0-8d927401ede5
             instructions: null
             label: null
             required: false

@@ -93,41 +93,212 @@
     </section>
     
     {# ICON GRID SECTION #}
-    <section class="w-full logo_strip h-52 md:flex">
+    <section class="w-full h-52">
         <div class="icon-block">
             <div class="container mx-auto mt-10 text-sm font-bold leading-6 text-center text-primaryblack-950">Trusted by organisations globally</div>
         </div>
-        <div class="grid gap-1 grid-row-1 md:gap-3">
-            {% set icons = entry.logo.all %}
-
-            <div class="grid grid-cols-3 overflow-hidden grid-nowrap">
-                {% for icon in icons %}
-                    <div class="p-4">
-                        <img src="{{ icon.url }}" alt="{{ icon.title }}">
-                    </div>
+        <div class="grid gap-1 md:gap-3 grid-row-1 auto-rows-fr">
+            {% set smicons = entry.smlogos.limit(10).asArray().all() %}
+            
+            <div class="grid grid-cols-3 overflow-hidden md:grid-cols-7 lg:grid-cols-8 xl:grid-cols-9 justify-items-center">
+                {% for smicon in smicons %}
+                   
+                   {{ smicon.title }}
+                {% endfor %}
+            </div>    
+        </div>
+        <div class="grid gap-1 md:gap-3 grid-row-1 auto-rows-fr">
+            {% set mdicons = entry.mdlogos.limit(3).all() %}
+            
+            <div class="grid grid-cols-3 overflow-hidden md:grid-cols-7 lg:grid-cols-8 xl:grid-cols-9 justify-items-center">
+                {% for mdicon in mdicons %}
+                   <div class="hidden md:block">
+                    {{ mdicon.title }}
+                   </div>
                 {% endfor %}
             </div>    
         </div>
     </section>
+        
+        
+{#             
+            {% set mdicons = entry.mdlogos.limit(7).all() %}
+            
+                {% for mdicon in mdicons %}
+                    <div class="p-6 md:block sm:hiddden lg:hidden xl:hidden">
+                        <img src="{{ mdicon.url }}" alt="{{ mdicon.title }}">
+                    </div>
+                {% endfor %}
+           
+           
+            {% set lgicons = entry.lglogos.limit(8).all() %}
+
+                {% for lgicon in lgicons %}
+                    <div class="p-4 md:hidden sm:hiddden lg:block xl:hidden">
+                        <img src="{{ lgicon.url }}" alt="{{ lgicon.title }}">
+                    </div>
+                {% endfor %}
+            
+
+            {% set xlicons = entry.xllogos.limit(9).all() %}
+
+                {% for xlicon in xlicons %}
+                    <div class="p-4 md:hidden sm:hiddden lg:hidden xl:block">
+                        <img src="{{ xlicon.url }}" alt="{{ xlicon.title }}">
+                    </div>
+                {% endfor %} #}
 
     {# SOLUTIONS SECTION #}
-    <section class="solutions">
-        <div class="container bg-white">
-             {# Image Section - Solutions #}
-            <div class="lg:flex lg:items-center">
-                <img class="object-cover h-auto mx-auto lg:hidden xl:hidden md:hidden lg:w-1/2 lg:h-full" <img src="{{ siteUrl }}static/images/heroimage.webp">
-            </div>
+    <section class="solutions1">
+        <div class="container mx-auto mb-8">
             <div class="p-4 text-center lg:w-1/2">
-                <h1 class="mb-4 font-sans text-[28px] leading-[34px]
-                font-bold">Learning solutions that <br> <span class="font-bold text-primaryorange-400">deliver results</span></h1>
-                <p class="text-[#474747] mb-4 text-base font-normal tracking-wide">Whatever your learning and development goals are , we have the solution to achieve them. </p>
+                <h1 class="mb-4 md:mx-auto font-sans text-[28px] leading-[34px]
+                font-bold md:text-[36px] md:w-[550px] md:leading-[44px] lg:text-[48px] lg:leading-[60px]">Learning solutions that <span class="font-bold text-primaryorange-400">deliver results</span></h1>
+                <p class="text-[#474747] w-11/12  md:mx-auto md:w-[540px] md:text-lg mb-4 text-base font-normal tracking-wide">Whatever your learning and development goals are, we have the solution to achieve them. </p>
+            </div>
+            <div class="container relative w-11/12 mx-auto rounded-lg h-[645px] bg-floralwhite">
+                <div class="mx-4">
+                    {# Image Section - Solutions #}
+                    <div class="mt-6 lg:flex lg:items-center">
+                        <img class="object-cover h-auto mx-auto lg:hidden xl:hidden md:hidden lg:w-1/2 lg:h-full" <img src="{{ siteUrl }}static/images/solutions1.svg">
+                    </div>
+                </div>
+                {# Content Section - Solutions #}
+                <div class="mx-4">
+                    <h3 class="font-bold text-[24px] leading-[38px] mb-2"> Learning Content</h3>
+                    <p class="text-[16px] leading-[26px] font-normal">Lorem ipsum dolor sit amet conse ctetur adipiscg elit nisl, lobortis montes senectus facilisis taciti.</p>
+                    <div class="tickbox section">
+                        <div class="flex items-center py-1 mt-4 spaces-x-2 md:mx-auto md:w-9/12 group">   
+                            <svg width="26" height="26" class="flex-shrink-0" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="13" cy="13" r="13" fill="#FFFFFF"/>
+                            <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
+                            </svg>
+                            <span class="px-2 text-[16px] leading-[26px] font-normal md:text-[16px] md:leading-[34px]">Lorem ipsum dolor sit amet</span>
+                        </div>
+                        <div class="flex items-center py-1 mt-1 spaces-x-2 md:mx-auto md:w-9/12 group">   
+                            <svg width="26" height="26" class="flex-shrink-0" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="13" cy="13" r="13" fill="#FFFFFF"/>
+                            <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
+                            </svg>
+                            <span class="px-2 text-[16px] leading-[26px] font-normal md:text-[16px] md:leading-[34px]">Consectetur adipiscing elit ultrices</span>
+                        </div>
+                        
+                        
+                        <div class="flex items-center py-1 mt-1 mb-8 spaces-x-2 md:mx-auto md:w-9/12 group">   
+                            <svg width="26" height="26" class="flex-shrink-0" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="13" cy="13" r="13" fill="#FFFFFF"/>
+                            <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
+                            </svg>
+                            <span class="px-2 text-[16px] leading-[26px] font-normal md:text-[16px] md:leading-[34px]">Lorem ipsum dolor sit amet</span>
+                        </div>
+                    </div>
+                </div>
                 {#  Button - Solutions #}
-                <button type="button" class="text-white bg-primaryorange-400 hover:bg-primaryorange-600 font-bold text-center text-[17px] px-5 mr-3 rounded-[35px] w-[152px] h-[52px]">Learn More</button>
-                <div class="inline-block">
-                    <a href="#" class="text-[17px] leading-[30px] font-bold text-primaryblack-700 hover:text-primaryblack-300 underline">Request a Demo</a>
+                <div class="absolute h-[72px] bottom-0 flex items-center justify-center mb-2 md:w-8/12 md:mt-6 md:mb-8">
+                    <button type="button" class="text-white bg-primaryorange-400 hover:bg-primaryorange-600 font-bold text-center text-[17px] px-5 py-3 mr-3 rounded-[35px] translate-x-4">Learn More</button>
+                    <div class="inline-block translate-x-4">
+                        <a href="#" class="text-[17px] leading-[30px] font-bold text-primaryblack-950  hover:text-primaryorange-600 underline ">Request a Demo</a>
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
+    <section class="solutions2">
+        <div class="container mx-auto mb-8">
+            <div class="container relative w-11/12 mx-auto mb-8 border rounded-lg h-[645px]  bg-thistle">
+                <div class="mx-4">
+                    {# Image Section - Solutions #}
+                    <div class="mt-6 lg:flex lg:items-center">
+                        <img class="object-cover h-auto mx-auto lg:hidden xl:hidden md:hidden lg:w-1/2 lg:h-full" <img src="{{ siteUrl }}static/images/solutions2.svg">
+                    </div>
+                </div>
+                {# Content Section - Solutions #}
+                <div class="mx-4">
+                    <h3 class="font-bold text-[24px] mb-2 leading-[38px]"> Learning Content</h3>
+                    <p class="text-[16px] leading-[26px] font-normal">Lorem ipsum dolor sit amet conse ctetur adipiscg elit nisl, lobortis montes senectus facilisis taciti.</p>
+                    <div class="tickbox section">
+                        <div class="flex items-center py-1 mt-4 spaces-x-2 md:mx-auto md:w-9/12 group">   
+                            <svg width="26" height="26" class="flex-shrink-0" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="13" cy="13" r="13" fill="#FFFFFF"/>
+                            <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
+                            </svg>
+                            <span class="px-2 text-[16px] leading-[26px] font-normal md:text-[16px] md:leading-[34px]">Lorem ipsum dolor sit amet
+                            </span>
+                        </div>
+                        <div class="flex items-center py-1 mt-1 spaces-x-2 md:mx-auto md:w-9/12 group">   
+                            <svg width="26" height="26" class="flex-shrink-0" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="13" cy="13" r="13" fill="#FFFFFF"/>
+                            <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
+                            </svg>
+                            <span class="px-2 text-[16px] leading-[26px] font-normal md:text-[16px] md:leading-[34px]">Consectetur adipiscing elit ultrices</span>
+                        </div>
+                        <div class="flex items-center py-1 mt-1 mb-8 spaces-x-2 md:mx-auto md:w-9/12 group">   
+                            <svg width="26" height="26" class="flex-shrink-0" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="13" cy="13" r="13" fill="#FFFFFF"/>
+                            <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
+                            </svg>
+                            <span class="px-2 text-[16px] leading-[26px] font-normal md:text-[16px] md:leading-[34px]">Lorem ipsum dolor sit amet
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                {#  Button - Solutions #}
+                 <div class="absolute h-[72px] bottom-0 flex items-center justify-center mb-2 md:w-8/12 md:mt-6 md:mb-8">
+                    <button type="button" class="text-white bg-primaryorange-400 hover:bg-primaryorange-600 font-bold text-center text-[17px] px-5 py-3 mr-3 rounded-[35px] translate-x-4">Learn More</button>
+                    <div class="inline-block translate-x-4">
+                        <a href="#" class="text-[17px] leading-[30px] font-bold text-primaryblack-950  hover:text-primaryorange-600 underline ">Request a Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="solutions3">
+           <div class="container relative w-11/12 mx-auto mb-8 h-[645px] rounded-lg bg-mintgreen">
+                <div class="mx-4">
+                    {# Image Section - Solutions #}
+                    <div class="mt-10 lg:flex lg:items-center">
+                        <img class="object-cover h-auto mx-auto lg:hidden xl:hidden md:hidden lg:w-1/2 lg:h-full" <img src="{{ siteUrl }}static/images/solutions3.svg">
+                    </div>
+                </div>
+                {# Content Section - Solutions #}
+                <div class="mx-4">
+                    <h3 class="font-bold text-[24px] leading-[38px]"> Learning Content</h3>
+                    <p class="text-[16px] leading-[26px] font-normal">Lorem ipsum dolor sit amet conse ctetur adipiscg elit nisl, lobortis montes senectus facilisis taciti.</p>
+                    <div class="tickbox section">
+                        <div class="flex items-center py-1 mt-4 spaces-x-2 md:mx-auto md:w-9/12 group">   
+                            <svg width="26" height="26" class="flex-shrink-0" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="13" cy="13" r="13" fill="#FFFFFF"/>
+                            <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
+                            </svg>
+                            <span class="px-2 text-[16px] leading-[26px] font-normal md:text-[16px] md:leading-[34px]">Lorem ipsum dolor sit amet</span>
+                        </div>
+                        <div class="flex items-center py-1 mt-1 spaces-x-2 md:mx-auto md:w-9/12 group">   
+                            <svg width="26" height="26" class="flex-shrink-0" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="13" cy="13" r="13" fill="#FFFFFF"/>
+                            <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
+                            </svg>
+                            <span class="px-2 text-[16px] leading-[26px] font-normal md:text-[16px] md:leading-[34px]">Consectetur adipiscing elit ultrices/span>
+                        </div>
+                        
+                        
+                        <div class="flex items-center py-1 mt-1 mb-8 spaces-x-2 md:mx-auto md:w-9/12 group">   
+                            <svg width="26" height="26" class="flex-shrink-0" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="13" cy="13" r="13" fill="#FFFFFF"/>
+                            <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
+                            </svg>
+                            <span class="px-2 text-[16px] leading-[26px] font-normal md:text-[16px] md:leading-[34px]">Lorem ipsum dolor sit amet</span>
+                        </div>
+                    </div>
+                </div>
+                {#  Button - Solutions #}
+                <div class="absolute h-[72px] bottom-0 flex items-center justify-center mb-2 md:w-8/12 md:mt-6 md:mb-8">
+                    <button type="button" class="text-white bg-primaryorange-400 hover:bg-primaryorange-600 font-bold text-center text-[17px] px-5 py-3 mr-3 rounded-[35px] translate-x-4">Learn More</button>
+                    <div class="inline-block translate-x-4">
+                        <a href="#" class="text-[17px] leading-[30px] font-bold text-primaryblack-950  hover:text-primaryorange-600 underline ">Request a Demo</a>
+                    </div>
+                </div>
+            </div>
     </section>
     
     {# EXPERTISE-TABS SECTION #}
