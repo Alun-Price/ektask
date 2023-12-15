@@ -1,7 +1,8 @@
 {
   "name": "ektask",
   "scripts": {
-    "run": "npx tailwindcss  --output web/static/css/styles.css --watch"
+    "build:css": "postcss src/css/styles.css -o web/css/styles.css",
+    "watch:css": "postcss src/css/styles.css -o web/css/styles.css --watch"
   },
   "devDependencies": {
     "tailwindcss": "^3.3.6"

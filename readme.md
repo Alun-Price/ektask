@@ -96,3 +96,66 @@ module.exports = {
   plugins: [],
 };
 ```
+
+**Typography**
+
+The site's typography was updated based on the following suggested styles ..
+
+| Mobile           | MD               | LG               | XL               |
+| ---------------- | ---------------- | ---------------- | ---------------- |
+| h1 - 45px        | h1 - 54px        | h1 - 90px        | h1 - 96px        |
+| h2 - 28px        | h2 - 36px        | h2 - 42px        | h2 - 48px        |
+| h3 - 24px        | h3 - 28px        | h3 - 38px        | h3 - 42px        |
+| -                | h4 - 26px        | h4 - 36px        | h4 - 36px        |
+| -                | h5 - 24px        | h5 - 32px        | -                |
+| -                | h6 - 22px        | h6 - 30px        | h6 - 30px        |
+| p - large - 18px | p - large - 18px | p - large - 22px | p - large - 22px |
+| p - 16px         | p - 16px         | p - 20px         | p - 20px         |
+| Spacing 40px     | Spacing 64px     | Spacing 125px    | Spacing 150px    |
+
+The following was added to the tailwind base css layer;
+
+```js
+
+@layer base {
+  h1,
+  .h1 {
+    @apply text-[45px] font-bold leading-[55px] md:text-[54px] lg:text-[90px] lg:leading-[100px] xl:text-[96px] xl:leading-[108px];
+  }
+
+  h2,
+  .h2 {
+    @apply text-[28px] leading-[34px] font-bold md:text-[36px] md:leading-[44px] lg:text-[42px] lg:leading-[60px] xl:text-[48px];
+  }
+
+  h3,
+  .h3 {
+    @apply text-[24px] leading-[38px] font-bold md:text-[28px] md:leading-[44px] lg:text-[38px] xl:text-[42px];
+  }
+
+  h4,
+  .h4 {
+    @apply md:text-[26px] font-bold lg:text-[36px] xl:text-[36px];
+  }
+
+  h5,
+  .h5 {
+    @apply md:text-[24px] font-bold md:leading-[34px] lg:text-[32px] lg:leading-[42px] xl:text-[36px] xl:leading-[46px];
+  }
+
+  h6,
+  .h6 {
+    @apply md:text-[22px] font-bold lg:text-[30px] xl:text-[30px];
+  }
+
+  plarge,
+  .plarge {
+    @apply text-[18px] font-normal leading-[30px] md:text-[18px] md:leading-[28px] lg:text-[22px] lg:leading-[36px] xl:text-[22px];
+  }
+
+  p,
+  .p {
+    @apply text-[16px] leading-[26px] md:text-[16px] lg:text-[20px] lg:leading-[34px] xl:text-[20px];
+  }
+}
+```

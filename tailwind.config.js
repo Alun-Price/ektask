@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   mode: 'jit',
-  content: ['templates/**/*.twig'],
+  content: ['./templates/**/*.twig', './src/css/**/*.css'],
   theme: {
     screens: {
       sm: '376px',
@@ -9,6 +9,7 @@ module.exports = {
       lg: '1441px',
       xl: '1921px',
     },
+    purge: ['./web/**/*.twig', './src/css/**/*.css'],
     extend: {
       colors: {
         primaryorange: {
