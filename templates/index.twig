@@ -14,34 +14,18 @@
     
 </head>
 <body>
-    <header class="relative items-center justify-center lg:flex lg:justify-between lg:items-center lg:px-3 md:py-3 md:w-full">
-        <nav class="flex items-center justify-between px-4 py-3 mt-4 lg:p-0">
-            <div class="flex items-center"> 
-                <a class="mr-6" href="{{ siteUrl }}">
+    <header class="relative md:py-3 md:w-full">
+        <nav class="flex items-center justify-between px-4 py-3 mt-4 lg:flex-row">
+                {# Logo Images #}
+                <a class="mr-6 lg:hidden" href="{{ siteUrl }}">
                     <img src="{{ siteUrl }}static/images/LogoMobile.svg">
                 </a>
-                {# Nav Links#}
-                <div class="items-center justify-between hidden lg:flex">
-                    <ul class="flex flex-col p-4 mt-4 font-medium lg:p-0 lg:flex-row lg:mt-0 lg:space-x-4">
-                        {% for link in navigation.navLinks.all() %}
-                        {% set destination = link.linkDestination.one() %}
-                        {% set dropdown = link.dropdownToggle %}
-                        {% if dropdown.contains('dropdownYes') %}
-                        
-                        <li>
-                            <a href="{{ destination.url}}" class="relative text-sm font-bold after:content-arrowDownIcon after:inline-block after:ml-1"> {{ link.linkText   }}</a>   
-                        </li>
-                        {% else %}
-                        <li>
-                            <a href="{{ destination.url}}" class="inline-block text-sm font-bold"> {{ link.linkText   }}</a>
-                        </li>
-                        {% endif %}
-                        {% endfor %}
-                    </ul>
-                </div>
+                <a class="hidden mr-6 md:hidden lg:block" href="{{ siteUrl }}">
+                    <img src="{{ siteUrl }}static/images/lgnavLogo.svg">
+                </a>
                 {#Mobile Hamburger #} 
-                <div class="absolute flex items-center right-6 lg:hidden">
-                    <div>
+                <div class="absolute items-center block right-6 lg:hidden">
+                    <button>
                         <svg class="fill-current text-primaryorange-400 hover:text-primaryorange-600" xmlns="http://www.w3.org/2000/svg" width="24" height="15" viewBox="0 0 24 15" fill="none">
                         <g id="Menu Icon">
                             <line id="Line 3" y1="1" x2="24" y2="1" stroke="#F26839" stroke-width="2"></line>
@@ -49,23 +33,41 @@
                             <line id="Line 5" y1="14" x2="24" y2="14" stroke="#F26839" stroke-width="2"></line>
                         </g>
                         </svg>
-                    </div>
+                    </button>
+                </div>
+                {# Nav Links#}
+                <div class="justify-between flex-grow hidden w-full lg:flex lg:flex-row lg:items-center lg:w-auto">
+                    <ul class="mt-4 lg:mb-4 lg:ml-8 lg:flex-grow font-medium align-top  lg:font-bold lg:text-[18px] lg:leading-[25.41px] xl:leading-[24.51px]">
+                        {% for link in navigation.navLinks.all() %}
+                        {% set destination = link.linkDestination.one() %}
+                        {% set dropdown = link.dropdownToggle %}
+                        {% if dropdown.contains('dropdownYes') %}
+                        
+                        <li class="inline-block mr-[85px] ">
+                            <a href="{{ destination.url}}" class="relative text-sm font-bold after:content-arrowDownIcon after:inline-block after:mr-4 hover:text-primaryorange-400"> {{ link.linkText   }}</a>   
+                        </li>
+                        {% else %}
+                        <li class="inline-block mr-[85px] ">
+                            <a href="{{ destination.url}}" class="inline-block text-sm font-bold hover:text-primaryorange-400"> {{ link.linkText   }}</a>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
                 </div>
                 {# CTA Button #}
-                <div class="absolute items-center hidden space-x-6 lg:flex lg:right-6">    
-                    <a href="#" type="button" class="text-white text-sm bg-primaryorange-400 hover:bg-primaryorange-600 font-bold leading-[30px] px-3 py-1 text-center rounded-[35px] align-baseline hidden lg:block">Request a Demo</a>
+                <div class="absolute items-center hidden lg:flex lg:right-6">    
+                    <a href="#" type="button" class="text-white text-sm bg-primaryorange-400 hover:bg-primaryorange-600 align-text-top font-bold leading-[30px] px-3 py-1 lg:py-[10px] lg:px-[28px] text-center rounded-[35px] hidden lg:block">Request a Demo</a>
                 </div>
-            </div>
         </nav>
     </header>
 
     {# HERO SECTION #}
     <section class="Hero">
-        <div class="container md:flex">
+        <div class="container justify-center mx-auto md:flex md:mb-8 md:mt-8 lg:justify-evenly">
             {# Content Section - Hero #}
-            <div class="p-4 md:w-6/12 lg:w-1/2 ">
-                <h1 class="mb-4 font-sans font-semibold tracking-wide">Learning <br>that <span class="font-bold text-primaryorange-400">works</span></h1>
-                <p class="text-[#474747] mb-8 text-base font-normal tracking-wide">We deliver engaging learning experiences that work for your goals and learners</p>
+            <div class="p-4 md:w-6/12 lg:w-5/12 xl:w-4/12 lg:mt-24 xl:mt-[234px] xl:mr-[700px]">
+                <h1 class="mb-4 font-sans text-[45px] font-bold leading-[55px] lg:text-[90px] lg:leading-[100px] xl:text-[96px] xl:leading-[108px] ">Learning <br>that <span class="font-bold text-primaryorange-400">works</span></h1>
+                <p class="text-pgrey-400 mb-8 text-base font-normal leading-[28px] lg:text-[22px] lg:leading-[36px] md:w-10/12 lg:w-11/12 lg:font-normal">We deliver engaging learning experiences that work for your goals and learners</p>
                 <div class="flex items-center">
                     {#  Button - Hero #}
                     <button type="button" class="text-white bg-primaryorange-400 hover:bg-primaryorange-600 font-bold text-center text-[17px] px-5 mr-3 rounded-[35px] w-[152px] h-[52px]">What We Do</button>
@@ -73,23 +75,25 @@
                     <a href="#" class="flex items-center py-1 group">   
                         <svg class=" group-hover:text-primaryorange-600" width="28" height="29" viewBox="0 0 28 29" fill="none" 
                             xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="14" cy="14.4719" r="13" stroke="#F26839" stroke-width="2"/>
-                            <path d="M12 18.8252L18.0674 14.9719L12 11.1186V18.8252Z" fill="#F26839" stroke="#F26839"/>
+                            <circle cx="14" cy="14.4719" r="13" stroke="#F26839" stroke-width="2" fill="#F26839"/>
+                            <path d="M12 18.8252L18.0674 14.9719L12 11.1186V18.8252Z" fill="#FFF" stroke="#FFF"/>
                             </svg>
                         <span class="px-2 text-[17px] font-bold text-primaryorange-400 group-hover:text-primaryorange-600">Watch Video</span>
                     </a>
                 </div>
             </div>
              {# Image Section - Hero #}
-            <div class="justify-center h-full align-center lg:flex lg:items-center md:flex">
-                <img class="hidden md:block" <img src="{{ siteUrl }}static/images/mdHero.svg">
+            <div class="justify-center h-full align-center lg:flex lg:items-center md:flex ">
                 <img class="md:hidden lg:hidden xl:hidden" <img src="{{ siteUrl }}static/images/smHero.svg">
+                <img class="hidden md:block lg:hidden xl:hidden" <img src="{{ siteUrl }}static/images/mdHero.svg">
+                <img class="md:hidden sm:hidden lg:block xl:hidden" <img src="{{ siteUrl }}static/images/lgHero.svg">
+                <img class="absolute xl:top-[20px] xl:right-[50px] md:hidden sm:hidden lg:hidden xl:block" <img src="{{ siteUrl }}static/images/xlHero.svg">
             </div>
         </div>
     </section>
     
     {# ICON GRID SECTION #}
-    <section class="w-full border logo_strip h-52 md:flex">
+    <section class="w-full logo_strip h-52 md:flex">
         <div class="icon-block">
             <div class="container mx-auto mt-10 text-sm font-bold leading-6 text-center text-primaryblack-950">Trusted by organisations globally</div>
         </div>
@@ -228,11 +232,13 @@
 
     {# WHY AURION #}
     <section class="why_aurion">
-        <div class="container px-5 py-10 mx-auto mt-20 text-center">
-            <h2 class="font-bold text-[28px] leading-[34px] md:text-[36px] md:leading-[44px]">Why Aurion Learning?</h2>
-            <p class="mt-4 text-base md:w-8/12 mx-auto md:text-center font-normal leading-[26px]">With decades of learning, technical and creative experience, we will work with you to deliver the best learning experience that works for your learners.</p> 
-            <div class="grid grid-cols-3 grid-rows-3 gap-2 mb-4 lg:grid-cols-3 why__list ">
-                <div class="grid place-items-center">
+        <div class="container px-5 py-10 mx-auto mt-20 text-center lg:w-8/12">
+            <div class="lg:mb-6">
+                <h2 class="font-bold text-[28px] leading-[34px] md:text-[36px] md:leading-[44px]">Why Aurion Learning?</h2>
+                <p class="mt-4 text-base md:w-8/12 mx-auto md:text-center font-normal leading-[26px]">With decades of learning, technical and creative experience, we will work with you to deliver the best learning experience that works for your learners.</p> 
+            </div>
+            <div class="grid grid-cols-3 grid-rows-3 gap-2 mb-4 lg:mx-auto lg:grid-cols-3 lg:grid-rows-3 lg:justify-self-center lg:align-self-center lg:justify-center lg:align-center ">
+                <div class="grid place-items-center lg:order-1">
                     <svg class="hidden col-span-1 md:block" width="102" height="97" viewBox="0 0 102 97" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M22.3446 33.1876C22.1587 33.857 22.5429 34.5388 23.1999 34.7371C23.8694 34.9231 24.5512 34.5388 24.7495 33.8818C24.9354 33.2124 24.5512 32.5306 23.8941 32.3322C23.2247 32.1339 22.5429 32.5182 22.3446 33.1876Z" fill="#E1C44E"/>
                     <path d="M52.009 8.51907C51.823 9.18848 52.2073 9.87028 52.8643 10.0686C53.5337 10.2546 54.2155 9.87028 54.4139 9.21327C54.5998 8.54387 54.2155 7.86207 53.5585 7.66372C52.8891 7.46538 52.1949 7.84967 52.009 8.51907Z" fill="#E1C44E"/>
@@ -389,13 +395,13 @@
                     </svg>
                 </div>
 
-                    <div class="col-span-2 col-start-2 why__details">
-                        <h4 class="font-bold text-[18px] leading-[27px] mt-6 text-left">Sector Knowledge</h4>
-                        <p class="mt-2 text-base font-normal leading-[26px] md:w-11/12 text-left">We work with a wide range of organisations across the public, private and charity sectors.</p> 
+                    <div class="col-span-2 col-start-2 lg:w-[300px] lg:col-span-1 lg:row-span-2 lg:order-4 ">
+                        <h4 class="font-bold text-[18px] lg:text-[20px] lg:leading-[34px] leading-[27px] mt-6 text-left lg:text-center">Sector Knowledge</h4>
+                        <p class="mt-2 text-base font-normal leading-[26px] md:w-11/12 text-left lg:text-center lg:mb-6">We work with a wide range of organisations across the public, private and charity sectors.</p> 
                     </div>
                 
-                <div class="grid place-items-center">
-                    <svg class="hidden col-span-1 row-start-4 md:block" width="100" height="86" viewBox="0 0 100 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <div class="grid place-items-center lg:order-2">
+                    <svg class="hidden col-span-1 row-start-4 lg:row-start-1 lg:row-span1 md:block" width="100" height="86" viewBox="0 0 100 86" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g opacity="0.2">
                     <path d="M8.4899 67.2384C8.7781 67.4305 9.0663 67.6227 9.36651 67.8028L38.3309 51.3152C38.3309 50.9669 38.3188 50.6187 38.2948 50.2825L8.4899 67.2384Z" fill="#E2C64F"/>
                     <path d="M11.9243 69.0636C12.2965 69.2198 12.6688 69.3518 13.0531 69.4719L37.8865 55.326C37.9706 54.9297 38.0426 54.5454 38.1027 54.1492L11.9243 69.0636Z" fill="#E2C64F"/>
@@ -522,13 +528,13 @@
                     </svg>
                 </div>
 
-                    <div class="col-span-2 why__details">
-                        <h4 class="font-bold text-[18px] leading-[27px] mt-6 text-left">Established in Marketplace</h4>
-                        <p class="mt-2 text-base font-normal leading-[26px] md:w-11/12  text-left">Over 20 years of experience delivering high-quality learning solutions that work.</p> 
+                    <div class="col-span-2 lg:order-5 lg:w-[300px] lg:col-span-1 lg:row-span-2">
+                        <h4 class="font-bold text-[18px] leading-[27px] lg:text-[20px] lg:leading-[34px] mt-6 text-left lg:text-center">Established in Marketplace</h4>
+                        <p class="mt-2 text-base font-normal leading-[26px] md:w-11/12  text-left lg:text-center">Over 20 years of experience delivering high-quality learning solutions that work.</p> 
                     </div>
 
-                <div class="grid place-items-center ">
-                    <svg class="hidden col-span-1 row-start-3 md:block" width="93" height="90" viewBox="0 0 93 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <div class="grid place-items-center lg:order-3">
+                    <svg class="hidden col-span-1 row-start-3 md:block lg:row-start-1 lg:row-span-1" width="93" height="90" viewBox="0 0 93 90" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M52.6067 1.5943L62.2438 11.2313L39.2018 34.2733L48.2402 43.3117L57.2668 34.285L68.3593 45.3776L82.363 31.3622L92 40.9993V1.5943H52.6067Z" fill="#F26839" stroke="#333333" stroke-width="1.68973" stroke-miterlimit="10"/>
                     <path d="M55.6009 45.7843L49.4174 51.9678L55.6009 58.1514L61.7844 51.9678L55.6009 45.7843Z" fill="#E2C64F" stroke="#333333" stroke-width="1.68973" stroke-miterlimit="10"/>
                     <path d="M33.2524 40.5219L27.1768 46.5975L33.2524 52.6732L39.328 46.5975L33.2524 40.5219Z" fill="#E2C64F" stroke="#333333" stroke-width="1.68973" stroke-miterlimit="10"/>
@@ -543,9 +549,9 @@
                     <path d="M33.9901 20.3049L17.8149 36.4801" stroke="#333333" stroke-width="1.68973" stroke-miterlimit="10"/>
                     </svg>
                 </div>
-                    <div class="col-span-2 why__details">
-                        <h4 class="font-bold text-[18px] leading-[27px] mt-2 text-left">Proven Track Record</h4>
-                        <p class="mt-2 text-base font-normal leading-[26px] text-left">Award-winning expertise in recognition of our quality, creativity and impact.</p> 
+                    <div class="col-span-2 lg:order-6 lg:w-[300px] lg:col-span-1 lg:row-span-2">
+                        <h4 class="font-bold text-[18px] leading-[27px] lg:text-[20px] lg:leading-[34px] mt-6 text-left lg:text-center">Proven Track Record</h4>
+                        <p class="mt-2 text-base font-normal leading-[26px] text-left lg:text-center">Award-winning expertise in recognition of our quality, creativity and impact.</p> 
                     </div>
             </div>
         </div>
