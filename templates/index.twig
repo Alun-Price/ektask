@@ -63,9 +63,9 @@
 
     {# HERO SECTION #}
     <section class="Hero">
-        <div class="container justify-center mx-auto md:flex md:mb-8 md:mt-8 lg:justify-evenly">
+        <div class="container relative justify-center mx-auto md:flex md:mb-8 md:mt-8 xl:mb-[180px] xl:-ml-[5px] lg:justify-evenly">
             {# Content Section - Hero #}
-            <div class="p-4 md:w-6/12 lg:w-5/12 xl:w-4/12 lg:mt-24 xl:mt-[234px] xl:mr-[700px]">
+            <div class="p-4 md:w-6/12 lg:w-5/12 xl:w-4/12 lg:mt-24 xl:mt-[200px] xl:mr-[700px]  ">
                 <h1 class="mb-4 font-sans text-[45px] font-bold leading-[55px] lg:text-[90px] lg:leading-[100px] xl:text-[96px] xl:leading-[108px] ">Learning <br>that <span class="font-bold text-primaryorange-400">works</span></h1>
                 <p class="text-pgrey-400 mb-8 text-base font-normal leading-[28px] lg:text-[22px] lg:leading-[36px] md:w-10/12 lg:w-11/12 lg:font-normal">We deliver engaging learning experiences that work for your goals and learners</p>
                 <div class="flex items-center">
@@ -83,70 +83,69 @@
                 </div>
             </div>
              {# Image Section - Hero #}
-            <div class="justify-center h-full align-center lg:flex lg:items-center md:flex ">
-                <img class="md:hidden lg:hidden xl:hidden" <img src="{{ siteUrl }}static/images/smHero.svg">
-                <img class="hidden md:block lg:hidden xl:hidden" <img src="{{ siteUrl }}static/images/mdHero.svg">
+            <div class="top-0 bottom-0 left-0 right-0 z-10 justify-center h-full align-center lg:flex lg:items-center md:flex">
+                <img class="hidden sm:block md:hidden lg:hidden xl:hidden" <img src="{{ siteUrl }}static/images/smHero.svg">
+                <img class="sm:hidden md:block lg:hidden xl:hidden" <img src="{{ siteUrl }}static/images/mdHero.svg">
                 <img class="md:hidden sm:hidden lg:block xl:hidden" <img src="{{ siteUrl }}static/images/lgHero.svg">
-                <img class="absolute xl:top-[20px] xl:right-[50px] md:hidden sm:hidden lg:hidden xl:block" <img src="{{ siteUrl }}static/images/xlHero.svg">
+                <img class="absolute xl:-top-[150px] xl:right-[1%] md:hidden sm:hidden lg:hidden xl:block" <img src="{{ siteUrl }}static/images/xlHero.svg">
             </div>
         </div>
     </section>
     
     {# ICON GRID SECTION #}
-    <section class="w-full h-52">
+    <section class="w-full md:mb-3 lg:mb-6 xl:mb-8">
         <div class="icon-block">
-            <div class="container mx-auto mt-10 text-sm font-bold leading-6 text-center text-primaryblack-950">Trusted by organisations globally</div>
+            <div class="container relative mx-auto md:mt-10 xl:mt-[100px] mb-3 text-sm font-bold leading-6 text-center text-primaryblack-950">Trusted by organisations globally</div>
         </div>
-        <div class="grid gap-1 md:gap-3 grid-row-1 auto-rows-fr">
-            {% set smicons = entry.smlogos.limit(10).asArray().all() %}
-            
-            <div class="grid grid-cols-3 overflow-hidden md:grid-cols-7 lg:grid-cols-8 xl:grid-cols-9 justify-items-center">
-                {% for smicon in smicons %}
-                   
-                   {{ smicon.title }}
-                {% endfor %}
-            </div>    
+        <div class="flex justify-between">
+        {% set logos = entry.logos %}
+        {% set siteSettings = craft.globalSets.handle('sitesettings') %}
+    
+        {# Determine the number of logos based on breakpoints #}
+        {% set mobileLogos = logos.limit(3) %}
+        {# Output logos for each breakpoint #}
+        {% for logo in mobileLogos %}
+        <div class="w-1/3 p-4 ml-4 md:hidden">
+            {# Output SVG from Asset field #}
+            <img src="{{ logo.getUrl() }}" alt="{{ logo.title }}"  class="w-full h-auto">
         </div>
-        <div class="grid gap-1 md:gap-3 grid-row-1 auto-rows-fr">
-            {% set mdicons = entry.mdlogos.limit(3).all() %}
-            
-            <div class="grid grid-cols-3 overflow-hidden md:grid-cols-7 lg:grid-cols-8 xl:grid-cols-9 justify-items-center">
-                {% for mdicon in mdicons %}
-                   <div class="hidden md:block">
-                    {{ mdicon.title }}
-                   </div>
-                {% endfor %}
-            </div>    
+        {% endfor %}
+        
+        {# Add similar loops for md, lg, and xl breakpoints #}
+
+        {# md Logos loop #}
+        {% set mdLogos = logos.limit(7) %}
+        {# Output logos for each breakpoint #}
+        {% for mdlogo in mdLogos %}
+        <div class="p-4 w-1/7 sm:hidden md:block lg:hidden xl:hidden">
+            {# Output SVG from Asset field #}
+            <img src="{{ mdlogo.getUrl() }}" alt="{{ mdlogo.title }}" class="w-full h-auto">
         </div>
+        {% endfor %}
+
+        {# lg Logos loop #}
+        {% set lgLogos = logos.limit(8) %}
+        {# Output logos for each breakpoint #}
+        {% for lglogo in lgLogos %}
+        <div class="p-8 w-1/8 sm:hidden md:hidden lg:block xl:hidden">
+            {# Output SVG from Asset field #}
+            <img src="{{ lglogo.getUrl() }}" alt="{{ lglogo.title }}" class="w-full h-auto">
+        </div>
+        {% endfor %}
+
+
+        {% set xlLogos = logos.limit(9) %}
+        {# Output logos for each breakpoint #}
+        {% for xllogo in xlLogos %}
+        <div class="p-12 w-1/9 sm:hidden md:hidden lg:hidden xl:block">
+            {# Output SVG from Asset field #}
+            <img src="{{ xllogo.getUrl() }}" alt="{{ xllogo.title }}" class="w-full h-auto">
+        </div>
+        {% endfor %}
+
+        
+    </div>
     </section>
-        
-        
-{#             
-            {% set mdicons = entry.mdlogos.limit(7).all() %}
-            
-                {% for mdicon in mdicons %}
-                    <div class="p-6 md:block sm:hiddden lg:hidden xl:hidden">
-                        <img src="{{ mdicon.url }}" alt="{{ mdicon.title }}">
-                    </div>
-                {% endfor %}
-           
-           
-            {% set lgicons = entry.lglogos.limit(8).all() %}
-
-                {% for lgicon in lgicons %}
-                    <div class="p-4 md:hidden sm:hiddden lg:block xl:hidden">
-                        <img src="{{ lgicon.url }}" alt="{{ lgicon.title }}">
-                    </div>
-                {% endfor %}
-            
-
-            {% set xlicons = entry.xllogos.limit(9).all() %}
-
-                {% for xlicon in xlicons %}
-                    <div class="p-4 md:hidden sm:hiddden lg:hidden xl:block">
-                        <img src="{{ xlicon.url }}" alt="{{ xlicon.title }}">
-                    </div>
-                {% endfor %} #}
 
     {# SOLUTIONS SECTION #}
     <section class="solutions1">
@@ -310,7 +309,7 @@
             </div>
             <div class="mb-4 md:mx-auto md:w-11/12">
                 <ul class="flex flex-wrap mx-auto -mb-px text-sm font-bold text-center" id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
-                    <li class="me-2" role="presentation">
+                    <li class="me-2 active-tab" role="presentation">
                         <button class="inline-block p-4 border-b-2 hover:border-primaryorange-400 hover:text-primaryorange-400  border-[#B1B1B1]/50 border-rounded-t-lg md:text-[22px] md:leading-[32px]" id="healthcare-tab" data-tabs-target="#healthcare" type="button" role="tab" aria-controls="healthcare" aria-selected="false">Healthcare</button>
                     </li>
                     <li class="me-2" role="presentation">
@@ -324,21 +323,24 @@
                     </li>
                 </ul>
             </div>
-            <div id="default-tab-content">
-                <div class="p-4 text-left rounded-lg" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <div id="default-tab-content" class="panels">
+                <article class="p-4 text-left rounded-lg active-panel" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                     <h5 class="md:font-bold md:w-10/12 text-primaryblack-950 md:text-[24px] md:leading-[34px] md:mx-auto">Enhance healthcare training with immersive, interactive learning experiences</h5>
                     <p class="text-pgrey-400 font-normal md:text-[16px] md:leading-[34px] md:mx-auto md:w-10/12 md:mt-4">Improve knowledge retention and patient outcomes.</p>
-                </div>
-                <div class="hidden p-4 rounded-lg bg-gray-50 md:mx-auto" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                </article>
+                <article class="hidden p-4 rounded-lg bg-gray-50 md:mx-auto" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                    <h5 class="md:font-bold md:w-10/12 text-primaryblack-950 md:text-[24px] md:leading-[34px] md:mx-auto">Panel 2 - Public Sector</h5>
                     <p class="text-sm text-gray-500 md:mx-auto">This is some placeholder content the <strong class="font-medium text-gray-800">Dashboard tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
-                </div>
-                <div class="hidden p-4 rounded-lg bg-gray-50" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+                </article>
+                <article class="hidden p-4 rounded-lg bg-gray-50" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+                    <h5 class="md:font-bold md:w-10/12 text-primaryblack-950 md:text-[24px] md:leading-[34px] md:mx-auto">Panel 3 - Commercial</h5>
                     <p class="text-sm text-gray-500 md:mx-auto">This is some placeholder content the <strong class="font-medium text-gray-800">Settings tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
-                </div>
-                <div class="hidden p-4 rounded-lg bg-gray-50" id="contacts" role="tabpanel" aria-labelledby="contacts-tab">
+                </article>
+                <article class="hidden p-4 rounded-lg bg-gray-50" id="contacts" role="tabpanel" aria-labelledby="contacts-tab">
+                    <h5 class="md:font-bold md:w-10/12 text-primaryblack-950 md:text-[24px] md:leading-[34px] md:mx-auto">Panel 4 - Charity</h5>
                     <p class="text-sm text-gray-500">This is some placeholder content the <strong class="font-medium text-gray-800">Contacts tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
-                </div>
-            </div>
+                </article>
+            </div class="tickbox_items">
                 <div class="flex items-center py-1 md:mx-auto md:w-9/12 group">   
                     <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="13" cy="13" r="13" fill="#F9F4EE"/>
@@ -366,29 +368,31 @@
                         <a href="#" class="text-[17px] leading-[30px] font-bold text-primaryorange-400  hover:text-primaryorange-600 underline">All Case Studies</a>
                     </div>
                 </div>
-                <figure>
+                <figure class="relative">
                     <img class="hidden rounded-t-lg md:block" src="{{ siteUrl }}static/images/healthcare.png" alt="Image depicting Healthcare where a nurse smiles at an elderly patient">
                     <img class="mt-6 rounded-t-lg md:hidden lg:hidden xl:hidden " src="{{ siteUrl }}static/images/healthcareMobile.svg" alt="A person wearing surgical gloves washes them in a sink>
 
-                    <figcaption class="w-[335px] h-[233px] md:w-[480px] md:h-[246px] bg-[#F9F4EE] md:rounded-tl-[20px] md:rounded-br-[40px] md:right-12 md:-bottom-11 md:p-10 md:z-10 p-5">
+                    <figcaption class="relative md:absolute md:bottom-0 md:left-0  md:w-[480px] md:h-[246px] md:rounded-tl-[20px] md:rounded-br-[40px] md:p-10 p-5">
                         
-                    <blockquote class="bg-[#F9F4EE] text-[20px] font-semibold text-left flex justify-end text-gray-900">
+                        <blockquote class="relative bg-[#F9F4EE] text-[20px] w-[321px] h-[223px]  text-left text-gray-900 md:w-[370px]">
                     
-                            <svg class="float-left"width="128" height="125" viewBox="0 0 28 25" fill="none" 
+                            <svg class="absolute top-0 left-8 transform -translate-x-[24.67px]  translate-y-[21.59px]" width="30" height="30" viewBox="0 0 25 25" fill="none" 
                             xmlns="http://www.w3.org/2000/svg">
                             <path d="M6.9622 8.54796V14.6864H0.671143V9.84026C0.671143 7.2165 1.01883 5.31721 1.71422 4.14239C2.62691 2.57596 4.07201 1.39135 6.0495 0.588562L7.48373 2.6445C6.28854 3.09484 5.40845 3.77036 4.84345 4.67106C4.27845 5.55217 3.96335 6.84447 3.89816 8.54796H6.9622ZM17.067 8.54796V14.6864H10.7759V9.84026C10.7759 7.2165 11.1236 5.31721 11.819 4.14239C12.7317 2.57596 14.1768 1.39135 16.1543 0.588562L17.5885 2.6445C16.3933 3.09484 15.5132 3.77036 14.9482 4.67106C14.3832 5.55217 14.0682 6.84447 14.003 8.54796H17.067Z" fill="#F26839"/>
                             </svg>
 
-                            <p class="text-primaryblack-950 leading-[26.79px] md:leading-[34px] ml-2 text-xl mt-10 md:mb-4">Lorem ipsum dolor sit amet consectet sum dolor sit amet consectetur, adipiscing elit.</p>
-                        <div class="hidden md:block">
-                            <cite class="flex font-bold text-primaryblack-950 text-base leading-[22px]">John Smith</cite>
-                            <cite class="hidden md:block font-normal text-pgrey-400 text-sm leading-[22px]">Head of Training, NHS</cite>
-                        </div>
-                        <div class="flex p-4 md:hidden lg:hidden xl:hidden">
-                            <cite class="flex justify-start font-bold text-primaryblack-950 text-base leading-[22px]">Paul McGurk</cite>
-                            <cite class="flex font-normal justify-start text-pgrey-400 text-sm leading-[22px] text-left">Head of Training, NHS</cite>
-                        </div>
-                    </blockquote>
+                            <p class="text-primaryblack-950 w-[300.81px] inline-block h-[108px] text-left font-semibold leading-[26.79px] md:leading-[34px] ml-[34.28px] pr-[29.91px] text-xl mt-5 md:mb-4 md:flex">Lorem ipsum dolor sit amet consectet sum dolor sit amet consectetur, adipiscing elit.</p>
+                            <footer class="mt-2 text-sm">
+                                <div class=" md:block hidden w-[124px] h-[32px] mb-1 md:w-[165px] md:h-[303px]">
+                                    <strong class="md:block hidden font-bold text-primaryblack-950 text-base leading-[22px]">John Smith</strong>
+                                    <span class="hidden md:block font-normal text-pgrey-400 text-sm leading-[22px]">Head of Training, NHS</span>
+                                </div>
+                                <div class="block p-2 ml-6 md:hidden lg:hidden xl:hidden">
+                                    <strong class="text-left font-bold text-primaryblack-950 text-base leading-[22px]">Paul McGurk</strong>
+                                    <span class="flex font-normal text-pgrey-400 text-sm leading-[22px] text-left">Head of Training, NHS</span></p>
+                                </div>
+                            </footer>
+                        </blockquote>
                     </figcaption>
                 </figure>
         </div>

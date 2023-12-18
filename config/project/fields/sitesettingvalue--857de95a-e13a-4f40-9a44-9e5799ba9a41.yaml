@@ -1,0 +1,19 @@
+columnSuffix: moitatdy
+contentColumnType: text
+fieldGroup: 50e3b3bb-a6f6-4870-a4d1-d3c78f1e48ba # Logo Strip
+handle: sitesettingvalue
+instructions: 'This sets the values for site''s breakpoints'
+name: siteSettingValue
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: '0'
+  uiMode: enlarged
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

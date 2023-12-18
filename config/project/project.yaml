@@ -1,4 +1,4 @@
-dateModified: 1702642625
+dateModified: 1702873985
 elementSources:
   craft\elements\Asset:
     -
@@ -41,32 +41,43 @@ meta:
     0d78a984-a68b-444d-a25a-377d5df9a4a4: xlLogos # xlLogos
     02aea2db-7a51-4c6f-a146-c2123960fe5d: Navigation # Navigation
     5e783436-9213-4fd9-acc2-4703d88a20dd: 'Hero Subtext' # Hero Subtext
+    10e6b2d3-3d2a-4e64-8773-694575ef11dc: logo # logo
     12dae174-ac60-45df-8001-7bd40dedce57: 'Solutions Global' # Solutions Global
     15e796fd-d9f9-4eb9-900b-19e85ab478a8: Logos # Logos
     22e9315c-4dfc-4b95-97ee-a0dbe6e3620f: 'Solutions Button Text' # Solutions Button Text
     40d0aff4-a577-4811-8a14-be151bd4f63e: 'Solution Card Image' # Solution Card Image
     50e3b3bb-a6f6-4870-a4d1-d3c78f1e48ba: 'Logo Strip' # Logo Strip
+    59e57a03-e278-4bb5-8210-63db9ba1e126: 'Media Category' # Media Category
     78ed5f4b-44d7-4c0d-9fbf-5c4d2d909e05: Common # Common
     93d458fd-c496-457f-aa0e-f73f4c7ff0ea: Solutions # Solutions
+    94a78850-d37f-4f2e-9b70-88b0b065cea4: Logos # Logos
     555e190a-6d35-423b-89be-d0e492f5bc58: 'Home Page' # Home Page
     699d7cd3-b9ff-4a6f-867d-ea7c7b3120b6: 'Solutions Button Color' # Solutions Button Color
+    857de95a-e13a-4f40-9a44-9e5799ba9a41: siteSettingValue # siteSettingValue
     3192af92-0e16-402a-bc85-8ec22b259c0b: 'Link Text' # Link Text
     4076ab59-327c-42ee-99c4-826bfedf430e: Hero # Hero
     8200bbfd-113b-4164-b60a-f5a5a1c15c32: ektask # ektask
     91737ba4-79fd-4b5e-8aaa-3518ab4ca720: lgLogos # lgLogos
+    3166623a-4b35-47cc-8610-11d77e9297ac: logos # logos
     10796049-3cf3-4547-9fdb-16401c6d9c20: 'Dropdown Toggle' # Dropdown Toggle
     47457785-60c3-4ebd-881d-6da1f22a67e6: 'Link Destination' # Link Destination
     80446766-2d4f-4863-977e-956559c32f3e: Navigation # Navigation
     a1229ca4-4e29-414a-9c33-b4da21c7cb37: 'Solution Card Bulletpoint Text' # Solution Card Bulletpoint Text
+    a174712f-24fb-4518-be8e-91855ed728fc: siteSettingMatrix # siteSettingMatrix
     b073904f-64d9-4bb5-84ba-e15c5e35f456: 'Home Page' # Home Page
     b6198944-67af-47f1-b642-0de35fb2a97a: 'Solution Card Color' # Solution Card Color
     bb0e0fd9-19d2-405c-a25b-72cf038c254e: Images # Images
     bb14322e-9cc4-403f-84de-57fc9605c618: 'Solutions Link ' # Solutions Link 
     c4a611b6-b197-454c-8b52-9a6b973cfd35: 'Solution Main Subheading' # Solution Main Subheading
     c4fc1131-0ef6-450b-8aaf-3b49b261f51d: Branding # Branding
+    c8c33375-9ac9-4f5f-b042-0d15901bb571: 'Logo Strip' # Logo Strip
     c30ece48-e6fe-445e-9a69-f624ddc44989: mdLogos # mdLogos
+    c992b9be-2b80-4b18-80d5-6ed0cd2832df: siteSettings # siteSettings
+    d8f4c2b1-2495-4e1e-a4de-702ff262ef48: 'Breakpoint Value' # Breakpoint Value
     d53c4d5f-7703-48da-be46-b99a157059e7: 'Nav Links' # Nav Links
+    d65cc449-3e95-43c1-9395-17e42961a4e4: siteSettings # siteSettings
     da5f037a-2657-4158-a31e-5b982b3132e8: 'Title Text' # Title Text
+    e5dab856-d4d2-426c-a0b2-44a827603a2b: 'Breakpoint Title' # Breakpoint Title
     e73abdd2-5b3e-400a-8017-810ba4c6c13b: ektask # ektask
     ecbbd1fb-b93d-4af2-8c8f-9efedfb15e8c: Link # Link
     f78e604d-3198-45dd-815a-fa0bc67bb1f4: 'Solutions Card Subheading' # Solutions Card Subheading

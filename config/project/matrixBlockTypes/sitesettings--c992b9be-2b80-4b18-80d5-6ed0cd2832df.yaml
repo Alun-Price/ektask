@@ -1,0 +1,117 @@
+field: a174712f-24fb-4518-be8e-91855ed728fc # siteSettingMatrix
+fieldLayouts:
+  fc39938a-1779-4219-97eb-29ad6bb21c34:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: e5dab856-d4d2-426c-a0b2-44a827603a2b # Breakpoint Title
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c8298483-66dc-469e-b206-c75014bce445
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d8f4c2b1-2495-4e1e-a4de-702ff262ef48 # Breakpoint Value
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 461eb126-0536-4116-83f2-2b9d6b443747
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: c6087665-fed0-4702-af92-8600918098ee
+        userCondition: null
+fields:
+  d8f4c2b1-2495-4e1e-a4de-702ff262ef48: # Breakpoint Value
+    columnSuffix: ngourjwv
+    contentColumnType: integer(10)
+    fieldGroup: null
+    handle: breakpointValue
+    instructions: null
+    name: 'Breakpoint Value'
+    searchable: false
+    settings:
+      decimals: 0
+      defaultValue: null
+      max: null
+      min: null
+      prefix: 'Number of logos at given breakpoint'
+      previewCurrency: null
+      previewFormat: decimal
+      size: null
+      suffix: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Number
+  e5dab856-d4d2-426c-a0b2-44a827603a2b: # Breakpoint Title
+    columnSuffix: weumjuty
+    contentColumnType: string(16)
+    fieldGroup: null
+    handle: breakpointTitle
+    instructions: 'Choose from mobileBreakpoint, mdBreakpoint, lgBreakpoint and xlBreakpoint'
+    name: 'Breakpoint Title'
+    searchable: true
+    settings:
+      columnType: null
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - mobileBreakpoint
+            -
+              - value
+              - mobileBreakpoint
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - mdBreakpoint
+            -
+              - value
+              - mdBreakpoint
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - lgBreakpoint
+            -
+              - value
+              - lgBreakpoint
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - xlBreakpoint
+            -
+              - value
+              - xlBreakpoint
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+handle: sitesettings
+name: siteSettings
+sortOrder: 1

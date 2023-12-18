@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   mode: 'jit',
-  content: ['templates/**/*.twig'],
+  content: ['templates/**/*.twig', './web/index.php'],
   theme: {
     screens: {
       sm: '376px',

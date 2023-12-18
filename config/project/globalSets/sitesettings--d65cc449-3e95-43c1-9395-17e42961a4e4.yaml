@@ -1,0 +1,24 @@
+fieldLayouts:
+  3f448a3b-c2c8-40a9-8681-2e411e70bbff:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: a174712f-24fb-4518-be8e-91855ed728fc # siteSettingMatrix
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ff94705c-1059-4d68-80d7-f6f05e1fa95d
+            userCondition: null
+            warning: null
+            width: 100
+        name: siteSettings
+        uid: 4a22d1c4-bc9c-402e-9168-0580fcaa9641
+        userCondition: null
+handle: sitesettings
+name: siteSettings
+sortOrder: 5

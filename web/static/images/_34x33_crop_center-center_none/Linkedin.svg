@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="34px" height="33px" viewBox="0 0 91 90" fill="none">
+  <g id="Linkedin" filter="url(#filter0_d_0_52)">
+    <circle id="Oval" cx="45.6665" cy="33" r="20" stroke="#F2EAE0" stroke-width="2"></circle>
+    <path id="Linkedin_2" fill-rule="evenodd" clip-rule="evenodd" d="M41.6979 30.0779H38.7198V39.669H41.6979V30.0779ZM41.9414 27.0393C41.9414 26.0857 41.1665 25.3096 40.2144 25.3096C39.2567 25.3096 38.4873 26.0857 38.4873 27.0393C38.4873 27.9929 39.2567 28.769 40.2144 28.769C41.1665 28.769 41.9414 27.9929 41.9414 27.0393ZM46.4194 30.0773H43.5742V39.6685H46.5468V34.9228C46.5468 33.6754 46.7792 32.4613 48.3292 32.4613C49.857 32.4613 49.8736 33.8916 49.8736 35.006V39.6685H52.8461V34.4127C52.8461 31.8292 52.287 29.8445 49.2757 29.8445C47.8254 29.8445 46.8567 30.6373 46.4582 31.3913H46.4194V30.0773Z" fill="#333333"></path>
+  </g>
+  <defs>
+    <filter id="filter0_d_0_52" x="0.666504" y="0" width="90" height="90" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix>
+      <feOffset dy="12"></feOffset>
+      <feGaussianBlur stdDeviation="12"></feGaussianBlur>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"></feColorMatrix>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_52"></feBlend>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_52" result="shape"></feBlend>
+    </filter>
+  </defs>
+</svg>

@@ -6,24 +6,6 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 0c2f4fef-9935-4d4a-9677-0e4c034882a0 # SM Logo
-            instructions: 'Add logos for the sm logo strip (3 at one time!!)'
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 838aa4b1-5291-4a8b-a689-05b8d24bebd6
-            userCondition: null
-            warning: null
-            width: 100
-        name: 'Logo SM'
-        uid: 1f39eaaf-7f9c-4053-b1dd-311f4c39ac02
-        userCondition: null
-      -
-        elementCondition: null
-        elements:
-          -
-            elementCondition: null
             fieldUid: c30ece48-e6fe-445e-9a69-f624ddc44989 # mdLogos
             instructions: null
             label: null
@@ -36,42 +18,6 @@ fieldLayouts:
             width: 100
         name: 'Logo MD'
         uid: 888b9df6-c9fb-412a-b7be-59eea34de030
-        userCondition: null
-      -
-        elementCondition: null
-        elements:
-          -
-            elementCondition: null
-            fieldUid: 91737ba4-79fd-4b5e-8aaa-3518ab4ca720 # lgLogos
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 65eb38c3-3eb0-4ec0-bb61-37b12ed7d159
-            userCondition: null
-            warning: null
-            width: 100
-        name: 'Logo LG'
-        uid: 83b4b164-1fd9-46f5-95e4-03bd5a9ecc9c
-        userCondition: null
-      -
-        elementCondition: null
-        elements:
-          -
-            elementCondition: null
-            fieldUid: 0d78a984-a68b-444d-a25a-377d5df9a4a4 # xlLogos
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 1636b7ea-6ee0-489d-952c-336f098a85cd
-            userCondition: null
-            warning: null
-            width: 100
-        name: 'Logos XL'
-        uid: eac34405-9909-44e0-910c-924741043317
         userCondition: null
       -
         elementCondition: null
@@ -261,6 +207,24 @@ fieldLayouts:
             width: 100
         name: Solutions
         uid: d26388b1-35be-4eaa-8ee3-a7026a35b928
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 94a78850-d37f-4f2e-9b70-88b0b065cea4 # Logos
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 05cec254-7955-4a9b-b3f2-3f90f52bba45
+            userCondition: null
+            warning: null
+            width: 100
+        name: Logos
+        uid: 4e1220bc-2b1e-4ccc-9fc6-c2f1c1763f5b
         userCondition: null
 handle: homePage
 hasTitleField: true

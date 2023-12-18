@@ -1,0 +1,144 @@
+field: c8c33375-9ac9-4f5f-b042-0d15901bb571 # Logo Strip
+fieldLayouts:
+  0a80fa4c-d229-4095-a423-e12ac5177cf8:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 59e57a03-e278-4bb5-8210-63db9ba1e126 # Media Category
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e6a40062-02e6-49d5-8b37-bb04be45f379
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 10e6b2d3-3d2a-4e64-8773-694575ef11dc # logo
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 49171a32-01b4-4d19-aad2-003db60cc0e0
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 7567ac5a-4f68-41c9-a5b3-bd9b04c4a800
+        userCondition: null
+fields:
+  10e6b2d3-3d2a-4e64-8773-694575ef11dc: # logo
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: logo
+    instructions: 'Add a logo'
+    name: logo
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:bb0e0fd9-19d2-405c-a25b-72cf038c254e' # Images
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:bb0e0fd9-19d2-405c-a25b-72cf038c254e' # Images
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: 'Add a logo'
+      showSiteMenu: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  59e57a03-e278-4bb5-8210-63db9ba1e126: # Media Category
+    columnSuffix: jlecjhbq
+    contentColumnType: string
+    fieldGroup: null
+    handle: mediaCategory
+    instructions: 'Add a media category  to have the logo displayed in that category''s grid'
+    name: 'Media Category'
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - smMobile
+            -
+              - value
+              - smmobile
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - md
+            -
+              - value
+              - md
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - lg
+            -
+              - value
+              - lg
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - xl
+            -
+              - value
+              - xl
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Checkboxes
+handle: logos
+name: logos
+sortOrder: 1

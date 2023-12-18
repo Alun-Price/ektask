@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3f9f6ecc88d9befc6880a5c8f4a0fa40",
+    "content-hash": "56a8a303d8dd145ce00aadce2aba99b7",
     "packages": [
         {
             "name": "carlcs/craft-redactorcustomstyles",
@@ -573,11 +573,11 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "4.5.12",
+            "version": "4.5.13",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/d7ac8a6d9bac3a1adc2c538af17d9489f899c19e",
-                "reference": "d7ac8a6d9bac3a1adc2c538af17d9489f899c19e",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/c94af041eaca79540eac8ce4352e7d5737de6785",
+                "reference": "c94af041eaca79540eac8ce4352e7d5737de6785",
                 "shasum": ""
             },
             "require": {
@@ -665,7 +665,7 @@
                 "docs": "https://craftcms.com/docs/4.x/",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2023-12-12T17:06:10+00:00"
+            "time": "2023-12-15T19:23:31+00:00"
         },
         {
             "name": "craftcms/contact-form",
@@ -2342,11 +2342,11 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "1.24.4",
+            "version": "1.24.5",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/6bd0c26f3786cd9b7c359675cb789e35a8e07496",
-                "reference": "6bd0c26f3786cd9b7c359675cb789e35a8e07496",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/fedf211ff14ec8381c9bf5714e33a7a552dd1acc",
+                "reference": "fedf211ff14ec8381c9bf5714e33a7a552dd1acc",
                 "shasum": ""
             },
             "require": {
@@ -2364,7 +2364,7 @@
                 "MIT"
             ],
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
-            "time": "2023-11-26T18:29:22+00:00"
+            "time": "2023-12-16T09:33:33+00:00"
         },
         {
             "name": "pixelandtonic/imagine",

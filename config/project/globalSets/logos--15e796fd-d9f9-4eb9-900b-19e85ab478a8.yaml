@@ -6,13 +6,13 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 61282942-49f6-443d-a5e0-8d927401ede5
+            fieldUid: 857de95a-e13a-4f40-9a44-9e5799ba9a41 # siteSettingValue
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 76bd9fcf-340d-4960-81ec-e2c37d60cb77
+            uid: 8a4eaaa0-81c6-4004-bf82-10f11f1467a5
             userCondition: null
             warning: null
             width: 100
