@@ -1,12 +1,12 @@
-columnSuffix: tqfasffy
+columnSuffix: uaypaitv
 contentColumnType: char(7)
 fieldGroup: 93d458fd-c496-457f-aa0e-f73f4c7ff0ea # Solutions
-handle: solutionCardColor
-instructions: 'The background colour for the card'
-name: 'Solution Card Color'
+handle: solutionsCard2ButtonColor
+instructions: 'The colour for the CTA button on Solutions Card2'
+name: 'Solutions Card2 Button Color'
 searchable: false
 settings:
-  defaultColor: '#ffffff'
+  defaultColor: '#f26839'
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Color

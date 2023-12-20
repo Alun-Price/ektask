@@ -1,9 +1,9 @@
 columnSuffix: null
 contentColumnType: string
 fieldGroup: 93d458fd-c496-457f-aa0e-f73f4c7ff0ea # Solutions
-handle: solutionsLink
+handle: solutionsCard1Link
 instructions: 'Defines the link text and url on a solutions card'
-name: 'Solutions Link '
+name: 'Solutions Card1 Link'
 searchable: false
 settings:
   allowCustomText: true

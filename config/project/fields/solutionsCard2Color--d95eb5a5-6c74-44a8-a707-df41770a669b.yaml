@@ -1,12 +1,12 @@
-columnSuffix: tljzjosl
+columnSuffix: cwdehpwd
 contentColumnType: char(7)
 fieldGroup: 93d458fd-c496-457f-aa0e-f73f4c7ff0ea # Solutions
-handle: solutionsButtonColor
-instructions: 'Color of the Solutions CTA button'
-name: 'Solutions Button Color'
+handle: solutionsCard2Color
+instructions: 'Background colour for Solutions card 2'
+name: 'Solutions Card2 Color'
 searchable: false
 settings:
-  defaultColor: '#f26839'
+  defaultColor: '#ded1de'
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Color

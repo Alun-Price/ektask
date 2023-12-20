@@ -1,0 +1,19 @@
+columnSuffix: etglgxac
+contentColumnType: string(40)
+fieldGroup: 93d458fd-c496-457f-aa0e-f73f4c7ff0ea # Solutions
+handle: solutionsCard2ButtonText
+instructions: 'CTA Button text for Solutions Card2'
+name: 'Solutions Card2 Button Text'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: 10
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

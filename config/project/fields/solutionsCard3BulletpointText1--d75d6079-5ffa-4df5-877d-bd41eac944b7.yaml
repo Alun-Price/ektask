@@ -1,9 +1,9 @@
-columnSuffix: rogukdns
+columnSuffix: ayfcprwy
 contentColumnType: text
 fieldGroup: 93d458fd-c496-457f-aa0e-f73f4c7ff0ea # Solutions
-handle: solutionMainSubheading
+handle: solutionsCard3BulletpointText1
 instructions: null
-name: 'Solution Main Subheading'
+name: 'Solutions Card3 Bulletpoint Text1'
 searchable: false
 settings:
   availableTransforms: ''
@@ -15,10 +15,10 @@ settings:
   purifierConfig: null
   purifyHtml: true
   redactorConfig: null
-  removeEmptyTags: false
-  removeInlineStyles: false
-  removeNbsp: false
-  showHtmlButtonForNonAdmins: true
+  removeEmptyTags: true
+  removeInlineStyles: true
+  removeNbsp: true
+  showHtmlButtonForNonAdmins: false
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   uiMode: enlarged

@@ -1,9 +1,9 @@
 columnSuffix: null
 contentColumnType: string
 fieldGroup: 93d458fd-c496-457f-aa0e-f73f4c7ff0ea # Solutions
-handle: solutionCardImage
-instructions: 'This is the main image in the card section '
-name: 'Solution Card Image'
+handle: solutionsCard1Image
+instructions: 'Select an image for Solution Card 1'
+name: 'Solutions Card1 Image'
 searchable: false
 settings:
   allowSelfRelations: false
@@ -38,8 +38,7 @@ settings:
   showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
-  sources:
-    - 'volume:bb0e0fd9-19d2-405c-a25b-72cf038c254e' # Images
+  sources: '*'
   targetSiteId: null
   validateRelatedElements: false
   viewMode: list

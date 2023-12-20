@@ -1,0 +1,14 @@
+columnSuffix: kpewsiws
+contentColumnType: string(255)
+fieldGroup: 93d458fd-c496-457f-aa0e-f73f4c7ff0ea # Solutions
+handle: solutionsCard3Link
+instructions: 'Defines the link text and url on a solutions card'
+name: 'Solutions Card3 Link'
+searchable: false
+settings:
+  maxLength: 255
+  types:
+    - url
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url

@@ -1,9 +1,9 @@
-columnSuffix: gaxhuent
+columnSuffix: rogukdns
 contentColumnType: text
 fieldGroup: 93d458fd-c496-457f-aa0e-f73f4c7ff0ea # Solutions
-handle: solutionCardTitle
-instructions: 'Title for the Solution Card'
-name: 'Solution Card Title'
+handle: solutionsMainSubheading
+instructions: null
+name: 'Solutions Main Subheading'
 searchable: false
 settings:
   availableTransforms: ''

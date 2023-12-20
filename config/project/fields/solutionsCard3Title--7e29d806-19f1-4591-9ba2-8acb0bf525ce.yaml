@@ -1,0 +1,27 @@
+columnSuffix: shrdefdg
+contentColumnType: text
+fieldGroup: 93d458fd-c496-457f-aa0e-f73f4c7ff0ea # Solutions
+handle: solutionsCard3Title
+instructions: 'Title text for Solutions Card3'
+name: 'Solutions Card3 Title'
+searchable: false
+settings:
+  availableTransforms: ''
+  availableVolumes: '*'
+  columnType: text
+  configSelectionMode: choose
+  defaultTransform: ''
+  manualConfig: ''
+  purifierConfig: null
+  purifyHtml: true
+  redactorConfig: null
+  removeEmptyTags: true
+  removeInlineStyles: true
+  removeNbsp: true
+  showHtmlButtonForNonAdmins: false
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  uiMode: enlarged
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field

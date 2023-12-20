@@ -1,0 +1,12 @@
+columnSuffix: tqfasffy
+contentColumnType: char(7)
+fieldGroup: 93d458fd-c496-457f-aa0e-f73f4c7ff0ea # Solutions
+handle: solutionsCard1Color
+instructions: 'The background colour for Solutions Card1'
+name: 'Solutions Card1 Color'
+searchable: false
+settings:
+  defaultColor: '#fff9eb'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Color

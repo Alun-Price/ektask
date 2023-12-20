@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   mode: 'jit',
-  content: ['templates/**/*.twig', './web/index.php'],
+  content: ['templates/**/*.twig'],
   theme: {
     screens: {
       sm: '376px',
@@ -60,6 +60,7 @@ module.exports = {
         formoutline: '#F0E7DC',
         transparent: 'transparent',
         currentColor: 'currentColor',
+        tabBackground: '#F9F4EE',
       },
       content: {
         arrowDownIcon: ['url("../images/dropdown-arrow.svg")'],

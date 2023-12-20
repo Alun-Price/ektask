@@ -1,9 +1,9 @@
-columnSuffix: rzumpvrb
+columnSuffix: awywwexk
 contentColumnType: text
 fieldGroup: 93d458fd-c496-457f-aa0e-f73f4c7ff0ea # Solutions
-handle: solutionsButtonText
-instructions: 'The text that goes on the solutions CTA button'
-name: 'Solutions Button Text'
+handle: solutionsCard1Subheading
+instructions: 'Subheading text for a solutions card'
+name: 'Solutions Card1 Subheading'
 searchable: false
 settings:
   availableTransforms: ''

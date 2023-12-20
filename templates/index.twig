@@ -15,7 +15,7 @@
 </head>
 <body>
     <header class="relative md:py-3 md:w-full">
-        <nav class="flex items-center justify-between px-4 py-3 mt-4 lg:flex-row">
+        <nav class="z-20 flex items-center justify-between px-4 py-3 mt-4 lg:flex-row">
                 {# Logo Images #}
                 <a class="mr-6 lg:hidden" href="{{ siteUrl }}">
                     <img src="{{ siteUrl }}static/images/LogoMobile.svg">
@@ -25,7 +25,7 @@
                 </a>
                 {#Mobile Hamburger #} 
                 <div class="absolute items-center block right-6 lg:hidden">
-                    <button>
+                    <button aria-label="Open Menu" title="Open Menu">
                         <svg class="fill-current text-primaryorange-400 hover:text-primaryorange-600" xmlns="http://www.w3.org/2000/svg" width="24" height="15" viewBox="0 0 24 15" fill="none">
                         <g id="Menu Icon">
                             <line id="Line 3" y1="1" x2="24" y2="1" stroke="#F26839" stroke-width="2"></line>
@@ -44,11 +44,11 @@
                         {% if dropdown.contains('dropdownYes') %}
                         
                         <li class="inline-block mr-[85px] ">
-                            <a href="{{ destination.url}}" class="relative text-sm font-bold after:content-arrowDownIcon after:inline-block after:mr-4 hover:text-primaryorange-400"> {{ link.linkText   }}</a>   
+                            <a href="{{ destination.url}}" aria-label={{ link.linkText }} title={{ link.linkText }} class="relative text-sm font-bold after:content-arrowDownIcon after:inline-block after:mr-4 hover:text-primaryorange-400"> {{ link.linkText   }}</a>   
                         </li>
                         {% else %}
                         <li class="inline-block mr-[85px] ">
-                            <a href="{{ destination.url}}" class="inline-block text-sm font-bold hover:text-primaryorange-400"> {{ link.linkText   }}</a>
+                            <a href="{{ destination.url}}" aria-label={{ link.linkText }} title={{ link.linkText }} class="z-10 inline-block text-sm font-bold hover:text-primaryorange-400"> {{ link.linkText   }}</a>
                         </li>
                         {% endif %}
                         {% endfor %}
@@ -66,7 +66,7 @@
         <div class="container relative justify-center mx-auto md:flex md:mb-8 md:mt-8 xl:mb-[180px] xl:-ml-[5px] lg:justify-evenly">
             {# Content Section - Hero #}
             <div class="p-4 md:w-6/12 lg:w-5/12 xl:w-4/12 lg:mt-24 xl:mt-[200px] xl:mr-[700px]  ">
-                <h1 class="mb-4 font-sans text-[45px] font-bold leading-[55px] lg:text-[90px] lg:leading-[100px] xl:text-[96px] xl:leading-[108px] ">Learning <br>that <span class="font-bold text-primaryorange-400">works</span></h1>
+                <h1 class="mb-4 text-[45px] font-bold leading-[55px] lg:text-[90px] lg:leading-[100px] xl:text-[96px] xl:leading-[108px] ">Learning <br>that <span class="font-bold text-primaryorange-400">works</span></h1>
                 <p class="text-pgrey-400 mb-8 text-base font-normal leading-[28px] lg:text-[22px] lg:leading-[36px] md:w-10/12 lg:w-11/12 lg:font-normal">We deliver engaging learning experiences that work for your goals and learners</p>
                 <div class="flex items-center">
                     {#  Button - Hero #}
@@ -85,9 +85,9 @@
              {# Image Section - Hero #}
             <div class="top-0 bottom-0 left-0 right-0 z-10 justify-center h-full align-center lg:flex lg:items-center md:flex">
                 <img class="hidden sm:block md:hidden lg:hidden xl:hidden" <img src="{{ siteUrl }}static/images/smHero.svg">
-                <img class="sm:hidden md:block lg:hidden xl:hidden" <img src="{{ siteUrl }}static/images/mdHero.svg">
-                <img class="md:hidden sm:hidden lg:block xl:hidden" <img src="{{ siteUrl }}static/images/lgHero.svg">
-                <img class="absolute xl:-top-[150px] xl:right-[1%] md:hidden sm:hidden lg:hidden xl:block" <img src="{{ siteUrl }}static/images/xlHero.svg">
+                <img class="hidden md:block lg:hidden xl:hidden" <img src="{{ siteUrl }}static/images/mdHero.svg">
+                <img class="hidden md:hidden lg:block xl:hidden" <img src="{{ siteUrl }}static/images/lgHero.svg">
+                <img class="absolute xl:-top-[150px] xl:right-[1%] md:hidden sm:hidden lg:hidden xl:block xl:-z-10 pointer-events-none" <img src="{{ siteUrl }}static/images/xlHero.svg">
             </div>
         </div>
     </section>
@@ -148,200 +148,202 @@
     </section>
 
     {# SOLUTIONS SECTION #}
-    <section class="solutions1">
-        <div class="container mx-auto mb-8">
-            <div class="p-4 text-center lg:w-1/2">
-                <h1 class="mb-4 md:mx-auto font-sans text-[28px] leading-[34px]
-                font-bold md:text-[36px] md:w-[550px] md:leading-[44px] lg:text-[48px] lg:leading-[60px]">Learning solutions that <span class="font-bold text-primaryorange-400">deliver results</span></h1>
-                <p class="text-[#474747] w-11/12  md:mx-auto md:w-[540px] md:text-lg mb-4 text-base font-normal tracking-wide">Whatever your learning and development goals are, we have the solution to achieve them. </p>
-            </div>
-            <div class="container relative w-11/12 mx-auto rounded-lg h-[645px] bg-floralwhite">
-                <div class="mx-4">
-                    {# Image Section - Solutions #}
-                    <div class="mt-6 lg:flex lg:items-center">
-                        <img class="object-cover h-auto mx-auto lg:hidden xl:hidden md:hidden lg:w-1/2 lg:h-full" <img src="{{ siteUrl }}static/images/solutions1.svg">
-                    </div>
-                </div>
-                {# Content Section - Solutions #}
-                <div class="mx-4">
-                    <h3 class="font-bold text-[24px] leading-[38px] mb-2"> Learning Content</h3>
-                    <p class="text-[16px] leading-[26px] font-normal">Lorem ipsum dolor sit amet conse ctetur adipiscg elit nisl, lobortis montes senectus facilisis taciti.</p>
-                    <div class="tickbox section">
-                        <div class="flex items-center py-1 mt-4 spaces-x-2 md:mx-auto md:w-9/12 group">   
-                            <svg width="26" height="26" class="flex-shrink-0" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="13" cy="13" r="13" fill="#FFFFFF"/>
-                            <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
-                            </svg>
-                            <span class="px-2 text-[16px] leading-[26px] font-normal md:text-[16px] md:leading-[34px]">Lorem ipsum dolor sit amet</span>
-                        </div>
-                        <div class="flex items-center py-1 mt-1 spaces-x-2 md:mx-auto md:w-9/12 group">   
-                            <svg width="26" height="26" class="flex-shrink-0" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="13" cy="13" r="13" fill="#FFFFFF"/>
-                            <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
-                            </svg>
-                            <span class="px-2 text-[16px] leading-[26px] font-normal md:text-[16px] md:leading-[34px]">Consectetur adipiscing elit ultrices</span>
-                        </div>
-                        
-                        
-                        <div class="flex items-center py-1 mt-1 mb-8 spaces-x-2 md:mx-auto md:w-9/12 group">   
-                            <svg width="26" height="26" class="flex-shrink-0" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="13" cy="13" r="13" fill="#FFFFFF"/>
-                            <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
-                            </svg>
-                            <span class="px-2 text-[16px] leading-[26px] font-normal md:text-[16px] md:leading-[34px]">Lorem ipsum dolor sit amet</span>
-                        </div>
-                    </div>
-                </div>
-                {#  Button - Solutions #}
-                <div class="absolute h-[72px] bottom-0 flex items-center justify-center mb-2 md:w-8/12 md:mt-6 md:mb-8">
-                    <button type="button" class="text-white bg-primaryorange-400 hover:bg-primaryorange-600 font-bold text-center text-[17px] px-5 py-3 mr-3 rounded-[35px] translate-x-4">Learn More</button>
-                    <div class="inline-block translate-x-4">
-                        <a href="#" class="text-[17px] leading-[30px] font-bold text-primaryblack-950  hover:text-primaryorange-600 underline ">Request a Demo</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="solutions2">
-        <div class="container mx-auto mb-8">
-            <div class="container relative w-11/12 mx-auto mb-8 border rounded-lg h-[645px]  bg-thistle">
-                <div class="mx-4">
-                    {# Image Section - Solutions #}
-                    <div class="mt-6 lg:flex lg:items-center">
-                        <img class="object-cover h-auto mx-auto lg:hidden xl:hidden md:hidden lg:w-1/2 lg:h-full" <img src="{{ siteUrl }}static/images/solutions2.svg">
-                    </div>
-                </div>
-                {# Content Section - Solutions #}
-                <div class="mx-4">
-                    <h3 class="font-bold text-[24px] mb-2 leading-[38px]"> Learning Content</h3>
-                    <p class="text-[16px] leading-[26px] font-normal">Lorem ipsum dolor sit amet conse ctetur adipiscg elit nisl, lobortis montes senectus facilisis taciti.</p>
-                    <div class="tickbox section">
-                        <div class="flex items-center py-1 mt-4 spaces-x-2 md:mx-auto md:w-9/12 group">   
-                            <svg width="26" height="26" class="flex-shrink-0" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="13" cy="13" r="13" fill="#FFFFFF"/>
-                            <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
-                            </svg>
-                            <span class="px-2 text-[16px] leading-[26px] font-normal md:text-[16px] md:leading-[34px]">Lorem ipsum dolor sit amet
-                            </span>
-                        </div>
-                        <div class="flex items-center py-1 mt-1 spaces-x-2 md:mx-auto md:w-9/12 group">   
-                            <svg width="26" height="26" class="flex-shrink-0" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="13" cy="13" r="13" fill="#FFFFFF"/>
-                            <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
-                            </svg>
-                            <span class="px-2 text-[16px] leading-[26px] font-normal md:text-[16px] md:leading-[34px]">Consectetur adipiscing elit ultrices</span>
-                        </div>
-                        <div class="flex items-center py-1 mt-1 mb-8 spaces-x-2 md:mx-auto md:w-9/12 group">   
-                            <svg width="26" height="26" class="flex-shrink-0" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="13" cy="13" r="13" fill="#FFFFFF"/>
-                            <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
-                            </svg>
-                            <span class="px-2 text-[16px] leading-[26px] font-normal md:text-[16px] md:leading-[34px]">Lorem ipsum dolor sit amet
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                {#  Button - Solutions #}
-                 <div class="absolute h-[72px] bottom-0 flex items-center justify-center mb-2 md:w-8/12 md:mt-6 md:mb-8">
-                    <button type="button" class="text-white bg-primaryorange-400 hover:bg-primaryorange-600 font-bold text-center text-[17px] px-5 py-3 mr-3 rounded-[35px] translate-x-4">Learn More</button>
-                    <div class="inline-block translate-x-4">
-                        <a href="#" class="text-[17px] leading-[30px] font-bold text-primaryblack-950  hover:text-primaryorange-600 underline ">Request a Demo</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="solutions3">
-           <div class="container relative w-11/12 mx-auto mb-8 h-[645px] rounded-lg bg-mintgreen">
-                <div class="mx-4">
-                    {# Image Section - Solutions #}
-                    <div class="mt-10 lg:flex lg:items-center">
-                        <img class="object-cover h-auto mx-auto lg:hidden xl:hidden md:hidden lg:w-1/2 lg:h-full" <img src="{{ siteUrl }}static/images/solutions3.svg">
+    {% set entries = craft.entries().section('homePage').all() %}
+    {% for entry in entries %}
+        <section class="solutions1">
+            <div class="container flex-row items-center justify-center mx-auto">
+                <div class="p-4 text-center lg:mb-10">
+                    <h1 class="mb-4 md:mx-auto font-sans text-[28px] leading-[34px]
+                    font-bold md:text-[36px] md:w-[550px] md:leading-[44px] lg:text-[48px] lg:leading-[60px] lg:w-[920px]">Learning solutions that <span class="font-bold text-primaryorange-400">deliver results</span></h1>
+                    <p class="text-[#474747] text-lg text-center w-11/12  md:mx-auto md:w-[540px] lg:text-[22px] lg:leading-[36px] mb-4 lg:w-[500px] xl:w-[606px] font-normal">{{ entry.solutionsMainSubheading }} </p>
+                </div>
+
+                {# Solutions Card 1 #}
+                <div class="relative w-11/12 pb-12 mx-auto mb-6 rounded-lg lg:mb-10 md:pb-8 bg-[#FFF9EB] lg:flex">
+                    {# Image Section - Solutions Card1 #}
+                    <div class="py-6 mx-4 md:py-8 lg:flex lg:w-1/2 lg:order-last">
+                        <img class="object-contain h-auto mx-auto md:w-1/2 lg:h-full lg:w-full" src="{{ siteUrl }}static/images/solutions1.svg">
+                    </div>
+                    
+                    {# Content Section - Solutions Card1 #}
+                    <div class="mx-4 text-left md:mx-32 md:mb-6 lg:py-20 lg:w-1/2 lg:order-first">
+                        <h3 class="font-bold text-[24px] leading-[38px] mb-2 lg:text-[38px] lg:leading-[44px] xl:text-[42px]"> {{ entry.solutionsCard1Title }}</h3>
+                        <p class="text-[16px] leading-[26px] font-normal text-left lg:text-[20px] lg:leading-[34px]">{{ entry.solutionsCard1Subheading }}</p>
+                        {# Tickbox section #}
+                        <div class="tickbox section">
+                            <div class="flex items-center py-1 mt-4 mb-1 md:w-9/12 group">   
+                                <svg width="26" height="26" class="flex-shrink-0" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="13" cy="13" r="13" fill="#FFFFFF"/>
+                                <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
+                                </svg>
+                                <span class="px-2 text-[16px] leading-[26px] font-normal md:text-[16px] md:leading-[34px] lg:text-[20px] lg:leading-[42px] ">{{ entry.solutionsCard1BulletpointText1 }}</span>
+                            </div>
+                            <div class="flex items-center py-1 mt-1 spaces-y-1 md:w-9/12 group">   
+                                <svg width="26" height="26" class="flex-shrink-0" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="13" cy="13" r="13" fill="#FFFFFF"/>
+                                <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
+                                </svg>
+                                <span class="px-2 text-[16px] leading-[26px] font-normal md:text-[16px] md:leading-[34px]  lg:text-[20px] lg:leading-[42px]">{{ entry.solutionsCard1Bulletpointtext2 }}</span>
+                            </div>
+                            
+                            
+                            <div class="flex items-center py-1 mt-1 mb-8 spaces-y-1 md:w-9/12 group">   
+                                <svg width="26" height="26" class="flex-shrink-0" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="13" cy="13" r="13" fill="#FFFFFF"/>
+                                <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
+                                </svg>
+                                <span class="px-2 text-[16px] leading-[26px] font-normal md:text-[16px] md:leading-[34px] lg:text-[20px] lg:leading-[42px]">{{ entry.solutionsCard1BulletpointText3 }}</span>
+                            </div>
+                        </div>
+                        {#  Buttons - Solutions Card 1#}
+                        <div class="flex items-center">
+                            <button type="button" class="text-white bg-primaryorange-400 hover:bg-primaryorange-600 font-bold text-center text-[17px] px-5 py-3 rounded-[35px] mr-3">{{ entry.solutionsCard1ButtonText }}</button>
+                            <div class="inline-block">
+                                <a href="#" class="text-[17px] leading-[30px] font-bold text-primaryblack-950  hover:text-primaryorange-600 underline ">{{ entry.solutionsCard1LinkText }}</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                {# Content Section - Solutions #}
-                <div class="mx-4">
-                    <h3 class="font-bold text-[24px] leading-[38px]"> Learning Content</h3>
-                    <p class="text-[16px] leading-[26px] font-normal">Lorem ipsum dolor sit amet conse ctetur adipiscg elit nisl, lobortis montes senectus facilisis taciti.</p>
-                    <div class="tickbox section">
-                        <div class="flex items-center py-1 mt-4 spaces-x-2 md:mx-auto md:w-9/12 group">   
-                            <svg width="26" height="26" class="flex-shrink-0" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="13" cy="13" r="13" fill="#FFFFFF"/>
-                            <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
-                            </svg>
-                            <span class="px-2 text-[16px] leading-[26px] font-normal md:text-[16px] md:leading-[34px]">Lorem ipsum dolor sit amet</span>
+                {# Solutions Card 2 #}
+                <div class="relative w-11/12 pb-12 mx-auto mb-6 rounded-lg lg:mb-10 md:pb-8 bg-thistle lg:flex">
+                    {# Image Section - Solutions Card 2#}
+                    <div class="py-6 mx-4 md:py-8 lg:flex lg:w-1/2 lg:order-last">
+                        <img class="object-contain h-auto mx-auto md:w-1/2 lg:h-full lg:w-full" src="{{ siteUrl }}static/images/solutions2.svg">
+                    </div>
+                    
+                    {# Content Section - Solutions Card 2 #}
+                    <div class="mx-4 text-left md:mx-32 md:mb-6 lg:py-20 lg:w-1/2 lg:order-first">
+                        <h3 class="font-bold text-[24px] leading-[38px] mb-2 lg:text-[38px] lg:leading-[44px] xl:text-[42px]"> {{ entry.solutionsCard2Title }}</h3>
+                        <p class="text-[16px] leading-[26px] font-normal text-left lg:text-[20px] lg:leading-[34px]">{{ entry.solutionsCard2Subheading }}.</p>
+                        {# Tickbox section Card 2 #}
+                        <div class="tickbox section">
+                            <div class="flex items-center py-1 mt-4 mb-1 md:w-9/12 group">   
+                                <svg width="26" height="26" class="flex-shrink-0" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="13" cy="13" r="13" fill="#FFFFFF"/>
+                                <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
+                                </svg>
+                                <span class="px-2 text-[16px] leading-[26px] font-normal md:text-[16px] md:leading-[34px] lg:text-[20px] lg:leading-[42px] ">{{ entry.solutionsCard2BulletpointText1 }}</span>
+                            </div>
+                            <div class="flex items-center py-1 mt-1 spaces-y-1 md:w-9/12 group">   
+                                <svg width="26" height="26" class="flex-shrink-0" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="13" cy="13" r="13" fill="#FFFFFF"/>
+                                <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
+                                </svg>
+                                <span class="px-2 text-[16px] leading-[26px] font-normal md:text-[16px] md:leading-[34px]  lg:text-[20px] lg:leading-[42px]">{{ entry.solutionsCard2BulletpointText2 }}</span>
+                            </div>
+                            
+                            
+                            <div class="flex items-center py-1 mt-1 mb-8 spaces-y-1 md:w-9/12 group">   
+                                <svg width="26" height="26" class="flex-shrink-0" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="13" cy="13" r="13" fill="#FFFFFF"/>
+                                <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
+                                </svg>
+                                <span class="px-2 text-[16px] leading-[26px] font-normal md:text-[16px] md:leading-[34px] lg:text-[20px] lg:leading-[42px]">{{ entry.solutionsCard2BulletpointText3 }}</span>
+                            </div>
                         </div>
-                        <div class="flex items-center py-1 mt-1 spaces-x-2 md:mx-auto md:w-9/12 group">   
-                            <svg width="26" height="26" class="flex-shrink-0" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="13" cy="13" r="13" fill="#FFFFFF"/>
-                            <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
-                            </svg>
-                            <span class="px-2 text-[16px] leading-[26px] font-normal md:text-[16px] md:leading-[34px]">Consectetur adipiscing elit ultrices/span>
-                        </div>
-                        
-                        
-                        <div class="flex items-center py-1 mt-1 mb-8 spaces-x-2 md:mx-auto md:w-9/12 group">   
-                            <svg width="26" height="26" class="flex-shrink-0" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="13" cy="13" r="13" fill="#FFFFFF"/>
-                            <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
-                            </svg>
-                            <span class="px-2 text-[16px] leading-[26px] font-normal md:text-[16px] md:leading-[34px]">Lorem ipsum dolor sit amet</span>
+                        {#  Buttons - Solutions Card2 #}
+                        <div class="flex items-center md:w-8/12">
+                            <button type="button" class="text-white bg-primaryorange-400 hover:bg-primaryorange-600 font-bold text-center text-[17px] px-5 py-3 rounded-[35px] mr-3">{{ entry.solutionsCard2ButtonText }}</button>
+                            <div class="inline-block">
+                                <a href="#" class="text-[17px] leading-[30px] font-bold text-primaryblack-950  hover:text-primaryorange-600 underline ">{{ entry.solutionsCard2LinkText }}</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                {#  Button - Solutions #}
-                <div class="absolute h-[72px] bottom-0 flex items-center justify-center mb-2 md:w-8/12 md:mt-6 md:mb-8">
-                    <button type="button" class="text-white bg-primaryorange-400 hover:bg-primaryorange-600 font-bold text-center text-[17px] px-5 py-3 mr-3 rounded-[35px] translate-x-4">Learn More</button>
-                    <div class="inline-block translate-x-4">
-                        <a href="#" class="text-[17px] leading-[30px] font-bold text-primaryblack-950  hover:text-primaryorange-600 underline ">Request a Demo</a>
+
+                {# Solutions Card 3 #}
+                <div class="relative w-11/12 pb-12 mx-auto rounded-lg lg:mb-10 md:pb-8 bg-mintgreen lg:flex">
+                    {# Image Section - Solutions Card 3 #}
+                    <div class="py-6 mx-4 md:py-8 lg:flex lg:w-1/2 lg:order-last">
+                        <img class="object-contain h-auto mx-auto md:w-1/2 lg:h-full lg:w-full" src="{{ siteUrl }}static/images/solutions3.svg">
+                    </div>
+                    
+                    {# Content Section - Solutions Card 3 #}
+                    <div class="mx-4 text-left md:mx-32 md:mb-6 lg:py-20 lg:w-1/2 lg:order-first">
+                        <h3 class="font-bold text-[24px] leading-[38px] mb-2 lg:text-[38px] lg:leading-[44px] xl:text-[42px]"> {{ entry.solutionsCard3Title }}</h3>
+                        <p class="text-[16px] leading-[26px] font-normal text-left lg:text-[20px] lg:leading-[34px]">{{ entry.solutionsCard3Subheading }}</p>
+                        {# Tickbox section Card 3 #}
+                        <div class="tickbox section">
+                            <div class="flex items-center py-1 mt-4 mb-1 md:w-9/12 group">   
+                                <svg width="26" height="26" class="flex-shrink-0" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="13" cy="13" r="13" fill="#FFFFFF"/>
+                                <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
+                                </svg>
+                                <span class="px-2 text-[16px] leading-[26px] font-normal md:text-[16px] md:leading-[34px] lg:text-[20px] lg:leading-[42px] ">{{ entry.solutionsCard3BulletpointText1 }}</span>
+                            </div>
+                            <div class="flex items-center py-1 mt-1 spaces-y-1 md:w-9/12 group">   
+                                <svg width="26" height="26" class="flex-shrink-0" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="13" cy="13" r="13" fill="#FFFFFF"/>
+                                <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
+                                </svg>
+                                <span class="px-2 text-[16px] leading-[26px] font-normal md:text-[16px] md:leading-[34px]  lg:text-[20px] lg:leading-[42px]">{{ entry.solutionsCard3BulletpointText2 }}</span>
+                            </div>
+                            
+                            
+                            <div class="flex items-center py-1 mt-1 mb-8 spaces-y-1 md:w-9/12 group">   
+                                <svg width="26" height="26" class="flex-shrink-0" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="13" cy="13" r="13" fill="#FFFFFF"/>
+                                <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
+                                </svg>
+                                <span class="px-2 text-[16px] leading-[26px] font-normal md:text-[16px] md:leading-[34px] lg:text-[20px] lg:leading-[42px]">{{ entry.solutionsCard3BulletpointText3 }}</span>
+                            </div>
+                        </div>
+                        {#  Buttons - Solutions Card 3 #}
+                        <div class="flex items-center md:w-8/12">
+                            <button type="button" class="text-white bg-primaryorange-400 hover:bg-primaryorange-600 font-bold text-center text-[17px] px-5 py-3 rounded-[35px] mr-3">{{ entry.solutionsCard3ButtonText }}</button>
+                            <div class="inline-block">
+                                <a href="#" class="text-[17px] leading-[30px] font-bold text-primaryblack-950  hover:text-primaryorange-600 underline ">{{ entry.solutionsCard3LinkText }}</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-    </section>
+        </section>
+    {% endfor %}
     
     {# EXPERTISE-TABS SECTION #}
     <section class="expertise-tabs">
-        <div class="container px-5 py-10 w-80% mx-auto md:mb-12 text-center">
+        <div class="container py-10 mx-auto w-[336px] text-center md:mb-12">
             <div class="p-4 text-center lg:w-1/2">
-                <h1 class="mb-4 text-[28px] leading-[34px]
+                <h1 class="mb-4 text-[28px] leading-[34px] text-center
                 font-bold">Sector expertise that will <span class="font-bold text-primaryorange-400">drive results </span> for your organisation</h1>
             </div>
-            <div class="mb-4 md:mx-auto md:w-11/12">
-                <ul class="flex flex-wrap mx-auto -mb-px text-sm font-bold text-center" id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
+            <nav class="rounded-[10px] bg-tabBackground md:bg-transparent mb-4 md:mx-auto md:w-11/12">
+                <ul class="flex flex-wrap mx-auto text-sm font-bold text-center md:-mb-px" data-tabs-toggle="#default-tab-content" role="tablist">
                     <li class="me-2 active-tab" role="presentation">
-                        <button class="inline-block p-4 border-b-2 hover:border-primaryorange-400 hover:text-primaryorange-400  border-[#B1B1B1]/50 border-rounded-t-lg md:text-[22px] md:leading-[32px]" id="healthcare-tab" data-tabs-target="#healthcare" type="button" role="tab" aria-controls="healthcare" aria-selected="false">Healthcare</button>
+                        <button class=" bg-white rounded-[10px] p-2 md:p-4 mx-1 my-1 md:border-b-2 hover:shadow-inner md:hover:border-primaryorange-400 hover:text-primaryorange-400 text-[17px]leading-[23.15px] font-bold md:border-[#B1B1B1]/50 md:border-rounded-t-lg md:text-[22px] md:leading-[32px]" id="healthcare-tab" data-tabs-target="#healthcare" type="button" role="tab" aria-controls="healthcare" aria-selected="false">Healthcare</button>
                     </li>
                     <li class="me-2" role="presentation">
-                        <button class="inline-block p-4 border-b-2 hover:border-primaryorange-400 hover:text-primaryorange-400 border-[#B1B1B1]/50 rounded-t-lg md:text-[22px] md:leading-[32px]" id="publicSector-tab" data-tabs-target="#publicsector" type="button" role="tab" aria-controls="publicsector" aria-selected="false">Public Sector</button>
+                        <button class=" hover:bg-white hover:rounded-[10px] p-2 m-1 md:p-4 md:border-b-2 hover:shadow-inner md:hover:border-primaryorange-400 hover:text-primaryorange-400 border-[#B1B1B1]/50 rounded-t-lg md:text-[22px] md:leading-[32px]" id="publicSector-tab" data-tabs-target="#publicsector" type="button" role="tab" aria-controls="publicsector" aria-selected="false">Public Sector</button>
                     </li>
                     <li class="me-2" role="presentation">
-                        <button class="inline-block p-4 border-b-2 hover:border-primaryorange-400 hover:text-primaryorange-400  border-[#B1B1B1]/50 rounded-t-lg md:text-[22px] md:leading-[32px]" id="commercial-tab" data-tabs-target="#commercial" type="button" role="tab" aria-controls="commercial" aria-selected="false">Commercial</button>
+                        <button class=" hover:bg-white rounded-[10px] p-2 m-1 md:p-4 md:border-b-2 hover:shadow-inner md:hover:border-primaryorange-400 hover:text-primaryorange-400  border-[#B1B1B1]/50 rounded-t-lg md:text-[22px] md:leading-[32px]" id="commercial-tab" data-tabs-target="#commercial" type="button" role="tab" aria-controls="commercial" aria-selected="false">Commercial</button>
                     </li>
                     <li role="presentation">
-                        <button class="inline-block p-4 border-b-2 hover:border-primaryorange-400  hover:text-primaryorange-400 rounded-t-lg md:text-[22px] md:leading-[32px]" id="charity-tab" data-tabs-target="#charity" type="button" role="tab" aria-controls="charity" aria-selected="false">Charity</button>
+                        <button class=" hover:bg-white rounded-[10px] p-2 m-1 md:p-4 md:border-b-2 hover:shadow-inner md:hover:border-primaryorange-400  hover:text-primaryorange-400 rounded-t-lg md:text-[22px] md:leading-[32px]" id="charity-tab" data-tabs-target="#charity" type="button" role="tab" aria-controls="charity" aria-selected="false">Charity</button>
                     </li>
                 </ul>
-            </div>
+            </nav>
             <div id="default-tab-content" class="panels">
-                <article class="p-4 text-left rounded-lg active-panel" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <article class="p-4 text-left rounded-lg active-panel" id="healthcare" role="tabpanel" aria-labelledby="profile-tab">
                     <h5 class="md:font-bold md:w-10/12 text-primaryblack-950 md:text-[24px] md:leading-[34px] md:mx-auto">Enhance healthcare training with immersive, interactive learning experiences</h5>
                     <p class="text-pgrey-400 font-normal md:text-[16px] md:leading-[34px] md:mx-auto md:w-10/12 md:mt-4">Improve knowledge retention and patient outcomes.</p>
                 </article>
-                <article class="hidden p-4 rounded-lg bg-gray-50 md:mx-auto" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                <article class="hidden p-4 rounded-lg bg-gray-50 md:mx-auto" id="publicSector" role="tabpanel" aria-labelledby="dashboard-tab">
                     <h5 class="md:font-bold md:w-10/12 text-primaryblack-950 md:text-[24px] md:leading-[34px] md:mx-auto">Panel 2 - Public Sector</h5>
                     <p class="text-sm text-gray-500 md:mx-auto">This is some placeholder content the <strong class="font-medium text-gray-800">Dashboard tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
                 </article>
-                <article class="hidden p-4 rounded-lg bg-gray-50" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+                <article class="hidden p-4 rounded-lg bg-gray-50" id="commercial" role="tabpanel" aria-labelledby="settings-tab">
                     <h5 class="md:font-bold md:w-10/12 text-primaryblack-950 md:text-[24px] md:leading-[34px] md:mx-auto">Panel 3 - Commercial</h5>
                     <p class="text-sm text-gray-500 md:mx-auto">This is some placeholder content the <strong class="font-medium text-gray-800">Settings tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
                 </article>
-                <article class="hidden p-4 rounded-lg bg-gray-50" id="contacts" role="tabpanel" aria-labelledby="contacts-tab">
+                <article class="hidden p-4 rounded-lg bg-gray-50" id="charity" role="tabpanel" aria-labelledby="contacts-tab">
                     <h5 class="md:font-bold md:w-10/12 text-primaryblack-950 md:text-[24px] md:leading-[34px] md:mx-auto">Panel 4 - Charity</h5>
                     <p class="text-sm text-gray-500">This is some placeholder content the <strong class="font-medium text-gray-800">Contacts tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
                 </article>
             </div class="tickbox_items">
-                <div class="flex items-center py-1 md:mx-auto md:w-9/12 group">   
+                <div class="flex items-center py-1 text-left md:mx-auto md:w-9/12 group">   
                     <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="13" cy="13" r="13" fill="#F9F4EE"/>
                     <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
@@ -353,19 +355,19 @@
                     <circle cx="13" cy="13" r="13" fill="#F9F4EE"/>
                     <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
                     </svg>
-                    <span class="px-2 text-pgrey-400 font-normal md:text-[16px] md:leading-[34px]">Proven track record of innovative learning solutions</span>
+                    <span class="px-2 text-pgrey-400 font-normal text-left md:text-[16px] md:leading-[34px]">Proven track record of innovative learning solutions</span>
                 </div>
                 <div class="flex py-1 items-left md:mx-auto md:w-9/12 group">   
                     <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="13" cy="13" r="13" fill="#F9F4EE"/>
                     <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
                     </svg>
-                    <span class="px-2 text-pgrey-400 font-normal md:text-[16px] md:leading-[34px]">Trusted by global healthcare leaders</span>
+                    <span class="px-2 text-pgrey-400 font-normal  text-left md:text-[16px] md:leading-[34px]">Trusted by global healthcare leaders</span>
                 </div>
                 <div class="flex items-center justify-center md:w-8/12 md:mt-6 md:mb-8">
                     <button type="button" class="text-white bg-primaryorange-400 hover:bg-primaryorange-600 font-bold text-center text-[17px] px-5 mr-3 rounded-[35px] w-[152px] h-[52px]">Learn More</button>
                     <div class="inline-block">
-                        <a href="#" class="text-[17px] leading-[30px] font-bold text-primaryorange-400  hover:text-primaryorange-600 underline">All Case Studies</a>
+                        <a href="#" class="text-[17px] leading-[30px]  text-left font-bold text-primaryorange-400  hover:text-primaryorange-600 underline">All Case Studies</a>
                     </div>
                 </div>
                 <figure class="relative">

@@ -1,0 +1,12 @@
+columnSuffix: tljzjosl
+contentColumnType: char(7)
+fieldGroup: 93d458fd-c496-457f-aa0e-f73f4c7ff0ea # Solutions
+handle: solutionsCard1ButtonColor
+instructions: 'Color of the Solutions Card1 CTA button'
+name: 'Solutions Card1 Button Color'
+searchable: false
+settings:
+  defaultColor: '#f26839'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Color

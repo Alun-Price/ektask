@@ -1,9 +1,9 @@
-columnSuffix: awywwexk
+columnSuffix: icxvqmcq
 contentColumnType: text
 fieldGroup: 93d458fd-c496-457f-aa0e-f73f4c7ff0ea # Solutions
-handle: solutionsCardSubheading
-instructions: 'Subheading text for a solutions card'
-name: 'Solutions Card Subheading'
+handle: solutionsCard2Title
+instructions: 'Select a title for Solutions Card 2'
+name: 'Solutions Card2 Title'
 searchable: false
 settings:
   availableTransforms: ''
@@ -15,10 +15,10 @@ settings:
   purifierConfig: null
   purifyHtml: true
   redactorConfig: null
-  removeEmptyTags: false
-  removeInlineStyles: false
-  removeNbsp: false
-  showHtmlButtonForNonAdmins: true
+  removeEmptyTags: true
+  removeInlineStyles: true
+  removeNbsp: true
+  showHtmlButtonForNonAdmins: false
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   uiMode: enlarged
