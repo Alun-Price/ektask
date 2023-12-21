@@ -1,13 +1,13 @@
-columnSuffix: ihgacakw
-contentColumnType: text
-fieldGroup: 93d458fd-c496-457f-aa0e-f73f4c7ff0ea # Solutions
-handle: solutionsCard2BulletpointText2
-instructions: null
-name: 'Solutions Card2 Bulletpoint Text2'
+columnSuffix: rsgxgeuo
+contentColumnType: string(60)
+fieldGroup: 4aa35177-3ee6-45b7-9fbb-0dbc64d50bcc # Tabs
+handle: tabsPanel1ButtonText
+instructions: 'Button text for tabs panel 1'
+name: 'Tabs Panel1 Button Text'
 searchable: false
 settings:
   byteLimit: null
-  charLimit: null
+  charLimit: 15
   code: false
   columnType: null
   initialRows: 4

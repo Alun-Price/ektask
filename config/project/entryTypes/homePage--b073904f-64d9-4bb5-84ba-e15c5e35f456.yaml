@@ -526,6 +526,162 @@ fieldLayouts:
         name: Content
         uid: 8fca0acb-dd63-4436-8081-de833c915885
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 1dde08a7-0369-4bcb-97b7-6b4f05210441 # Tabs Panel1 Name
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 17322555-93e6-41ed-9ab4-d510b76b653a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: fa2788f2-0a27-402c-8992-ee89a969b7ba # Tabs Panel1 Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5a07b60a-2714-4180-a1cd-9baa72d3f053
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 0cf72060-b216-4306-99c9-419e533ec7d6 # Tabs Panel1 Subheading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 474c2aa1-2f53-4454-bec8-a6ecb51a8534
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d2a8a211-1516-4364-83cc-15b8e12d70b3 # Tabs Panel1 Bulletpoint Text1
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1dc77211-36ec-4b0a-a7d3-d396f49e52f3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 5c21f109-0825-4f19-b7f9-4fb32f04d4b2 # Tabs Panel1 Bulletpoint Text2
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cbd944d8-04c0-463c-a700-15ff61d8dff9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 010d4606-43a0-4cbb-9e7e-6940170f0e06 # Tabs Panel1 Bulletpoint Text3
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a2acde32-efa8-4adb-b27d-e63328dbed1d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: ac8660a2-90e9-4864-90ca-2f340ffe007f # Tabs Panel1 Button Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 876a2fda-ee53-4659-9a95-c6acafee864c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 492d9a19-dc4e-4993-a783-e6f60b0a5dba # Tabs Panel1 Link Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 54cd4f8f-55e9-4be5-9769-aee5b9201bff
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Tabs Panel1'
+        uid: 9912c222-6c9f-45dc-85c2-73da02426739
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 0b3e671b-1f0d-4f06-8286-6c4b33e03cac # Tabs Panel2 Name
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 62d1f4e9-2f48-471f-b25d-c6ad8c6121d9
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Tabs Panel2'
+        uid: 28bd1e4f-e1c0-4d80-8bed-54c17e0eaaa5
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 5255f582-4244-425b-a88f-3d2d8f2b05fe # Tabs Panel3 Name
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d7a2cbdb-27a5-4eec-b024-33b2b97273b1
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Tabs Panel3'
+        uid: 6916e901-f6a3-484d-b562-c7a89e6a4360
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 3cc5cbc2-41db-4b32-92dc-fb441c4b56f4 # Tabs Panel4 Name
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5b5a4a38-0928-4513-8d82-25099d78ec0f
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Tabs Panel4'
+        uid: d5befeec-adcf-4651-914a-599894d07137
+        userCondition: null
 handle: homePage
 hasTitleField: false
 name: 'Home Page'

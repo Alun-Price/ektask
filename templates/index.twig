@@ -10,7 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
 
-    <link rel="stylesheet" href="{{ siteUrl }}static/css/styles.css">   
+    {# <link rel="stylesheet" href="{{ siteUrl }}static/css/styles.css">    #}
+    <link rel="stylesheet" href="{{ siteUrl }}static/css/stylesheet.css">
     
 </head>
 <body>
@@ -44,11 +45,11 @@
                         {% if dropdown.contains('dropdownYes') %}
                         
                         <li class="inline-block mr-[85px] ">
-                            <a href="{{ destination.url}}" aria-label={{ link.linkText }} title={{ link.linkText }} class="relative text-sm font-bold after:content-arrowDownIcon after:inline-block after:mr-4 hover:text-primaryorange-400"> {{ link.linkText   }}</a>   
+                            <a href="{{ destination.url}}" aria-label={{ link.linkText }} title={{ link.linkText }} class="relative text-sm font-bold after:content-arrowDownIcon after:inline-block after:mr-4 hover:text-primaryorange-400"> {{ link.linkText }}</a>   
                         </li>
                         {% else %}
                         <li class="inline-block mr-[85px] ">
-                            <a href="{{ destination.url}}" aria-label={{ link.linkText }} title={{ link.linkText }} class="z-10 inline-block text-sm font-bold hover:text-primaryorange-400"> {{ link.linkText   }}</a>
+                            <a href="{{ destination.url}}" aria-label={{ link.linkText }} title={{ link.linkText }} class="z-10 inline-block text-sm font-bold hover:text-primaryorange-400"> {{ link.linkText }}</a>
                         </li>
                         {% endif %}
                         {% endfor %}
@@ -65,7 +66,7 @@
     <section class="Hero">
         <div class="container relative justify-center mx-auto md:flex md:mb-8 md:mt-8 xl:mb-[180px] xl:-ml-[5px] lg:justify-evenly">
             {# Content Section - Hero #}
-            <div class="p-4 md:w-6/12 lg:w-5/12 xl:w-4/12 lg:mt-24 xl:mt-[200px] xl:mr-[700px]  ">
+            <div class="p-4 md:w-6/12 lg:w-5/12 xl:w-4/12 lg:mt-24 xl:mt-[200px] xl:mr-[700px]">
                 <h1 class="mb-4 text-[45px] font-bold leading-[55px] lg:text-[90px] lg:leading-[100px] xl:text-[96px] xl:leading-[108px] ">Learning <br>that <span class="font-bold text-primaryorange-400">works</span></h1>
                 <p class="text-pgrey-400 mb-8 text-base font-normal leading-[28px] lg:text-[22px] lg:leading-[36px] md:w-10/12 lg:w-11/12 lg:font-normal">We deliver engaging learning experiences that work for your goals and learners</p>
                 <div class="flex items-center">
@@ -156,7 +157,7 @@
                 <div class="p-4 text-center lg:mb-10">
                     <h1 class="mb-4 md:mx-auto font-sans text-[28px] leading-[34px]
                     font-bold md:text-[36px] md:w-[550px] md:leading-[44px] lg:text-[48px] lg:leading-[60px] lg:w-[920px]">Learning solutions that <span class="font-bold text-primaryorange-400">deliver results</span></h1>
-                    <p class="text-[#474747] text-lg text-center w-11/12  md:mx-auto md:w-[540px] lg:text-[22px] lg:leading-[36px] mb-4 lg:w-[500px] xl:w-[606px] font-normal">{{ entry.solutionsMainSubheading }} </p>
+                    <plarge class="text-[#474747] text-lg text-center w-11/12  md:mx-auto md:w-[540px] mb-4 lg:w-[500px] xl:w-[606px] font-normal">{{ entry.solutionsMainSubheading }} </plarge>
                 </div>
 
                 {# Solutions Card 1 #}
@@ -168,8 +169,8 @@
                     
                     {# Content Section - Solutions Card1 #}
                     <div class="mx-4 text-left md:mx-32 md:mb-6 lg:py-20 lg:w-1/2 lg:order-first">
-                        <h3 class="font-bold text-[24px] leading-[38px] mb-2 lg:text-[38px] lg:leading-[44px] xl:text-[42px]"> {{ entry.solutionsCard1Title }}</h3>
-                        <p class="text-[16px] leading-[26px] font-normal text-left lg:text-[20px] lg:leading-[34px]">{{ entry.solutionsCard1Subheading }}</p>
+                        <h3 class="mb-2 font-bold"> {{ entry.solutionsCard1Title }}</h3>
+                        <p class="font-normal text-left">{{ entry.solutionsCard1Subheading }}</p>
                         {# Tickbox section #}
                         <div class="tickbox section">
                             <div class="flex items-center py-1 mt-4 mb-1 md:w-9/12 group">   
@@ -177,14 +178,14 @@
                                 <circle cx="13" cy="13" r="13" fill="#FFFFFF"/>
                                 <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
                                 </svg>
-                                <span class="px-2 text-[16px] leading-[26px] font-normal md:text-[16px] md:leading-[34px] lg:text-[20px] lg:leading-[42px] ">{{ entry.solutionsCard1BulletpointText1 }}</span>
+                                <p class="px-2 font-normal">{{ entry.solutionsCard1BulletpointText1 }}</p>
                             </div>
                             <div class="flex items-center py-1 mt-1 spaces-y-1 md:w-9/12 group">   
                                 <svg width="26" height="26" class="flex-shrink-0" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="13" cy="13" r="13" fill="#FFFFFF"/>
                                 <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
                                 </svg>
-                                <span class="px-2 text-[16px] leading-[26px] font-normal md:text-[16px] md:leading-[34px]  lg:text-[20px] lg:leading-[42px]">{{ entry.solutionsCard1Bulletpointtext2 }}</span>
+                                <p class="px-2 font-normal">{{ entry.solutionsCard1Bulletpointtext2 }}</p>
                             </div>
                             
                             
@@ -193,7 +194,7 @@
                                 <circle cx="13" cy="13" r="13" fill="#FFFFFF"/>
                                 <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
                                 </svg>
-                                <span class="px-2 text-[16px] leading-[26px] font-normal md:text-[16px] md:leading-[34px] lg:text-[20px] lg:leading-[42px]">{{ entry.solutionsCard1BulletpointText3 }}</span>
+                                <p class="px-2 font-normal">{{ entry.solutionsCard1BulletpointText3 }}</p>
                             </div>
                         </div>
                         {#  Buttons - Solutions Card 1#}
@@ -214,8 +215,8 @@
                     
                     {# Content Section - Solutions Card 2 #}
                     <div class="mx-4 text-left md:mx-32 md:mb-6 lg:py-20 lg:w-1/2 lg:order-first">
-                        <h3 class="font-bold text-[24px] leading-[38px] mb-2 lg:text-[38px] lg:leading-[44px] xl:text-[42px]"> {{ entry.solutionsCard2Title }}</h3>
-                        <p class="text-[16px] leading-[26px] font-normal text-left lg:text-[20px] lg:leading-[34px]">{{ entry.solutionsCard2Subheading }}.</p>
+                        <h3 class="mb-2 font-bold"> {{ entry.solutionsCard2Title }}</h3>
+                        <p class="font-normal text-left">{{ entry.solutionsCard2Subheading }}</p>
                         {# Tickbox section Card 2 #}
                         <div class="tickbox section">
                             <div class="flex items-center py-1 mt-4 mb-1 md:w-9/12 group">   
@@ -223,14 +224,14 @@
                                 <circle cx="13" cy="13" r="13" fill="#FFFFFF"/>
                                 <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
                                 </svg>
-                                <span class="px-2 text-[16px] leading-[26px] font-normal md:text-[16px] md:leading-[34px] lg:text-[20px] lg:leading-[42px] ">{{ entry.solutionsCard2BulletpointText1 }}</span>
+                                <p class="px-2 font-normal">{{ entry.solutionsCard2BulletpointText1 }}</p>
                             </div>
                             <div class="flex items-center py-1 mt-1 spaces-y-1 md:w-9/12 group">   
                                 <svg width="26" height="26" class="flex-shrink-0" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="13" cy="13" r="13" fill="#FFFFFF"/>
                                 <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
                                 </svg>
-                                <span class="px-2 text-[16px] leading-[26px] font-normal md:text-[16px] md:leading-[34px]  lg:text-[20px] lg:leading-[42px]">{{ entry.solutionsCard2BulletpointText2 }}</span>
+                                <p class="px-2 font-normal">{{ entry.solutionsCard2BulletpointText2 }}</p>
                             </div>
                             
                             
@@ -239,7 +240,7 @@
                                 <circle cx="13" cy="13" r="13" fill="#FFFFFF"/>
                                 <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
                                 </svg>
-                                <span class="px-2 text-[16px] leading-[26px] font-normal md:text-[16px] md:leading-[34px] lg:text-[20px] lg:leading-[42px]">{{ entry.solutionsCard2BulletpointText3 }}</span>
+                                <p class="px-2 font-normal">{{ entry.solutionsCard2BulletpointText3 }}</p>
                             </div>
                         </div>
                         {#  Buttons - Solutions Card2 #}
@@ -270,14 +271,14 @@
                                 <circle cx="13" cy="13" r="13" fill="#FFFFFF"/>
                                 <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
                                 </svg>
-                                <span class="px-2 text-[16px] leading-[26px] font-normal md:text-[16px] md:leading-[34px] lg:text-[20px] lg:leading-[42px] ">{{ entry.solutionsCard3BulletpointText1 }}</span>
+                                <p class="px-2 font-normal">{{ entry.solutionsCard3BulletpointText1 }}</p>
                             </div>
                             <div class="flex items-center py-1 mt-1 spaces-y-1 md:w-9/12 group">   
                                 <svg width="26" height="26" class="flex-shrink-0" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="13" cy="13" r="13" fill="#FFFFFF"/>
                                 <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
                                 </svg>
-                                <span class="px-2 text-[16px] leading-[26px] font-normal md:text-[16px] md:leading-[34px]  lg:text-[20px] lg:leading-[42px]">{{ entry.solutionsCard3BulletpointText2 }}</span>
+                                <p class="px-2 font-normal">{{ entry.solutionsCard3BulletpointText2 }}</p>
                             </div>
                             
                             
@@ -286,7 +287,7 @@
                                 <circle cx="13" cy="13" r="13" fill="#FFFFFF"/>
                                 <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
                                 </svg>
-                                <span class="px-2 text-[16px] leading-[26px] font-normal md:text-[16px] md:leading-[34px] lg:text-[20px] lg:leading-[42px]">{{ entry.solutionsCard3BulletpointText3 }}</span>
+                                <p class="px-2 font-normal">{{ entry.solutionsCard3BulletpointText3 }}</p>
                             </div>
                         </div>
                         {#  Buttons - Solutions Card 3 #}
@@ -303,109 +304,117 @@
     {% endfor %}
     
     {# EXPERTISE-TABS SECTION #}
-    <section class="expertise-tabs">
-        <div class="container py-10 mx-auto w-[336px] text-center md:mb-12">
-            <div class="p-4 text-center lg:w-1/2">
-                <h1 class="mb-4 text-[28px] leading-[34px] text-center
-                font-bold">Sector expertise that will <span class="font-bold text-primaryorange-400">drive results </span> for your organisation</h1>
+    {% set entries = craft.entries().section('homePage').all() %}
+    {% for entry in entries %}
+        <section class="expertise-tabs">
+            <div class="container py-10 mx-auto w-[336px] md:w-full xl:w-9/12 items-center justify-center text-center md:mb-32">
+                <div class="p-4 text-center md:w-[535px] lg:w-[816px] mx-auto">
+                    <h2 class="mb-4 font-bold text-center">Sector expertise that will <span class="font-bold text-primaryorange-400">drive results </span> for your organisation</h2>
+                </div>
+                <nav class="rounded-[10px] bg-tabBackground md:bg-transparent mb-4 md:mx-auto md:w-11/12 lg:w-full lg:justify-around xl:justify-center">
+                    <ul class="flex flex-wrap mx-auto text-sm font-bold text-center lg:w-full lg:justify-around" data-tabs-toggle="#default-tab-content" role="tablist">
+                        <li class="me-2 active-tab" role="presentation">
+                            <button class=" bg-white hover:bg-white rounded-[10px] md:rounded-none md:bg-transparent p-2 md:p-4 mx-1 my-1 md:border-b-2 md:hover:border-b-primaryorange-400 hover:text-primaryorange-400 text-[17px] leading-[23.15px] font-bold md:border-[#B1B1B1]/50 md:text-[22px] md:leading-[32px] lg:text-[24px] lg:leading-[68px] lg:w-[255px]" id="{{ entry.tabsPanel1Name|lower }}-tab" data-tabs-target="#{{  entry.tabsPanel1Name|lower  }}" type="button" role="tab" aria-controls="{{  entry.tabsPanel1Name|lower  }}" aria-selected="false">{{ entry.tabsPanel1Name }}</button>
+                        </li>
+                        <li class="me-2" role="presentation">
+                            <button class=" md:rounded-none md:bg-transparent hover:bg-white p-2 m-1 md:p-4 md:border-b-2 md:hover:border-primaryorange-400 hover:text-primaryorange-400 border-[#B1B1B1]/50 rounded-t-lg md:text-[22px] md:leading-[32px] lg:text-[24px] lg:leading-[68px] lg:w-[255px]" id="{{ entry.tabsPanel2Name|lower }}-tab" data-tabs-target="#{{ entry.tabsPanel2Name|lower }}" type="button" role="tab" aria-controls="{{ entry.tabsPanel2Name|lower }}" aria-selected="false">{{ entry.tabsPanel2Name }}</button>
+                        </li>
+                        <li class="me-2" role="presentation">
+                            <button class=" md:rounded-none md:bg-transparent hover:bg-white rounded-[10px] p-2 m-1 md:p-4 md:border-b-2 md:hover:border-primaryorange-400 hover:text-primaryorange-400  border-[#B1B1B1]/50 rounded-t-lg md:text-[22px] md:leading-[32px] lg:text-[24px] lg:leading-[68px] lg:w-[255px]" id="{{ entry.tabsPanel3Name|lower }}-tab" data-tabs-target="#{{ entry.tabsPanel3Name|lower }}" type="button" role="tab" aria-controls="{{ entry.tabsPanel3Name|lower }}" aria-selected="false">{{ entry.tabsPanel3Name }}</button>
+                        </li>
+                        <li role="presentation">
+                            <button class=" md:rounded-none md:bg-transparent hover:bg-white rounded-[10px] p-2 m-1 md:p-4 md:border-b-2 md:hover:border-primaryorange-400  hover:text-primaryorange-400 rounded-t-lg md:text-[22px] md:leading-[32px] lg:text-[24px] lg:leading-[68px] lg:w-[255px]" id="{{ entry.tabsPanel4Name|lower }}-tab" data-tabs-target="#{{ entry.tabsPanel4Name|lower }}" type="button" role="tab" aria-controls="{{ entry.tabsPanel4Name|lower }}" aria-selected="false">{{ entry.tabsPanel4Name }}</button>
+                        </li>
+                    </ul>
+                </nav>
+                <div id="default-tab-content" class="flex flex-col panels">
+                    <article class="p-4 text-left active-panel lg:flex" id="{{  entry.tabsPanel1Name|lower  }}-tab" role="tabpanel" aria-labelledby="{{  entry.tabsPanel1Name|lower  }}-tab">
+                        <div class="text-left md:mx-20 md:mb-6 lg:py-6 lg:order-first lg:flex-1">
+                            <h5 class="mb-1.5 md:mb-2"> {{ entry.tabsPanel1Title }}</h5>
+                            <plarge class="font-normal text-left">{{ entry.tabsPanel1Subheading }}</plarge>
+                            {# Tickbox section - Tab Panel 1 #}
+                            <div class="tickbox section">
+                                <div class="flex items-center py-1 mt-4 mb-1 group">   
+                                    <svg width="26" height="26" class="flex-shrink-0" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="13" cy="13" r="13" fill="#FFFFFF"/>
+                                    <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
+                                    </svg>
+                                    <p class="px-2 font-normal ">{{ entry.tabsPanel1BulletpointText1 }}</p>
+                                </div>
+                                <div class="flex items-center py-1 mt-1 spaces-y-1 group">   
+                                    <svg width="26" height="26" class="flex-shrink-0" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="13" cy="13" r="13" fill="#FFFFFF"/>
+                                    <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
+                                    </svg>
+                                    <p class="px-2 font-normal">{{ entry.tabsPanel1BulletpointText2 }}</p>
+                                </div>
+                                <div class="flex items-center py-1 mt-1 mb-8 spaces-y-1 md:w-9/12 group">   
+                                    <svg width="26" height="26" class="flex-shrink-0" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="13" cy="13" r="13" fill="#FFFFFF"/>
+                                    <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
+                                    </svg>
+                                    <p class="px-2 font-normal">{{ entry.tabsPanel1BulletpointText3 }}</p>
+                                </div>
+                            </div>
+                            {#  Buttons - Tab Panel 1 #}
+                            <div class="flex items-center justify-start md:mt-6 md:mb-8">
+                                <button type="button" class="text-white bg-primaryorange-400 hover:bg-primaryorange-600 font-bold text-center text-[17px] px-5 mr-3 rounded-[35px] w-[152px] h-[52px]">Learn More</button>
+                                <div class="inline-block">
+                                    <a href="#" class="text-[17px] leading-[30px] text-left font-bold text-primaryorange-400  hover:text-primaryorange-600 underline">All Case Studies</a>
+                                </div>
+                            </div>
+                        </div>
+                        {# Image - Tab Panel 1 #}
+                        <figure class="relative lg:flex lg:flex-1 lg:w-1/2">
+                            <img class="relative hidden object-contain mx-auto rounded-t-lg lg:py-6 md:block" src="{{ siteUrl }}static/images/healthcare.png" alt="Image depicting Healthcare where a nurse smiles at an elderly patient">
+                            
+                            <img class="mt-6 rounded-t-lg md:hidden lg:hidden xl:hidden" src="{{ siteUrl }}static/images/healthcareMobile.svg" alt="A person wearing surgical gloves washes them in a sink">
+                            {# Quotebox - Tab Panel 1 #}
+                            <figcaption class="w-full">
+                                <blockquote class="relative p-1 bg-[#F9F4EE] text-[20px] md:absolute md:bottom-0 md:right-0 md:p-4 md:rounded-tl-[20px] md:rounded-br-[40px] md:translate-y-[50%] md:-translate-x-[38.5px] lg:-translate-x-[0px] text-left text-gray-900 lg:right-0 xl:-translate-x-[0%]">
+                                    {# Quotes SVG #}
+                                    <svg class="absolute top-0 left-8 -translate-x-[24.67px]  translate-y-[21.59px] md:translate-x-[10px] md:translate-y-[43px]" width="30" height="30" viewBox="0 0 25 25" fill="none" 
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.9622 8.54796V14.6864H0.671143V9.84026C0.671143 7.2165 1.01883 5.31721 1.71422 4.14239C2.62691 2.57596 4.07201 1.39135 6.0495 0.588562L7.48373 2.6445C6.28854 3.09484 5.40845 3.77036 4.84345 4.67106C4.27845 5.55217 3.96335 6.84447 3.89816 8.54796H6.9622ZM17.067 8.54796V14.6864H10.7759V9.84026C10.7759 7.2165 11.1236 5.31721 11.819 4.14239C12.7317 2.57596 14.1768 1.39135 16.1543 0.588562L17.5885 2.6445C16.3933 3.09484 15.5132 3.77036 14.9482 4.67106C14.3832 5.55217 14.0682 6.84447 14.003 8.54796H17.067Z" fill="#F26839"/>
+                                    </svg>
+
+                                    <span class="w-[280.81px] inline-block text-left font-medium text-[20px] md:w-[370px] leading-[26.79px] md:leading-[34px] ml-[34.28px] md:ml-[60px] lg:text-[26px] lg:leading-[38px] pr-[29.91px] md:font-semibold text-xl mt-5 md:mb-4 md:flex">Lorem ipsum dolor sit amet consectet sum dolor sit amet consectetur, adipiscing elit.</span>
+                                    <footer class="mt-2 text-sm md:ml-[60px]">
+                                        <div class=" md:block hidden w-[124px] mb-1 md:w-[165px]">
+                                            <strong class="md:block hidden font-bold text-primaryblack-950 text-base leading-[22px]">John Smith</strong>
+                                            <span class="hidden md:block font-normal text-pgrey-400 text-sm leading-[22px]">Head of Training, NHS</span>
+                                        </div>
+                                        <div class="block p-2 ml-6 md:hidden lg:hidden xl:hidden">
+                                            <strong class="text-left font-bold text-primaryblack-950 text-base leading-[22px]">Paul McGurk</strong>
+                                            <span class="flex font-normal text-pgrey-400 text-sm leading-[22px] text-left">Head of Training, NHS</span></p>
+                                        </div>
+                                    </footer>
+                                </blockquote>
+                            </figcaption>
+                        </figure>
+                    </article>
+                    <article class="hidden p-4 rounded-lg bg-gray-50 md:mx-auto" id="publicSector" role="tabpanel" aria-labelledby="dashboard-tab">
+                        <h5 class="md:font-bold md:w-10/12 text-primaryblack-950 md:text-[24px] md:leading-[34px] md:mx-auto">Panel 2 - Public Sector</h5>
+                        <p class="text-sm text-gray-500 md:mx-auto">This is some placeholder content the <strong class="font-medium text-gray-800">Dashboard tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+                    </article>
+                    <article class="hidden p-4 rounded-lg bg-gray-50" id="commercial" role="tabpanel" aria-labelledby="settings-tab">
+                        <h5 class="md:font-bold md:w-10/12 text-primaryblack-950 md:text-[24px] md:leading-[34px] md:mx-auto">Panel 3 - Commercial</h5>
+                        <p class="text-sm text-gray-500 md:mx-auto">This is some placeholder content the <strong class="font-medium text-gray-800">Settings tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+                    </article>
+                    <article class="hidden p-4 rounded-lg bg-gray-50" id="charity" role="tabpanel" aria-labelledby="contacts-tab">
+                        <h5 class="md:font-bold md:w-10/12 text-primaryblack-950 md:text-[24px] md:leading-[34px] md:mx-auto">Panel 4 - Charity</h5>
+                        <p class="text-sm text-gray-500">This is some placeholder content the <strong class="font-medium text-gray-800">Contacts tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+                    </article>
+                
             </div>
-            <nav class="rounded-[10px] bg-tabBackground md:bg-transparent mb-4 md:mx-auto md:w-11/12">
-                <ul class="flex flex-wrap mx-auto text-sm font-bold text-center md:-mb-px" data-tabs-toggle="#default-tab-content" role="tablist">
-                    <li class="me-2 active-tab" role="presentation">
-                        <button class=" bg-white rounded-[10px] p-2 md:p-4 mx-1 my-1 md:border-b-2 hover:shadow-inner md:hover:border-primaryorange-400 hover:text-primaryorange-400 text-[17px]leading-[23.15px] font-bold md:border-[#B1B1B1]/50 md:border-rounded-t-lg md:text-[22px] md:leading-[32px]" id="healthcare-tab" data-tabs-target="#healthcare" type="button" role="tab" aria-controls="healthcare" aria-selected="false">Healthcare</button>
-                    </li>
-                    <li class="me-2" role="presentation">
-                        <button class=" hover:bg-white hover:rounded-[10px] p-2 m-1 md:p-4 md:border-b-2 hover:shadow-inner md:hover:border-primaryorange-400 hover:text-primaryorange-400 border-[#B1B1B1]/50 rounded-t-lg md:text-[22px] md:leading-[32px]" id="publicSector-tab" data-tabs-target="#publicsector" type="button" role="tab" aria-controls="publicsector" aria-selected="false">Public Sector</button>
-                    </li>
-                    <li class="me-2" role="presentation">
-                        <button class=" hover:bg-white rounded-[10px] p-2 m-1 md:p-4 md:border-b-2 hover:shadow-inner md:hover:border-primaryorange-400 hover:text-primaryorange-400  border-[#B1B1B1]/50 rounded-t-lg md:text-[22px] md:leading-[32px]" id="commercial-tab" data-tabs-target="#commercial" type="button" role="tab" aria-controls="commercial" aria-selected="false">Commercial</button>
-                    </li>
-                    <li role="presentation">
-                        <button class=" hover:bg-white rounded-[10px] p-2 m-1 md:p-4 md:border-b-2 hover:shadow-inner md:hover:border-primaryorange-400  hover:text-primaryorange-400 rounded-t-lg md:text-[22px] md:leading-[32px]" id="charity-tab" data-tabs-target="#charity" type="button" role="tab" aria-controls="charity" aria-selected="false">Charity</button>
-                    </li>
-                </ul>
-            </nav>
-            <div id="default-tab-content" class="panels">
-                <article class="p-4 text-left rounded-lg active-panel" id="healthcare" role="tabpanel" aria-labelledby="profile-tab">
-                    <h5 class="md:font-bold md:w-10/12 text-primaryblack-950 md:text-[24px] md:leading-[34px] md:mx-auto">Enhance healthcare training with immersive, interactive learning experiences</h5>
-                    <p class="text-pgrey-400 font-normal md:text-[16px] md:leading-[34px] md:mx-auto md:w-10/12 md:mt-4">Improve knowledge retention and patient outcomes.</p>
-                </article>
-                <article class="hidden p-4 rounded-lg bg-gray-50 md:mx-auto" id="publicSector" role="tabpanel" aria-labelledby="dashboard-tab">
-                    <h5 class="md:font-bold md:w-10/12 text-primaryblack-950 md:text-[24px] md:leading-[34px] md:mx-auto">Panel 2 - Public Sector</h5>
-                    <p class="text-sm text-gray-500 md:mx-auto">This is some placeholder content the <strong class="font-medium text-gray-800">Dashboard tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
-                </article>
-                <article class="hidden p-4 rounded-lg bg-gray-50" id="commercial" role="tabpanel" aria-labelledby="settings-tab">
-                    <h5 class="md:font-bold md:w-10/12 text-primaryblack-950 md:text-[24px] md:leading-[34px] md:mx-auto">Panel 3 - Commercial</h5>
-                    <p class="text-sm text-gray-500 md:mx-auto">This is some placeholder content the <strong class="font-medium text-gray-800">Settings tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
-                </article>
-                <article class="hidden p-4 rounded-lg bg-gray-50" id="charity" role="tabpanel" aria-labelledby="contacts-tab">
-                    <h5 class="md:font-bold md:w-10/12 text-primaryblack-950 md:text-[24px] md:leading-[34px] md:mx-auto">Panel 4 - Charity</h5>
-                    <p class="text-sm text-gray-500">This is some placeholder content the <strong class="font-medium text-gray-800">Contacts tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
-                </article>
-            </div class="tickbox_items">
-                <div class="flex items-center py-1 text-left md:mx-auto md:w-9/12 group">   
-                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="13" cy="13" r="13" fill="#F9F4EE"/>
-                    <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
-                    </svg>
-                    <span class="px-2 text-pgrey-400 font-normal md:text-[16px] md:leading-[34px]">Over 20 years' experience working in healthcare</span>
-                </div>
-                <div class="flex items-center py-1 md:mx-auto md:w-9/12 group">   
-                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="13" cy="13" r="13" fill="#F9F4EE"/>
-                    <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
-                    </svg>
-                    <span class="px-2 text-pgrey-400 font-normal text-left md:text-[16px] md:leading-[34px]">Proven track record of innovative learning solutions</span>
-                </div>
-                <div class="flex py-1 items-left md:mx-auto md:w-9/12 group">   
-                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="13" cy="13" r="13" fill="#F9F4EE"/>
-                    <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
-                    </svg>
-                    <span class="px-2 text-pgrey-400 font-normal  text-left md:text-[16px] md:leading-[34px]">Trusted by global healthcare leaders</span>
-                </div>
-                <div class="flex items-center justify-center md:w-8/12 md:mt-6 md:mb-8">
-                    <button type="button" class="text-white bg-primaryorange-400 hover:bg-primaryorange-600 font-bold text-center text-[17px] px-5 mr-3 rounded-[35px] w-[152px] h-[52px]">Learn More</button>
-                    <div class="inline-block">
-                        <a href="#" class="text-[17px] leading-[30px]  text-left font-bold text-primaryorange-400  hover:text-primaryorange-600 underline">All Case Studies</a>
-                    </div>
-                </div>
-                <figure class="relative">
-                    <img class="hidden rounded-t-lg md:block" src="{{ siteUrl }}static/images/healthcare.png" alt="Image depicting Healthcare where a nurse smiles at an elderly patient">
-                    <img class="mt-6 rounded-t-lg md:hidden lg:hidden xl:hidden " src="{{ siteUrl }}static/images/healthcareMobile.svg" alt="A person wearing surgical gloves washes them in a sink>
-
-                    <figcaption class="relative md:absolute md:bottom-0 md:left-0  md:w-[480px] md:h-[246px] md:rounded-tl-[20px] md:rounded-br-[40px] md:p-10 p-5">
-                        
-                        <blockquote class="relative bg-[#F9F4EE] text-[20px] w-[321px] h-[223px]  text-left text-gray-900 md:w-[370px]">
-                    
-                            <svg class="absolute top-0 left-8 transform -translate-x-[24.67px]  translate-y-[21.59px]" width="30" height="30" viewBox="0 0 25 25" fill="none" 
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6.9622 8.54796V14.6864H0.671143V9.84026C0.671143 7.2165 1.01883 5.31721 1.71422 4.14239C2.62691 2.57596 4.07201 1.39135 6.0495 0.588562L7.48373 2.6445C6.28854 3.09484 5.40845 3.77036 4.84345 4.67106C4.27845 5.55217 3.96335 6.84447 3.89816 8.54796H6.9622ZM17.067 8.54796V14.6864H10.7759V9.84026C10.7759 7.2165 11.1236 5.31721 11.819 4.14239C12.7317 2.57596 14.1768 1.39135 16.1543 0.588562L17.5885 2.6445C16.3933 3.09484 15.5132 3.77036 14.9482 4.67106C14.3832 5.55217 14.0682 6.84447 14.003 8.54796H17.067Z" fill="#F26839"/>
-                            </svg>
-
-                            <p class="text-primaryblack-950 w-[300.81px] inline-block h-[108px] text-left font-semibold leading-[26.79px] md:leading-[34px] ml-[34.28px] pr-[29.91px] text-xl mt-5 md:mb-4 md:flex">Lorem ipsum dolor sit amet consectet sum dolor sit amet consectetur, adipiscing elit.</p>
-                            <footer class="mt-2 text-sm">
-                                <div class=" md:block hidden w-[124px] h-[32px] mb-1 md:w-[165px] md:h-[303px]">
-                                    <strong class="md:block hidden font-bold text-primaryblack-950 text-base leading-[22px]">John Smith</strong>
-                                    <span class="hidden md:block font-normal text-pgrey-400 text-sm leading-[22px]">Head of Training, NHS</span>
-                                </div>
-                                <div class="block p-2 ml-6 md:hidden lg:hidden xl:hidden">
-                                    <strong class="text-left font-bold text-primaryblack-950 text-base leading-[22px]">Paul McGurk</strong>
-                                    <span class="flex font-normal text-pgrey-400 text-sm leading-[22px] text-left">Head of Training, NHS</span></p>
-                                </div>
-                            </footer>
-                        </blockquote>
-                    </figcaption>
-                </figure>
-        </div>
-    </section>
-
+        </section>
+    {% endfor %}
     {# WHY AURION #}
     <section class="why_aurion">
-        <div class="container px-5 py-10 mx-auto mt-20 text-center lg:w-8/12">
+        <div class="container px-5 pb-10 mx-auto mt-2 text-center lg:w-8/12">
             <div class="lg:mb-6">
-                <h2 class="font-bold text-[28px] leading-[34px] md:text-[36px] md:leading-[44px]">Why Aurion Learning?</h2>
-                <p class="mt-4 text-base md:w-8/12 mx-auto md:text-center font-normal leading-[26px]">With decades of learning, technical and creative experience, we will work with you to deliver the best learning experience that works for your learners.</p> 
+                <h2>Why Aurion Learning?</h2>
+                <p class="mx-auto mt-4 font-normal md:w-8/12 md:text-center">With decades of learning, technical and creative experience, we will work with you to deliver the best learning experience that works for your learners.</p> 
             </div>
             <div class="grid grid-cols-3 grid-rows-3 gap-2 mb-4 lg:mx-auto lg:grid-cols-3 lg:grid-rows-3 lg:justify-self-center lg:align-self-center lg:justify-center lg:align-center ">
                 <div class="grid place-items-center lg:order-1">
@@ -566,8 +575,8 @@
                 </div>
 
                     <div class="col-span-2 col-start-2 lg:w-[300px] lg:col-span-1 lg:row-span-2 lg:order-4 ">
-                        <h4 class="font-bold text-[18px] lg:text-[20px] lg:leading-[34px] leading-[27px] mt-6 text-left lg:text-center">Sector Knowledge</h4>
-                        <p class="mt-2 text-base font-normal leading-[26px] md:w-11/12 text-left lg:text-center lg:mb-6">We work with a wide range of organisations across the public, private and charity sectors.</p> 
+                        <plarge class="mt-6 font-bold text-left lg:text-center">Sector Knowledge</plarge>
+                        <p class="mt-2 font-normal text-left md:w-11/12 lg:text-center lg:mb-6">We work with a wide range of organisations across the public, private and charity sectors.</p> 
                     </div>
                 
                 <div class="grid place-items-center lg:order-2">
@@ -699,8 +708,8 @@
                 </div>
 
                     <div class="col-span-2 lg:order-5 lg:w-[300px] lg:col-span-1 lg:row-span-2">
-                        <h4 class="font-bold text-[18px] leading-[27px] lg:text-[20px] lg:leading-[34px] mt-6 text-left lg:text-center">Established in Marketplace</h4>
-                        <p class="mt-2 text-base font-normal leading-[26px] md:w-11/12  text-left lg:text-center">Over 20 years of experience delivering high-quality learning solutions that work.</p> 
+                        <plarge class="mt-6 font-bold text-left lg:text-center">Established in Marketplace</plarge>
+                        <p class="mt-2 font-normal text-left md:w-11/12 lg:text-center">Over 20 years of experience delivering high-quality learning solutions that work.</p> 
                     </div>
 
                 <div class="grid place-items-center lg:order-3">
@@ -720,8 +729,8 @@
                     </svg>
                 </div>
                     <div class="col-span-2 lg:order-6 lg:w-[300px] lg:col-span-1 lg:row-span-2">
-                        <h4 class="font-bold text-[18px] leading-[27px] lg:text-[20px] lg:leading-[34px] mt-6 text-left lg:text-center">Proven Track Record</h4>
-                        <p class="mt-2 text-base font-normal leading-[26px] text-left lg:text-center">Award-winning expertise in recognition of our quality, creativity and impact.</p> 
+                        <plarge class="mt-6 font-bold text-left lg:text-center">Proven Track Record</plarge>
+                        <p class="mt-2 text-left lg:text-center">Award-winning expertise in recognition of our quality, creativity and impact.</p> 
                     </div>
             </div>
         </div>
@@ -1140,8 +1149,8 @@
                     </svg>
                 </div>
         
-                <h2 class="font-bold text-[28px] w-[335px] lg:mt-[64.5px] lg:mb-8 px-11 mb-4 md:mx-auto md:w-11/12 lg:w-6/12 xl:w-5/12 leading-[34px] md:leading-[54px] md:text-[48px]">Talk to our eLearning experts today</h2>
-                    <p class="mt-4 text-base md:text-[20px] mb-8 md:leading-[34px]font-normal lg:mb-10 leading-[26px]">Contact us to discuss your learning challenges and find solutions.</p> 
+                <h2 class="font-bold w-[335px] lg:mt-[64.5px] lg:mb-8 px-11 mb-4 md:mx-auto md:w-11/12 lg:w-6/12 xl:w-5/12">Talk to our eLearning experts today</h2>
+                    <p class="mt-4 mb-8 text-base font-normal lg:mb-10">Contact us to discuss your learning challenges and find solutions.</p> 
                     <div class="flex justify-center pt-4 mb-3 gap-x-2.5">
                         <a href="#" type="button" class="text-primarywhite text-sm bg-transparent border-2 hover:bg-primaryorange-500 font-bold leading-[30px] px-4 py-1  lg:px-6 text-center rounded-[35px] align-baseline select-none">Contact Us</a>
                         <a href="#" type="button" class="text-primarywhite text-sm bg-primaryblack-950 hover:text-primaryblack-100 font-bold leading-[30px] px-4 py-1 md:px-[26px] text-center rounded-[35px] align-baseline select-none">Request a Demo</a>

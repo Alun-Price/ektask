@@ -1,0 +1,19 @@
+columnSuffix: tgdhrvbu
+contentColumnType: string(80)
+fieldGroup: 4aa35177-3ee6-45b7-9fbb-0dbc64d50bcc # Tabs
+handle: tabsPanel1LinkText
+instructions: 'Link text for tabs panel 1 (max: 15 chars)'
+name: 'Tabs Panel1 Link Text'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: 20
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

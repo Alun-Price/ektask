@@ -1,4 +1,4 @@
-dateModified: 1703052904
+dateModified: 1703139075
 elementSources:
   craft\elements\Asset:
     -
@@ -37,46 +37,53 @@ fs:
 meta:
   __names__:
     00ac0806-61fb-4aef-9a81-8e3e9426032d: 'Solutions Card1 Title' # Solutions Card1 Title
+    0b3e671b-1f0d-4f06-8286-6c4b33e03cac: 'Tabs Panel2 Name' # Tabs Panel2 Name
     0c2f4fef-9935-4d4a-9677-0e4c034882a0: 'SM Logo' # SM Logo
+    0cf72060-b216-4306-99c9-419e533ec7d6: 'Tabs Panel1 Subheading' # Tabs Panel1 Subheading
     0d78a984-a68b-444d-a25a-377d5df9a4a4: xlLogos # xlLogos
     1d30f193-6862-4d4c-85b9-c058007167ca: 'Solutions Card2 Bulletpoint Text3' # Solutions Card2 Bulletpoint Text3
+    1dde08a7-0369-4bcb-97b7-6b4f05210441: 'Tabs Panel1 Name' # Tabs Panel1 Name
     1e489a30-b76f-49ff-b56f-9d5c6a089b69: 'Solutions Card2 Button Color' # Solutions Card2 Button Color
     02aea2db-7a51-4c6f-a146-c2123960fe5d: Navigation # Navigation
     2f7db1c8-c7cd-4af9-9a86-4c0cd08b3be7: 'Solutions Card3 Link' # Solutions Card3 Link
+    3cc5cbc2-41db-4b32-92dc-fb441c4b56f4: 'Tabs Panel4 Name' # Tabs Panel4 Name
+    4aa35177-3ee6-45b7-9fbb-0dbc64d50bcc: Tabs # Tabs
     5b663fe4-fa4e-4853-a70c-7f6df3f7ca10: 'Solutions Card2 Title' # Solutions Card2 Title
+    5c21f109-0825-4f19-b7f9-4fb32f04d4b2: 'Tabs Panel1 Bulletpoint Text2' # Tabs Panel1 Bulletpoint Text2
     5e783436-9213-4fd9-acc2-4703d88a20dd: 'Hero Subtext' # Hero Subtext
     5eb80996-b5b7-4931-9e4f-5ce0094f1d67: 'Solutions Card2 Bulletpoint Text1' # Solutions Card2 Bulletpoint Text1
     5f4eded7-6231-4599-9f25-83565d164b05: 'Solutions Card2 Subheading' # Solutions Card2 Subheading
     7c13edb7-05d5-4e13-8a6a-6150e4e43dde: 'Solutions Card3 Image' # Solutions Card3 Image
     7e29d806-19f1-4591-9ba2-8acb0bf525ce: 'Solutions Card3 Title' # Solutions Card3 Title
-    10e6b2d3-3d2a-4e64-8773-694575ef11dc: logo # logo
+    010d4606-43a0-4cbb-9e7e-6940170f0e06: 'Tabs Panel1 Bulletpoint Text3' # Tabs Panel1 Bulletpoint Text3
     12dae174-ac60-45df-8001-7bd40dedce57: 'Solutions Global' # Solutions Global
     15e796fd-d9f9-4eb9-900b-19e85ab478a8: Logos # Logos
     22e9315c-4dfc-4b95-97ee-a0dbe6e3620f: 'Solutions Card1 Button Text' # Solutions Card1 Button Text
     40d0aff4-a577-4811-8a14-be151bd4f63e: 'Solutions Card1 Image' # Solutions Card1 Image
+    50da8cdf-9a5c-4c56-83fe-94dca5ddd3fe: TabTitleMain # TabTitleMain
     50e3b3bb-a6f6-4870-a4d1-d3c78f1e48ba: 'Logo Strip' # Logo Strip
-    59e57a03-e278-4bb5-8210-63db9ba1e126: 'Media Category' # Media Category
-    78ed5f4b-44d7-4c0d-9fbf-5c4d2d909e05: Common # Common
     93d458fd-c496-457f-aa0e-f73f4c7ff0ea: Solutions # Solutions
     94a78850-d37f-4f2e-9b70-88b0b065cea4: Logos # Logos
+    492d9a19-dc4e-4993-a783-e6f60b0a5dba: 'Tabs Panel1 Link Text' # Tabs Panel1 Link Text
     555e190a-6d35-423b-89be-d0e492f5bc58: 'Home Page' # Home Page
     576ac951-8622-4ff2-9d69-057041d1e104: 'Solutions Card3 Bulletpoint Text2' # Solutions Card3 Bulletpoint Text2
     699d7cd3-b9ff-4a6f-867d-ea7c7b3120b6: 'Solutions Card1 Button Color' # Solutions Card1 Button Color
     857de95a-e13a-4f40-9a44-9e5799ba9a41: siteSettingValue # siteSettingValue
     3192af92-0e16-402a-bc85-8ec22b259c0b: 'Link Text' # Link Text
     4076ab59-327c-42ee-99c4-826bfedf430e: Hero # Hero
+    5255f582-4244-425b-a88f-3d2d8f2b05fe: 'Tabs Panel3 Name' # Tabs Panel3 Name
     8200bbfd-113b-4164-b60a-f5a5a1c15c32: ektask # ektask
     50805c8f-aed0-4e14-8fe1-d217748229eb: 'Solutions Card3 Button Color' # Solutions Card3 Button Color
     59560d8a-7626-43c0-b31f-060231e0c9c3: 'Solutions Card2 Link' # Solutions Card2 Link
     91737ba4-79fd-4b5e-8aaa-3518ab4ca720: lgLogos # lgLogos
     95070de3-e274-44e6-b8bb-f3de2a628f5b: 'Solutions Card3 Bulletpoint Text3' # Solutions Card3 Bulletpoint Text3
-    3166623a-4b35-47cc-8610-11d77e9297ac: logos # logos
     6485657f-9dc3-453f-bfe2-196867db7613: 'Solutions Card2 Image' # Solutions Card2 Image
     10796049-3cf3-4547-9fdb-16401c6d9c20: 'Dropdown Toggle' # Dropdown Toggle
     47457785-60c3-4ebd-881d-6da1f22a67e6: 'Link Destination' # Link Destination
     80446766-2d4f-4863-977e-956559c32f3e: Navigation # Navigation
     a1229ca4-4e29-414a-9c33-b4da21c7cb37: 'Solutions Card1 Bulletpoint Text1' # Solutions Card1 Bulletpoint Text1
     a174712f-24fb-4518-be8e-91855ed728fc: siteSettingMatrix # siteSettingMatrix
+    ac8660a2-90e9-4864-90ca-2f340ffe007f: 'Tabs Panel1 Button Text' # Tabs Panel1 Button Text
     b073904f-64d9-4bb5-84ba-e15c5e35f456: 'Home Page' # Home Page
     b4789fed-f03d-41f3-ac16-a7e0fbfb8499: 'Solutions Card2 Link Text' # Solutions Card2 Link Text
     b6198944-67af-47f1-b642-0de35fb2a97a: 'Solutions Card1 Color' # Solutions Card1 Color
@@ -84,11 +91,10 @@ meta:
     bb14322e-9cc4-403f-84de-57fc9605c618: 'Solutions Card1 Link' # Solutions Card1 Link
     c0844813-738c-4e5f-ac4e-bc400901c0f8: 'Solutions Card1 Bulletpoint Text2' # Solutions Card1 Bulletpoint Text2
     c4a611b6-b197-454c-8b52-9a6b973cfd35: 'Solutions Main Subheading' # Solutions Main Subheading
-    c4fc1131-0ef6-450b-8aaf-3b49b261f51d: Branding # Branding
-    c8c33375-9ac9-4f5f-b042-0d15901bb571: 'Logo Strip' # Logo Strip
     c30ece48-e6fe-445e-9a69-f624ddc44989: mdLogos # mdLogos
     c992b9be-2b80-4b18-80d5-6ed0cd2832df: siteSettings # siteSettings
     cc902951-219f-416d-93cc-e2f31f9709b7: 'Solutions Card3 Subheading' # Solutions Card3 Subheading
+    d2a8a211-1516-4364-83cc-15b8e12d70b3: 'Tabs Panel1 Bulletpoint Text1' # Tabs Panel1 Bulletpoint Text1
     d8f4c2b1-2495-4e1e-a4de-702ff262ef48: 'Breakpoint Value' # Breakpoint Value
     d53c4d5f-7703-48da-be46-b99a157059e7: 'Nav Links' # Nav Links
     d65cc449-3e95-43c1-9395-17e42961a4e4: siteSettings # siteSettings
@@ -107,6 +113,7 @@ meta:
     f93a1c78-7e07-47c5-863c-54778f88fd62: 'Solutions Card3 Link Text' # Solutions Card3 Link Text
     f900aa5e-c80c-4d73-876a-d45c0708f0c5: 'Solutions Main Title' # Solutions Main Title
     f21310f6-e6fd-4e80-8840-424690f6d11b: 'Solutions Card3 Color' # Solutions Card3 Color
+    fa2788f2-0a27-402c-8992-ee89a969b7ba: 'Tabs Panel1 Title' # Tabs Panel1 Title
 plugins:
   colour-swatches:
     edition: standard

@@ -1,9 +1,9 @@
-columnSuffix: gaxhuent
+columnSuffix: snmlkfwr
 contentColumnType: text
-fieldGroup: 93d458fd-c496-457f-aa0e-f73f4c7ff0ea # Solutions
-handle: solutionsCard1Title
-instructions: 'Select a title for Solutions Card 1'
-name: 'Solutions Card1 Title'
+fieldGroup: 4aa35177-3ee6-45b7-9fbb-0dbc64d50bcc # Tabs
+handle: tabsPanel1BulletpointText1
+instructions: 'Bulletpoint1 text for tab panel 1'
+name: 'Tabs Panel1 Bulletpoint Text1'
 searchable: false
 settings:
   byteLimit: null
