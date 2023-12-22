@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 93d458fd-c496-457f-aa0e-f73f4c7ff0ea # Solutions
+handle: solutionMatrix
+instructions: null
+name: 'Solution Matrix'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_solutionmatrix}}'
+  maxBlocks: null
+  minBlocks: null
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

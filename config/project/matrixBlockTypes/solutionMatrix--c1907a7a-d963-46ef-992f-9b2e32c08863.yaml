@@ -1,0 +1,494 @@
+field: 8f093e2b-d23f-4153-9831-0b2ee58d75d7 # Solution Matrix
+fieldLayouts:
+  773a7f09-f63d-4fd6-b9e4-705c3f07d27a:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: e7f681f5-dd66-4868-a885-b00b6085faad # solImage
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d9a34e78-86c7-4303-8de0-6b6ed434734c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 417edd7f-d132-4e0f-804f-1539f9b27356 # solCardTitle
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 00ef290d-72fb-4222-9432-c86357ee9bc9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f9f5c6bb-c399-44e1-bc1c-46a5781f4d1b # solCardSubheading
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2dbf8c71-6ccf-425b-9b74-ebeafeca9e64
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 9ec84187-5842-4b64-a363-df2809790092 # Sol Bulletpoint Text 1
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: debbcb23-16cd-4f45-9955-08676eb6c17e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 29333a82-abf9-4d7b-904c-1f9f6be597ae # Sol Bulletpoint Text 2
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d390960f-768e-466b-b3be-fac9ad1031dd
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 9508eea7-9b70-4558-8d1a-d1f02642b58d # Sol Bulletpoint Text 3
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 704b358f-ee1a-4ecb-8ab0-c82458538478
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: fe86aeea-6f76-497b-b19c-38335e95ec9a # sol bulletpoint icon
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3d69e2f5-4f74-48fa-9a9b-fa90d5209290
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b44ced1f-e6cc-452d-be3c-0ac93eae090c # sol button text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4be06dad-1f94-425e-948f-0296b9efe142
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 0b4ecdc7-9211-4ea6-9185-2b85f5bc627a # Sol Link Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6582df04-eb0b-48c7-99e9-01f637543c51
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c6245e3c-84a8-48c4-9111-0c523a4a29e7 # Sol Link Url
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 21c9d595-78d0-4df4-a9ae-bc4b8d96d571
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f21d5f9b-69f0-4ef7-934a-fab500c77149 # sol button url
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2035a5e1-29cf-40a1-85f9-dc18bf0d9720
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a7604adb-7e61-43a3-8714-774bfeeab423 # sol image first
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f1b80347-0c27-4b2e-837e-f59456e39f37
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f95e52ca-8259-48a9-9805-c8c2922a1611 # Sol Card Color
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6883a7de-f1b5-4a38-a08c-364487afc5fb
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 3e38aa66-dfcf-4584-824a-5fb25ef2beb4
+        userCondition: null
+fields:
+  0b4ecdc7-9211-4ea6-9185-2b85f5bc627a: # Sol Link Text
+    columnSuffix: skroylim
+    contentColumnType: string(80)
+    fieldGroup: null
+    handle: solLinkText
+    instructions: 'Text for the Solution Card''s link'
+    name: 'Sol Link Text'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: 20
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: 'Request a Demo'
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  9ec84187-5842-4b64-a363-df2809790092: # Sol Bulletpoint Text 1
+    columnSuffix: gkwzqehz
+    contentColumnType: string(160)
+    fieldGroup: null
+    handle: solBulletpointText1
+    instructions: 'Text for the first bullet-point (40 chars max)'
+    name: 'Sol Bulletpoint Text 1'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: 40
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: 'Bullet-point placeholder text 1'
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  417edd7f-d132-4e0f-804f-1539f9b27356: # solCardTitle
+    columnSuffix: nuoebsyx
+    contentColumnType: text
+    fieldGroup: null
+    handle: solcardtitle
+    instructions: 'Solution Card''s title'
+    name: solCardTitle
+    searchable: false
+    settings:
+      availableTransforms: ''
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: null
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  9508eea7-9b70-4558-8d1a-d1f02642b58d: # Sol Bulletpoint Text 3
+    columnSuffix: qeszugng
+    contentColumnType: string(160)
+    fieldGroup: null
+    handle: solBulletpointText3
+    instructions: 'Text for the third bullet-point (40 chars max)'
+    name: 'Sol Bulletpoint Text 3'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: 40
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: 'Bullet-point placeholder text 3'
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  29333a82-abf9-4d7b-904c-1f9f6be597ae: # Sol Bulletpoint Text 2
+    columnSuffix: ikjmkfzo
+    contentColumnType: text
+    fieldGroup: null
+    handle: solBulletpointText2
+    instructions: 'Text for the second bullet-point (40 chars max)'
+    name: 'Sol Bulletpoint Text 2'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: 'Bullet-point placeholder text 2'
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  a7604adb-7e61-43a3-8714-774bfeeab423: # sol image first
+    columnSuffix: hhbznkvb
+    contentColumnType: string(3)
+    fieldGroup: null
+    handle: solImageFirst
+    instructions: 'On wider devices/screens, is it image/content or content/image in terms of layout.  Select "yes" to have the image come first (i.e. on the left)'
+    name: 'sol image first'
+    searchable: false
+    settings:
+      columnType: null
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - 'Image First - Yes'
+            -
+              - value
+              - 'yes'
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Image First - No'
+            -
+              - value
+              - 'no'
+            -
+              - default
+              - '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\RadioButtons
+  b44ced1f-e6cc-452d-be3c-0ac93eae090c: # sol button text
+    columnSuffix: szmvqkej
+    contentColumnType: string(60)
+    fieldGroup: null
+    handle: solButtonText
+    instructions: 'Text for the solution card''s button'
+    name: 'sol button text'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: 15
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: 'Learn More'
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  c6245e3c-84a8-48c4-9111-0c523a4a29e7: # Sol Link Url
+    columnSuffix: sztetfjq
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: solLinkUrl
+    instructions: 'Solution Card''s link url'
+    name: 'Sol Link Url'
+    searchable: false
+    settings:
+      maxLength: 255
+      types:
+        - url
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+  e7f681f5-dd66-4868-a885-b00b6085faad: # solImage
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: solimage
+    instructions: 'Add an image for the solutions card'
+    name: solImage
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:bb0e0fd9-19d2-405c-a25b-72cf038c254e' # Images
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:bb0e0fd9-19d2-405c-a25b-72cf038c254e' # Images
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: null
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  f9f5c6bb-c399-44e1-bc1c-46a5781f4d1b: # solCardSubheading
+    columnSuffix: kqznvrdu
+    contentColumnType: text
+    fieldGroup: null
+    handle: solcardsubheading
+    instructions: 'Solutions Card subheading text (paragraph under heading)'
+    name: solCardSubheading
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: true
+      placeholder: 'Lorem ipsum dolor sit amet conse ctetur adipiscg elit nisl (placeholder text)'
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  f21d5f9b-69f0-4ef7-934a-fab500c77149: # sol button url
+    columnSuffix: fntcrmjx
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: solButtonUrl
+    instructions: 'Solution Card''s button url'
+    name: 'sol button url'
+    searchable: false
+    settings:
+      maxLength: 255
+      types:
+        - url
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+  f95e52ca-8259-48a9-9805-c8c2922a1611: # Sol Card Color
+    columnSuffix: lzliiavr
+    contentColumnType: char(7)
+    fieldGroup: null
+    handle: solCardColor
+    instructions: 'Background colour for the card.  Choose a hex value (e.g. #FFF9EB)'
+    name: 'Sol Card Color'
+    searchable: false
+    settings:
+      defaultColor: '#fff9eb'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Color
+  fe86aeea-6f76-497b-b19c-38335e95ec9a: # sol bulletpoint icon
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: solBulletpointIcon
+    instructions: "The bullet-point icon \r\nDefault: tick in a circle svg"
+    name: 'sol bulletpoint icon'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds: null
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:bb0e0fd9-19d2-405c-a25b-72cf038c254e' # Images
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: false
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:bb0e0fd9-19d2-405c-a25b-72cf038c254e' # Images
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: null
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: solutionMatrix
+name: 'solution matrix'
+sortOrder: 1

@@ -6,7 +6,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 857de95a-e13a-4f40-9a44-9e5799ba9a41 # siteSettingValue
+            fieldUid: 857de95a-e13a-4f40-9a44-9e5799ba9a41
             instructions: null
             label: null
             required: false

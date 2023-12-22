@@ -6,7 +6,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 40d0aff4-a577-4811-8a14-be151bd4f63e # Solutions Card1 Image
+            fieldUid: 40d0aff4-a577-4811-8a14-be151bd4f63e
             instructions: null
             label: null
             required: false
@@ -18,7 +18,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 00ac0806-61fb-4aef-9a81-8e3e9426032d # Solutions Card1 Title
+            fieldUid: 00ac0806-61fb-4aef-9a81-8e3e9426032d
             instructions: null
             label: null
             required: false
@@ -30,7 +30,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: f78e604d-3198-45dd-815a-fa0bc67bb1f4 # Solutions Card1 Subheading
+            fieldUid: f78e604d-3198-45dd-815a-fa0bc67bb1f4
             instructions: null
             label: null
             required: false
@@ -42,7 +42,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: a1229ca4-4e29-414a-9c33-b4da21c7cb37 # Solutions Card1 Bulletpoint Text1
+            fieldUid: a1229ca4-4e29-414a-9c33-b4da21c7cb37
             instructions: null
             label: null
             required: false
@@ -54,7 +54,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 22e9315c-4dfc-4b95-97ee-a0dbe6e3620f # Solutions Card1 Button Text
+            fieldUid: 22e9315c-4dfc-4b95-97ee-a0dbe6e3620f
             instructions: null
             label: null
             required: false
@@ -66,7 +66,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 699d7cd3-b9ff-4a6f-867d-ea7c7b3120b6 # Solutions Card1 Button Color
+            fieldUid: 699d7cd3-b9ff-4a6f-867d-ea7c7b3120b6
             instructions: null
             label: null
             required: false
@@ -78,7 +78,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: b6198944-67af-47f1-b642-0de35fb2a97a # Solutions Card1 Color
+            fieldUid: b6198944-67af-47f1-b642-0de35fb2a97a
             instructions: null
             label: null
             required: false
@@ -90,7 +90,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: bb14322e-9cc4-403f-84de-57fc9605c618 # Solutions Card1 Link
+            fieldUid: bb14322e-9cc4-403f-84de-57fc9605c618
             instructions: null
             label: null
             required: false

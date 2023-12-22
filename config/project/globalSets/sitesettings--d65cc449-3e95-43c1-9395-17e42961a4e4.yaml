@@ -6,7 +6,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: a174712f-24fb-4518-be8e-91855ed728fc # siteSettingMatrix
+            fieldUid: a174712f-24fb-4518-be8e-91855ed728fc
             instructions: null
             label: null
             required: false
