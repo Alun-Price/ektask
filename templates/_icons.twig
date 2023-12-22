@@ -1,23 +1,48 @@
-<section class="w-full border logo_strip h-52 md:flex">
-        <div class="icon-block">
-            <div class="container mx-auto mt-10 text-sm font-bold leading-6 text-center text-primaryblack-950">Trusted by organisations globally</div>
+<section class="w-full md:mb-3 lg:mb-6 xl:mb-8 icon-grid">
+    <div class="icon-block">
+        <div class="container relative mx-auto md:mt-10 xl:mt-[100px] mb-3 text-sm font-bold leading-6 text-center text-primaryblack-950">Trusted by organisations globally</div>
+    </div>
+    <div class="flex justify-between">
+        {% set logos = entry.logos %}
+        {% set siteSettings = craft.globalSets.handle('sitesettings') %}
+    
+        {# Determine the number of logos based on breakpoints #}
+        {% set mobileLogos = logos.limit(3) %}
+        {# Output logos for each breakpoint #}
+        {% for logo in mobileLogos %}
+        <div class="w-1/3 p-4 ml-4 md:hidden">
+            {# Output SVG from Asset field #}
+            <img src="{{ logo.getUrl() }}" alt="{{ logo.title }}"  class="w-full h-auto">
         </div>
-        <div class="grid grid-cols-2 gap-4 md:grid-cols-3">
+        {% endfor %}
+        
+        {# Add similar loops for md, lg, and xl breakpoints #}
 
-            {# {% for logos in logoStrip.logostripmatrix.all() %} 
-                {% set image = logos.logostripmatrix.one() %}      
-                    {% if image |length %}
-                        <div>
-                            <img class="h-auto max-w-full rounded-lg" src="{{ image.getUrl('medium') }}" alt="{{ image.title }}" />
-                        </div>    
-                {% endif %}      
-            {% endfor %} #}
-            
-                {% set logo = branding.logo.one() %}      
-                    {% if logo |length %}
-                        <div>
-                            <img class="h-auto max-w-full rounded-lg" src="{{ logo.getUrl('medium') }}" alt="{{ logo.title }}" />
-                        </div>    
-                {% endif %}      
+        {# md Logos loop #}
+        {% set mdLogos = logos.limit(7) %}
+        {% for mdlogo in mdLogos %}
+        <div class="p-4 w-1/7 sm:hidden md:block lg:hidden xl:hidden">
+            {# Output SVG from Asset field #}
+            <img src="{{ mdlogo.getUrl() }}" alt="{{ mdlogo.title }}" class="w-full h-auto">
         </div>
-    </section>
+        {% endfor %}
+
+        {# lg Logos loop #}
+        {% set lgLogos = logos.limit(8) %}
+        {% for lglogo in lgLogos %}
+        <div class="p-8 w-1/8 sm:hidden md:hidden lg:block xl:hidden">
+            {# Output SVG from Asset field #}
+            <img src="{{ lglogo.getUrl() }}" alt="{{ lglogo.title }}" class="w-full h-auto">
+        </div>
+        {% endfor %}
+
+        {# xl Logos loop #}
+        {% set xlLogos = logos.limit(9) %}
+        {% for xllogo in xlLogos %}
+        <div class="p-12 w-1/9 sm:hidden md:hidden lg:hidden xl:block">
+            {# Output SVG from Asset field #}
+            <img src="{{ xllogo.getUrl() }}" alt="{{ xllogo.title }}" class="w-full h-auto">
+        </div>
+        {% endfor %}
+    </div>
+</section>

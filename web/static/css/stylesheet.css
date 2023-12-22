@@ -1673,6 +1673,11 @@ video {
     margin-right: auto;
   }
 
+  .md\:mx-10 {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
+
   .md\:mb-12 {
     margin-bottom: 3rem;
   }
@@ -1727,6 +1732,10 @@ video {
 
   .md\:mt-8 {
     margin-top: 2rem;
+  }
+
+  .md\:ml-10 {
+    margin-left: 2.5rem;
   }
 
   .md\:block {
@@ -1909,8 +1918,17 @@ video {
     padding-bottom: 2rem;
   }
 
+  .md\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
   .md\:pb-8 {
     padding-bottom: 2rem;
+  }
+
+  .md\:pl-10 {
+    padding-left: 2.5rem;
   }
 
   .md\:text-center {

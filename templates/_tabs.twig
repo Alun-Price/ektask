@@ -1,79 +1,95 @@
-<section class="expertise-tabs">
-        <div class="container px-5 py-10 w-80% mx-auto md:mb-12 text-center">
-            <div class="p-4 text-center lg:w-1/2">
-                <h1 class="mb-4 text-[28px] leading-[34px]
-                font-bold">Sector expertise that will <span class="font-bold text-primaryorange-400">drive results </span> for your organisation</h1>
+{% set entries = craft.entries().section('homePage').all() %}
+{% for entry in entries %}
+    <section class="expertise-tabs">
+        <div class="container py-10 mx-auto w-[336px] md:w-full xl:w-9/12 items-center justify-center text-center md:mb-32">
+            <div class="p-4 text-center md:w-[535px] lg:w-[816px] mx-auto">
+                <h2 class="mb-4 font-bold text-center">Sector expertise that will <span class="font-bold text-primaryorange-400">drive results </span> for your organisation</h2>
             </div>
-            <div class="mb-4 md:mx-auto md:w-11/12">
-                <ul class="flex flex-wrap mx-auto -mb-px text-sm font-bold text-center" id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
-                    <li class="me-2" role="presentation">
-                        <button class="inline-block p-4 border-b-2 hover:border-primaryorange-400 hover:text-primaryorange-400  border-[#B1B1B1]/50 border-rounded-t-lg md:text-[22px] md:leading-[32px]" id="healthcare-tab" data-tabs-target="#healthcare" type="button" role="tab" aria-controls="healthcare" aria-selected="false">Healthcare</button>
+            <nav class="rounded-[10px] bg-tabBackground md:bg-transparent mb-4 md:mx-auto md:w-11/12 lg:w-full lg:justify-around xl:justify-center">
+                <ul class="flex flex-wrap mx-auto text-sm font-bold text-center lg:w-full lg:justify-around" data-tabs-toggle="#default-tab-content" role="tablist">
+                    <li class="me-2 active-tab" role="presentation">
+                        <button class=" bg-white hover:bg-white rounded-[10px] md:rounded-none md:bg-transparent p-2 md:p-4 mx-1 my-1 md:border-b-2 md:hover:border-b-primaryorange-400 md:active:border-primaryorange-400 md:focus:border-primaryorange-400 hover:text-primaryorange-400 text-[17px] leading-[23.15px] font-bold md:border-[#B1B1B1]/50 md:text-[22px] md:leading-[32px] lg:text-[24px] lg:leading-[68px] lg:w-[255px]" id="{{ entry.tabsPanel1Name|lower }}-tab" data-tabs-target="#{{  entry.tabsPanel1Name|lower  }}" type="button" role="tab" aria-controls="{{  entry.tabsPanel1Name|lower  }}" aria-selected="false">{{ entry.tabsPanel1Name }}</button>
                     </li>
                     <li class="me-2" role="presentation">
-                        <button class="inline-block p-4 border-b-2 hover:border-primaryorange-400 hover:text-primaryorange-400 border-[#B1B1B1]/50 rounded-t-lg md:text-[22px] md:leading-[32px]" id="publicSector-tab" data-tabs-target="#publicsector" type="button" role="tab" aria-controls="publicsector" aria-selected="false">Public Sector</button>
+                        <button class=" md:rounded-none md:bg-transparent hover:bg-white p-2 m-1 md:p-4 md:border-b-2 md:active:border-primaryorange-400 md:focus:border-primaryorange-400 md:hover:border-primaryorange-400 hover:text-primaryorange-400 border-[#B1B1B1]/50 rounded-t-lg md:text-[22px] md:leading-[32px] lg:text-[24px] lg:leading-[68px] lg:w-[255px]" id="{{ entry.tabsPanel2Name|lower }}-tab" data-tabs-target="#{{ entry.tabsPanel2Name|lower }}" type="button" role="tab" aria-controls="{{ entry.tabsPanel2Name|lower }}" aria-selected="false">{{ entry.tabsPanel2Name }}</button>
                     </li>
                     <li class="me-2" role="presentation">
-                        <button class="inline-block p-4 border-b-2 hover:border-primaryorange-400 hover:text-primaryorange-400  border-[#B1B1B1]/50 rounded-t-lg md:text-[22px] md:leading-[32px]" id="commercial-tab" data-tabs-target="#commercial" type="button" role="tab" aria-controls="commercial" aria-selected="false">Commercial</button>
+                        <button class=" md:rounded-none md:bg-transparent hover:bg-white rounded-[10px] p-2 m-1 md:p-4 md:border-b-2 md:active:border-primaryorange-400  md:hover:border-primaryorange-400 md:focus:border-primaryorange-400 hover:text-primaryorange-400  border-[#B1B1B1]/50 rounded-t-lg md:text-[22px] md:leading-[32px] lg:text-[24px] lg:leading-[68px] lg:w-[255px]" id="{{ entry.tabsPanel3Name|lower }}-tab" data-tabs-target="#{{ entry.tabsPanel3Name|lower }}" type="button" role="tab" aria-controls="{{ entry.tabsPanel3Name|lower }}" aria-selected="false">{{ entry.tabsPanel3Name }}</button>
                     </li>
                     <li role="presentation">
-                        <button class="inline-block p-4 border-b-2 hover:border-primaryorange-400  hover:text-primaryorange-400 rounded-t-lg md:text-[22px] md:leading-[32px]" id="charity-tab" data-tabs-target="#charity" type="button" role="tab" aria-controls="charity" aria-selected="false">Charity</button>
+                        <button class=" md:rounded-none md:bg-transparent hover:bg-white rounded-[10px] p-2 m-1 md:p-4 md:border-b-2 md:active:border-primaryorange-400  md:focus:border-primaryorange-400 md:hover:border-primaryorange-400  hover:text-primaryorange-400 rounded-t-lg md:text-[22px] md:leading-[32px] lg:text-[24px] lg:leading-[68px] lg:w-[255px]" id="{{ entry.tabsPanel4Name|lower }}-tab" data-tabs-target="#{{ entry.tabsPanel4Name|lower }}" type="button" role="tab" aria-controls="{{ entry.tabsPanel4Name|lower }}" aria-selected="false">{{ entry.tabsPanel4Name }}</button>
                     </li>
                 </ul>
-            </div>
-            <div id="default-tab-content">
-                <div class="p-4 text-left rounded-lg" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                    <h5 class="md:font-bold md:w-10/12 text-primaryblack-950 md:text-[24px] md:leading-[34px] md:mx-auto">Enhance healthcare training with immersive, interactive learning experiences</h5>
-                    <p class="text-pgrey-400 font-normal md:text-[16px] md:leading-[34px] md:mx-auto md:w-10/12 md:mt-4">Improve knowledge retention and patient outcomes.</p>
-                </div>
-                <div class="hidden p-4 rounded-lg bg-gray-50 md:mx-auto" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
-                    <p class="text-sm text-gray-500 md:mx-auto">This is some placeholder content the <strong class="font-medium text-gray-800">Dashboard tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
-                </div>
-                <div class="hidden p-4 rounded-lg bg-gray-50" id="settings" role="tabpanel" aria-labelledby="settings-tab">
-                    <p class="text-sm text-gray-500 md:mx-auto">This is some placeholder content the <strong class="font-medium text-gray-800">Settings tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
-                </div>
-                <div class="hidden p-4 rounded-lg bg-gray-50" id="contacts" role="tabpanel" aria-labelledby="contacts-tab">
-                    <p class="text-sm text-gray-500">This is some placeholder content the <strong class="font-medium text-gray-800">Contacts tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
-                </div>
-            </div>
-                <div class="flex items-center py-1 md:mx-auto md:w-9/12 group">   
-                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="13" cy="13" r="13" fill="#F9F4EE"/>
-                    <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
-                    </svg>
-                    <span class="px-2 text-pgrey-400 font-normal md:text-[16px] md:leading-[34px]">Over 20 years' experience working in healthcare</span>
-                </div>
-                <div class="flex items-center py-1 md:mx-auto md:w-9/12 group">   
-                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="13" cy="13" r="13" fill="#F9F4EE"/>
-                    <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
-                    </svg>
-                    <span class="px-2 text-pgrey-400 font-normal md:text-[16px] md:leading-[34px]">Proven track record of innovative learning solutions</span>
-                </div>
-                <div class="flex py-1 items-left md:mx-auto md:w-9/12 group">   
-                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="13" cy="13" r="13" fill="#F9F4EE"/>
-                    <path d="M11.2023 15.1733C11.3013 15.0348 11.3409 14.9556 11.4101 14.8864C13.5377 12.7588 15.6652 10.6214 17.8026 8.49385C18.3172 7.97928 18.9604 7.91991 19.4651 8.32563C19.9599 8.72145 20.0489 9.43392 19.6729 9.9386C19.5937 10.0376 19.5047 10.1365 19.4156 10.2256C17.0011 12.6401 14.5965 15.0546 12.182 17.4592C11.5289 18.1123 10.8857 18.1123 10.2227 17.4493C8.99562 16.2223 7.76858 14.9952 6.54153 13.7682C5.97749 13.2041 5.98738 12.4323 6.55143 11.9573C6.97693 11.5911 7.58056 11.5813 8.02586 11.9276C8.11492 11.9969 8.20398 12.0859 8.29304 12.1651C9.19353 13.0656 10.1039 13.976 11.0044 14.8765C11.0638 14.9457 11.1034 15.0249 11.2023 15.1733Z" fill="#F26839"/>
-                    </svg>
-                    <span class="px-2 text-pgrey-400 font-normal md:text-[16px] md:leading-[34px]">Trusted by global healthcare leaders</span>
-                </div>
-                <div class="flex items-center justify-center md:w-8/12 md:mt-6 md:mb-8">
-                    <button type="button" class="text-white bg-primaryorange-400 hover:bg-primaryorange-600 font-bold text-center text-[17px] px-5 mr-3 rounded-[35px] w-[152px] h-[52px]">Learn More</button>
-                    <div class="inline-block">
-                        <a href="#" class="text-[17px] leading-[30px] font-bold text-primaryorange-400  hover:text-primaryorange-600 underline">All Case Studies</a>
+            </nav>
+            <div id="default-tab-content" class="flex flex-col panels">
+                <article class="p-4 text-left active-panel lg:flex" id="{{  entry.tabsPanel1Name|lower  }}-tab" role="tabpanel" aria-labelledby="{{  entry.tabsPanel1Name|lower  }}-tab">
+                    <div class="text-left md:mx-20 md:mb-6 lg:py-6 lg:order-first lg:flex-1">
+                        <h5 class="mb-1.5 md:mb-2"> {{ entry.tabsPanel1Title }}</h5>
+                        <p class="font-normal text-left plarge">{{ entry.tabsPanel1Subheading }}</p>
+                        {# Tickbox section - Tab Panel 1 #}
+                        <div class="tickbox section">
+                            <div class="flex items-center py-1 mt-4 mb-1 group">   
+                                <img src="{{ siteUrl }}static/images/bulletpointicon.svg" alt="tick in circle icon">
+                                <p class="px-2 font-normal ">{{ entry.tabsPanel1BulletpointText1 }}</p>
+                            </div>
+                            <div class="flex items-center py-1 mt-1 spaces-y-1 group">   
+                                <img src="{{ siteUrl }}static/images/bulletpointicon.svg" alt="tick in circle icon">
+                                <p class="px-2 font-normal">{{ entry.tabsPanel1BulletpointText2 }}</p>
+                            </div>
+                            <div class="flex items-center py-1 mt-1 mb-8 spaces-y-1 md:w-9/12 group">   
+                                <img src="{{ siteUrl }}static/images/bulletpointicon.svg" alt="tick in circle icon">
+                                <p class="px-2 font-normal">{{ entry.tabsPanel1BulletpointText3 }}</p>
+                            </div>
+                        </div>
+                        {#  Buttons - Tab Panel 1 #}
+                        <div class="flex items-center justify-start md:mt-6 md:mb-8">
+                            <button type="button" class="text-white bg-primaryorange-400 hover:bg-primaryorange-600 font-bold text-center text-[17px] px-5 mr-3 rounded-[35px] w-[152px] h-[52px]">Learn More</button>
+                            <div class="inline-block">
+                                <a href="#" class="text-[17px] leading-[30px] text-left font-bold text-primaryorange-400  hover:text-primaryorange-600 underline">All Case Studies</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <figure class="relative flex items-center justify-center">
-                    <img class="rounded-t-lg " src="{{ siteUrl }}static/images/healthcare.png" alt="Image depicting Healthcare where a nurse smiles at an elderly patient">
-                    <figcaption class="md:w-[480px] md:h-[246px] bg-[#F9F4EE] rounded-tl-[20px] rounded-br-[40px] absolute right-12 -bottom-11 p-10 z-10">
-                        <blockquote class="text-xl italic font-semibold text-gray-900">
-                            <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8.92486 11.2917V20H0V13.125C0 9.40278 0.493256 6.70833 1.47977 5.04167C2.77457 2.81944 4.82466 1.13889 7.63006 0L9.66474 2.91667C7.96917 3.55556 6.72062 4.51389 5.91908 5.79167C5.11753 7.04167 4.67052 8.875 4.57803 11.2917H8.92486ZM23.2601 11.2917V20H14.3353V13.125C14.3353 9.40278 14.8285 6.70833 15.815 5.04167C17.1098 2.81944 19.1599 1.13889 21.9653 0L24 2.91667C22.3044 3.55556 21.0559 4.51389 20.2543 5.79167C19.4528 7.04167 19.0058 8.875 18.9133 11.2917H23.2601Z" fill="#F26839"/>
-                            </svg>
-                            <p class="text-primaryblack-950 md:leading-[34px] text-2xl md:mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum porro iure ipsa nesciunt.</p>
-                        </blockquote>
-                        <cite class="flex font-bold text-primaryblack-950 text-base leading-[22px]">John Smith</cite>
-                        <cite class="font-normal text-pgrey-400 text-sm leading-[22px]">Head of Training, NHS</cite>
-                    </figcaption>
-                </figure>
+                    {# Image - Tab Panel 1 #}
+                    <figure class="relative lg:flex lg:flex-1 lg:w-1/2">
+                        <img class="relative hidden object-contain mx-auto rounded-t-lg lg:py-6 md:block" src="{{ siteUrl }}static/images/healthcare.png" alt="Image depicting Healthcare where a nurse smiles at an elderly patient">
+                        
+                        <img class="mt-6 rounded-t-lg md:hidden lg:hidden xl:hidden" src="{{ siteUrl }}static/images/healthcareMobile.svg" alt="A person wearing surgical gloves washes them in a sink">
+                        {# Quotebox - Tab Panel 1 #}
+                        <figcaption class="w-full">
+                            <blockquote class="relative p-4 bg-[#F9F4EE] text-[20px] md:absolute md:bottom-0 md:right-0 md:p-4 md:rounded-tl-[20px] md:rounded-br-[40px] md:translate-y-[50%] md:-translate-x-[38.5px] lg:-translate-x-[0px] text-left text-gray-900 lg:right-0 xl:-translate-x-[0%]">
+                                {# Quotes SVG #}
+                                <svg class="absolute top-0 left-8 -translate-x-[10px]  translate-y-[40px] md:translate-x-[10px] md:translate-y-[43px]" width="30" height="30" viewBox="0 0 25 25" fill="none" 
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.9622 8.54796V14.6864H0.671143V9.84026C0.671143 7.2165 1.01883 5.31721 1.71422 4.14239C2.62691 2.57596 4.07201 1.39135 6.0495 0.588562L7.48373 2.6445C6.28854 3.09484 5.40845 3.77036 4.84345 4.67106C4.27845 5.55217 3.96335 6.84447 3.89816 8.54796H6.9622ZM17.067 8.54796V14.6864H10.7759V9.84026C10.7759 7.2165 11.1236 5.31721 11.819 4.14239C12.7317 2.57596 14.1768 1.39135 16.1543 0.588562L17.5885 2.6445C16.3933 3.09484 15.5132 3.77036 14.9482 4.67106C14.3832 5.55217 14.0682 6.84447 14.003 8.54796H17.067Z" fill="#F26839"/>
+                                </svg>
+
+                                <span class="w-[280.81px] inline-block text-left font-medium text-[20px] md:w-[370px] leading-[26.79px] md:leading-[34px] ml-[34.28px] md:ml-[60px] lg:text-[26px] lg:leading-[38px] pr-[29.91px] md:font-semibold text-xl mt-5 md:mb-4 md:flex">Lorem ipsum dolor sit amet consectet sum dolor sit amet consectetur, adipiscing elit.</span>
+                                <footer class="mt-2 text-sm md:ml-[60px]">
+                                    <div class=" md:block hidden w-[124px] mb-1 md:w-[165px]">
+                                        <strong class="md:block hidden font-bold text-primaryblack-950 text-base leading-[22px]">John Smith</strong>
+                                        <span class="hidden md:block font-normal text-pgrey-400 text-sm leading-[22px]">Head of Training, NHS</span>
+                                    </div>
+                                    <div class="block p-2 ml-6 md:hidden lg:hidden xl:hidden">
+                                        <strong class="text-left font-bold text-primaryblack-950 text-base leading-[22px]">Paul McGurk</strong>
+                                        <span class="flex font-normal text-pgrey-400 text-sm leading-[22px] text-left">Head of Training, NHS</span></p>
+                                    </div>
+                                </footer>
+                            </blockquote>
+                        </figcaption>
+                    </figure>
+                </article>
+                <article class="hidden p-4 rounded-lg bg-gray-50 md:mx-auto" id="publicSector" role="tabpanel" aria-labelledby="dashboard-tab">
+                    <h5 class="md:font-bold md:w-10/12 text-primaryblack-950 md:text-[24px] md:leading-[34px] md:mx-auto">Panel 2 - Public Sector</h5>
+                    <p class="text-sm text-gray-500 md:mx-auto">This is some placeholder content the <strong class="font-medium text-gray-800">Dashboard tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+                </article>
+                <article class="hidden p-4 rounded-lg bg-gray-50" id="commercial" role="tabpanel" aria-labelledby="settings-tab">
+                    <h5 class="md:font-bold md:w-10/12 text-primaryblack-950 md:text-[24px] md:leading-[34px] md:mx-auto">Panel 3 - Commercial</h5>
+                    <p class="text-sm text-gray-500 md:mx-auto">This is some placeholder content the <strong class="font-medium text-gray-800">Settings tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+                </article>
+                <article class="hidden p-4 rounded-lg bg-gray-50" id="charity" role="tabpanel" aria-labelledby="contacts-tab">
+                    <h5 class="md:font-bold md:w-10/12 text-primaryblack-950 md:text-[24px] md:leading-[34px] md:mx-auto">Panel 4 - Charity</h5>
+                    <p class="text-sm text-gray-500">This is some placeholder content the <strong class="font-medium text-gray-800">Contacts tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+                </article>
         </div>
     </section>
+{% endfor %}

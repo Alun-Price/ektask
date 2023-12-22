@@ -1,18 +1,54 @@
-<section class="solutions">
-        <div class="container bg-white">
-             {# Image Section - Solutions #}
-            <div class="lg:flex lg:items-center">
-                <img class="object-cover h-auto mx-auto lg:w-1/2 lg:h-full" <img src="{{ siteUrl }}static/images/heroimage.webp">
-            </div>
-            <div class="p-4 text-center lg:w-1/2">
-                <h1 class="mb-4 font-sans text-[28px] leading-[34px]
-                font-bold">Learning solutions that <br> <span class="font-bold text-primaryorange-400">deliver results</span></h1>
-                <p class="text-[#474747] mb-4 text-base font-normal tracking-wide">Whatever your learning and development goals are , we have the solution to achieve them. </p>
-                {#  Button - Solutions #}
-                <button type="button" class="text-white bg-primaryorange-400 hover:bg-primaryorange-600 font-bold text-center text-[17px] px-5 mr-3 rounded-[35px] w-[152px] h-[52px]">Learn More</button>
-                <div class="inline-block">
-                    <a href="#" class="text-[17px] leading-[30px] font-bold text-primaryblack-700 hover:text-primaryblack-300 underline">Request a Demo</a>
-                </div>
-            </div>
+{% set entries = craft.entries().section('homePage').all() %}
+{% for entry in entries %}
+    <section class="solutions">
+        <div class="container flex-row items-center justify-center mx-auto">
+            <div class="p-4 text-center lg:mb-10">
+                <h1 class="mb-4 md:mx-auto font-sans text-[28px] leading-[34px]
+                font-bold md:text-[36px] md:w-[550px] md:leading-[44px] lg:text-[48px] lg:leading-[60px] lg:w-[920px]">Learning solutions that <span class="font-bold text-primaryorange-400">deliver results</span></h1>
+                <p class="text-[#474747] plarge text-lg text-center w-11/12  md:mx-auto md:w-[540px] mb-4 lg:w-[500px] xl:w-[606px] font-normal">{{ entry.solutionsMainSubheading }} </p>
+            </div>    
+            {# Solutions Card Matrix #}
+            {% set blocks = entry.solutionMatrix.all() %}
+            {%  if blocks|length %}
+                {% for block in blocks %}
+                    <div class="relative w-11/12 pb-6 mx-auto mb-6 rounded-[20px] xl:rounded-[40px] lg:mb-10 md:pb-8 lg:flex xl:w-[1490px] xl:mb-16" style="background-color: {{ block.solCardColor|lower }};">
+                        {# Image Section - Solutions Card #}
+                        {% set image = block.solimage.one() %}
+                        {%  if image %}
+                        <div class="max-h-[528px] py-6 mx-4 md:py-8 lg:flex lg:w-1/2 xl:pt-10 xl:py-0 {{ block.solImageFirst == 'yes' ? 'lg:order-first' : 'lg:order-last' }}">
+                            <img class="object-contain h-auto mx-auto md:w-1/2 lg:h-full lg:w-full" src="{{image.getUrl()}}" alt="{{ image.title }}">
+                        </div>
+                        {%  endif %}
+                        {# Content Section - Solutions Card #}
+                        <div class="mx-4 text-left md:mx-32 md:mb-6 lg:py-20 lg:w-1/2 {{ block.solImageFirst == 'yes' ? 'lg:order-last' : 'lg:order-first' }}">
+                            <h3 class="mb-2 font-bold"> {{ block.solcardtitle }}</h3>
+                            <p class="font-normal text-left">{{ block.solcardsubheading }}</p>
+                            {# Tickbox section #}
+                            <div class="tickbox section">
+                                <div class="flex items-center py-1 mt-4 mb-1 md:w-9/12 group">   
+                                    <img src="{{ siteUrl }}static/images/bulletpointicon.svg" alt="tick in circle icon">
+                                    <p class="px-2 font-normal">{{ block.solBulletpointText1 }}</p>
+                                </div>
+                                <div class="flex items-center py-1 mt-1 spaces-y-1 md:w-9/12 group">   
+                                    <img src="{{ siteUrl }}static/images/bulletpointicon.svg" alt="tick in circle icon">
+                                    <p class="px-2 font-normal">{{ block.solBulletpointText2 }}</p>
+                                </div>
+                                <div class="flex items-center py-1 mt-1 mb-8 spaces-y-1 md:w-9/12 group">   
+                                    <img src="{{ siteUrl }}static/images/bulletpointicon.svg" alt="tick in circle icon">
+                                    <p class="px-2 font-normal">{{ block.solBulletpointText3 }}</p>
+                                </div>
+                            </div>
+                            {#  Buttons - Solutions Card #}
+                            <div class="flex items-center">
+                                <button type="button" class="text-white bg-primaryorange-400 hover:bg-primaryorange-600 font-bold text-center text-[17px] px-5 py-3 rounded-[35px] mr-3">{{ block.solButtonText }}</button>
+                                <div class="inline-block">
+                                    <a href="#" class="text-[17px] leading-[30px] font-bold text-primaryblack-950  hover:text-primaryorange-600 underline ">{{ block.solLinkText }}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
         </div>
     </section>
+{% endfor %}

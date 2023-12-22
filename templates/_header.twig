@@ -1,31 +1,15 @@
-<header class="relative items-center justify-center h-screen lg:flex lg:justify-between lg:items-center lg:px-3 md:py-3 md:w-full">
-        <nav class="flex items-center justify-between px-4 py-3 mt-4 lg:p-0 shrink-0">
-            <div class="flex items-center"> 
-                <a class="mr-6" href="{{ siteUrl }}">
+<header class="relative md:py-3 md:w-full">
+        <nav class="z-20 flex items-center justify-between px-4 py-3 mt-4 lg:flex-row">
+                {# Logo Images #}
+                <a class="mr-6 lg:hidden" href="{{ siteUrl }}">
                     <img src="{{ siteUrl }}static/images/LogoMobile.svg">
                 </a>
-                {# Nav Links#}
-                <div class="items-center justify-between hidden lg:flex">
-                    <ul class="flex flex-col p-4 mt-4 font-medium lg:p-0 lg:flex-row lg:mt-0 lg:space-x-4">
-                        {% for link in navigation.navLinks.all() %}
-                        {% set destination = link.linkDestination.one() %}
-                        {% set dropdown = link.dropdownToggle %}
-                        {% if dropdown.contains('dropdownYes') %}
-                        
-                        <li>
-                            <a href="{{ destination.url}}" class="relative text-sm font-bold after:content-arrowDownIcon after:inline-block after:ml-1"> {{ link.linkText   }}</a>   
-                        </li>
-                        {% else %}
-                        <li>
-                            <a href="{{ destination.url}}" class="inline-block text-sm font-bold"> {{ link.linkText   }}</a>
-                        </li>
-                        {% endif %}
-                        {% endfor %}
-                    </ul>
-                </div>
+                <a class="hidden mr-6 md:hidden lg:block" href="{{ siteUrl }}">
+                    <img src="{{ siteUrl }}static/images/lgnavLogo.svg">
+                </a>
                 {#Mobile Hamburger #} 
-                <div class="absolute flex items-center right-6 lg:hidden">
-                    <div>
+                <div class="absolute items-center block right-6 lg:hidden">
+                    <button aria-label="Open Menu" title="Open Menu">
                         <svg class="fill-current text-primaryorange-400 hover:text-primaryorange-600" xmlns="http://www.w3.org/2000/svg" width="24" height="15" viewBox="0 0 24 15" fill="none">
                         <g id="Menu Icon">
                             <line id="Line 3" y1="1" x2="24" y2="1" stroke="#F26839" stroke-width="2"></line>
@@ -33,12 +17,30 @@
                             <line id="Line 5" y1="14" x2="24" y2="14" stroke="#F26839" stroke-width="2"></line>
                         </g>
                         </svg>
-                    </div>
+                    </button>
+                </div>
+                {# Nav Links#}
+                <div class="justify-between flex-grow hidden w-full lg:flex lg:flex-row lg:items-center lg:w-auto">
+                    <ul class="mt-4 lg:mb-4 lg:ml-8 lg:flex-grow font-medium align-top  lg:font-bold lg:text-[18px] lg:leading-[25.41px] xl:leading-[24.51px]">
+                        {% for link in navigation.navLinks.all() %}
+                        {% set destination = link.linkDestination.one() %}
+                        {% set dropdown = link.dropdownToggle %}
+                        {% if dropdown.contains('dropdownYes') %}
+                        
+                        <li class="inline-block mr-[85px] ">
+                            <a href="{{ destination.url}}" aria-label={{ link.linkText }} title={{ link.linkText }} class="relative text-sm font-bold after:content-arrowDownIcon after:inline-block after:mr-4 hover:text-primaryorange-400"> {{ link.linkText }}</a>   
+                        </li>
+                        {% else %}
+                        <li class="inline-block mr-[85px] ">
+                            <a href="{{ destination.url}}" aria-label={{ link.linkText }} title={{ link.linkText }} class="z-10 inline-block text-sm font-bold hover:text-primaryorange-400"> {{ link.linkText }}</a>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
                 </div>
                 {# CTA Button #}
-                <div class="absolute items-center hidden space-x-6 lg:flex lg:right-6">    
-                    <a href="#" type="button" class="text-white text-sm bg-primaryorange-400 hover:bg-primaryorange-600 font-bold leading-[30px] px-3 py-1 text-center rounded-[35px] align-baseline hidden lg:block">Request a Demo</a>
+                <div class="absolute items-center hidden lg:flex lg:right-6">    
+                    <a href="#" type="button" class="text-white text-sm bg-primaryorange-400 hover:bg-primaryorange-600 align-text-top font-bold leading-[30px] px-3 py-1 lg:py-[10px] lg:px-[28px] text-center rounded-[35px] hidden lg:block">Request a Demo</a>
                 </div>
-            </div>
         </nav>
     </header>

@@ -1,10 +1,9 @@
 <section class="Hero">
-        <div class="container overflow-hidden md:flex">
+        <div class="container relative justify-center mx-auto md:flex md:mb-8 md:mt-8 xl:mb-[180px] xl:-ml-[5px] lg:justify-evenly">
             {# Content Section - Hero #}
-            <div class="p-4 md:w-6/12 lg:w-1/2 ">
-                <h1 class="mb-4 font-sans text-[45px] leading-[55px]
-                font-semibold tracking-wide">Learning <br>that <span class="font-bold text-primaryorange-400">works</span></h1>
-                <p class="text-[#474747] mb-8 text-base font-normal tracking-wide">We deliver engaging learning experiences that work for your goals and learners</p>
+            <div class="p-4 md:w-6/12 lg:w-5/12 xl:w-4/12 lg:mt-24 xl:mt-[200px] xl:mr-[700px]">
+                <h1 class="mb-4 text-[45px] font-bold leading-[55px] lg:text-[90px] lg:leading-[100px] xl:text-[96px] xl:leading-[108px] ">Learning <br>that <span class="font-bold text-primaryorange-400">works</span></h1>
+                <p class="text-pgrey-400 mb-8 text-base font-normal leading-[28px] lg:text-[22px] lg:leading-[36px] md:w-10/12 lg:w-11/12 lg:font-normal">We deliver engaging learning experiences that work for your goals and learners</p>
                 <div class="flex items-center">
                     {#  Button - Hero #}
                     <button type="button" class="text-white bg-primaryorange-400 hover:bg-primaryorange-600 font-bold text-center text-[17px] px-5 mr-3 rounded-[35px] w-[152px] h-[52px]">What We Do</button>
@@ -12,19 +11,19 @@
                     <a href="#" class="flex items-center py-1 group">   
                         <svg class=" group-hover:text-primaryorange-600" width="28" height="29" viewBox="0 0 28 29" fill="none" 
                             xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="14" cy="14.4719" r="13" stroke="#F26839" stroke-width="2"/>
-                            <path d="M12 18.8252L18.0674 14.9719L12 11.1186V18.8252Z" fill="#F26839" stroke="#F26839"/>
+                            <circle cx="14" cy="14.4719" r="13" stroke="#F26839" stroke-width="2" fill="#F26839"/>
+                            <path d="M12 18.8252L18.0674 14.9719L12 11.1186V18.8252Z" fill="#FFF" stroke="#FFF"/>
                             </svg>
                         <span class="px-2 text-[17px] font-bold text-primaryorange-400 group-hover:text-primaryorange-600">Watch Video</span>
                     </a>
                 </div>
             </div>
              {# Image Section - Hero #}
-            <div class="justify-center hidden h-full mt-6 align-center lg:flex lg:items-center md:grow md:flex md:align-top">
-                <svg class="hidden" width="375" height="439" viewBox="0 0 375 439" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="171.82" cy="219.202" r="218.102" stroke="#CBCBCB" stroke-width="1.53233" stroke-linecap="round" stroke-dasharray="0.51 10.22"/>
-                </svg>
-                <img class="md:w-5/12 lg:w-1/2 lg:h-full" <img src="{{ siteUrl }}static/images/hero.webp">
+            <div class="top-0 bottom-0 left-0 right-0 z-10 justify-center h-full align-center lg:flex lg:items-center md:flex">
+                <img class="hidden sm:block md:hidden lg:hidden xl:hidden" <img src="{{ siteUrl }}static/images/smHero.svg">
+                <img class="hidden md:block lg:hidden xl:hidden" <img src="{{ siteUrl }}static/images/mdHero.svg">
+                <img class="hidden md:hidden lg:block xl:hidden" <img src="{{ siteUrl }}static/images/lgHero.svg">
+                <img class="absolute xl:-top-[150px] xl:right-[1%] md:hidden sm:hidden lg:hidden xl:block xl:-z-10 pointer-events-none" <img src="{{ siteUrl }}static/images/xlHero.svg">
             </div>
         </div>
     </section>
