@@ -159,3 +159,43 @@ The following was added to the tailwind base css layer;
   }
 }
 ```
+
+### Self Hosting the Open Sans Font
+
+Initially I used the following links to bring in the font;
+
+````<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> ```
+
+````
+
+but then decided to self-host to avoid the issues with 3rd party Google Font hosting and speed up access.
+
+The fonts live in the @web/static/fonts folder and are accessed via some custom base layer css.
+
+```
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    src: url('web/static/fonts/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-muw.woff2')
+      format('woff2');
+  }
+  ,
+  @font-face {
+    font-family: 'Open Sans';
+    font-weight: 700;
+    src: url('web/static/fonts/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2')
+      format('woff2');
+  }
+
+```
+
+### Compressing Images
+
+All svg's were passed through [SVGOMG](https://svgomg.net/) with the `comp` suffix denoting a file compressed in this way.

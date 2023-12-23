@@ -3,6 +3,20 @@
 @tailwind utilities;
 
 @layer base {
+  @font-face {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    src: url('../fonts/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-muw.woff2')
+      format('woff2');
+  }
+  ,
+  @font-face {
+    font-family: 'Open Sans';
+    font-weight: 700;
+    src: url('../fonts/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2')
+      format('woff2');
+  }
+  ,
   h1,
   .h1 {
     @apply text-[45px] font-bold leading-[55px] md:text-[54px] lg:text-[90px] lg:leading-[100px] xl:text-[96px] xl:leading-[108px];
