@@ -4,8 +4,6 @@ Figma : `see link`
 
 The project requires docker to be running and DDEV to be installed (see [DDEV Installation](https://ddev.readthedocs.io/en/stable/))
 
-`npx tailwindcss  --output web/static/css/styles.css --watch`
-
 Start the project
 
 `ddev start`
@@ -18,7 +16,15 @@ Launch the Craft CMS admin console
 
 `ddev launch admin`
 
-We'll' be using Tailwind and here's the config so far. We could maybe do with reducing the colour options and finessing it a bit to take on the regularly used typography in the project
+Run in watch mode
+
+`npm run watch:css`
+
+Build the css
+
+`npm run build:css`
+
+We'll' be using Tailwind and here's the config so far.
 
 **Tailwind.config.js**
 
@@ -111,7 +117,6 @@ The site's typography was updated based on the following suggested styles ..
 | -                | h6 - 22px        | h6 - 30px        | h6 - 30px        |
 | p - large - 18px | p - large - 18px | p - large - 22px | p - large - 22px |
 | p - 16px         | p - 16px         | p - 20px         | p - 20px         |
-| Spacing 40px     | Spacing 64px     | Spacing 125px    | Spacing 150px    |
 
 The following was added to the tailwind base css layer;
 
